@@ -1,0 +1,11 @@
+{
+  "name": "rac-styles",
+  "version": "0.1.0",
+  "description": "rac style library",
+  "repository": "https://github.com/RockefellerArchiveCenter/styles.git",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}
