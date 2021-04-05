@@ -1,7 +1,7 @@
 @import '../../../stylesheets/main.scss';
 
 @include describe('The visually-hidden mixin') {
-  @include it('outputs the expected properties.') {
+  @include it('Outputs the expected properties.') {
     @include assert {
       @include output {
         @include visually-hidden();
