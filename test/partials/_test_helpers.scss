@@ -1,0 +1,21 @@
+@import '../../../stylesheets/main.scss';
+
+@include describe('The visually-hidden mixin') {
+  @include it('outputs the expected properties.') {
+    @include assert {
+      @include output {
+        @include visually-hidden();
+      }
+      @include expect {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+    }
+  }
+}

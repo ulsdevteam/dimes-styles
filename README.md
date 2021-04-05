@@ -9,6 +9,14 @@ This project uses [Dart Sass](https://sass-lang.com/dart-sass). Compile SCSS sty
 yarn compile
 ```
 
+## Tests
+Unit tests have been added to ensure that mixin output and Sass functions are correct. To run tests:
+```
+yarn test
+```
+
+Unit tests are set up to run in the CI pipeline. The build will fail if the tests do not pass.
+
 ## Linting
 This project uses [stylelint](https://stylelint.io/), which can be configured using the `.stylelintrc.json` file located in the root of this repository. To run linting:
 ```
