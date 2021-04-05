@@ -1,9 +1,9 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-sass-guidelines",
-    "stylelint-config-property-sort-order-smacss"
+    "stylelint-config-sass-guidelines"
   ],
+  "ignoreFiles": ["*/vendors/*.*"],
   "plugins": ["stylelint-a11y"],
   "rules": {
     "a11y/media-prefers-reduced-motion": true,
