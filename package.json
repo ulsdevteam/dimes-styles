@@ -6,7 +6,10 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
+    "autoprefixer": "^10.2.5",
     "jest": "^26.6.3",
+    "postcss": "^8.2.9",
+    "postcss-cli": "^8.3.1",
     "sass": "^1.32.8",
     "sass-true": "^6.0.1",
     "stylelint": "^13.12.0",
@@ -15,9 +18,12 @@
     "stylelint-config-standard": "^21.0.0"
   },
   "scripts": {
-    "compile": "sass stylesheets/main.scss dist/main.css",
+    "compile": "sass stylesheets/main.scss dist/main.min.css --no-source-map --style=compressed && postcss dist/main.min.css --replace --use autoprefixer",
     "lint": "npx stylelint 'stylesheets/**/*.scss'",
     "lint-fix": "npx stylelint 'stylesheets/**/*.scss' --fix",
     "test": "jest --testRegex test_ --env=node --passWithNoTests"
-  }
+  },
+  "browserslist": [
+    "> 2%"
+  ]
 }
