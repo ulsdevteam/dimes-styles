@@ -12,7 +12,9 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 /// Colors
 /// Do not use color alone to communicate information.
-/// To meet WCAG Level AA, text must have a contrast ratio of at least 4.5:1, or 3:1 for large text (defined as 14p t bold or 18 pt).
+/// To meet WCAG Level AA, text must have a contrast ratio of at least 4.5:1, or 3:1 for large text (defined as 14pt bold or 18pt).
+
+//TODO: Remove color variables that can be replaced with Sass color functions in the component context.
 
 /// Red Orange
 /// @type Color
@@ -64,13 +66,13 @@ $pale-blue: hsl(213, 29%, 94%) !default;
 
 /// Blue Gray
 /// @type Color
-$blue-gray: 	hsla(214, 15%, 53%, 0.3) !default;
+$blue-gray: hsla(214, 15%, 53%, 0.3) !default;
 
 /// Deep Navy
 /// @type Color
 $deep-navy: hsl(214, 49%, 19%) !default;
 
-/// LDark Blue
+/// Dark Blue
 /// @type Color
 $dark-blue: hsl(214, 72%, 24%) !default;
 
@@ -80,7 +82,7 @@ $deep-blue: hsl(214, 70%, 35%);
 
 /// Faded Navy
 /// @type Color
-$faded-navy: 	hsla(215, 49%, 19%, 0.5) !default;
+$faded-navy: hsla(215, 49%, 19%, 0.5) !default;
 
 /// Light Orange
 /// @type Color
@@ -109,7 +111,6 @@ $light-gray: hsla(0, 0%, 0%, 0.15) !default;
 /// Pure Black
 /// @type Color
 $pure-black: hsl(0, 0%, 0%) !default;
-
 
 /// Container's maximum width
 /// @type Length
