@@ -10,25 +10,106 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-/// Copy text color
+/// Colors
+/// Do not use color alone to communicate information.
+/// To meet WCAG Level AA, text must have a contrast ratio of at least 4.5:1, or 3:1 for large text (defined as 14p t bold or 18 pt).
+
+/// Red Orange
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$red-orange: hsl(13, 86%, 60%) !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$burnt-orange: hsl(17, 76%, 48%) !default;
 
-/// Light grey
+/// Red Brown
 /// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+$red-brown: hsl(19, 49%, 44%) !default;
 
-/// Medium grey
+/// Medium Brown
 /// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
+$med-brown: hsl(19, 83%, 34%) !default;
 
-/// Dark grey
+/// Faded Orange
 /// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$faded-orange: hsl(25, 87%, 64%) !default;
+
+/// Peach Orange
+/// @type Color
+$peach-orange: hsl(30, 100%, 80%) !default;
+
+/// Neutral Sand
+/// @type Color
+$neutral-sand: hsl(40, 10%, 88%) !default;
+
+/// Orange Gray
+/// @type Color
+$orange-gray: hsl(45, 6%, 72%) !default;
+
+/// Lighter Gray
+/// @type Color
+$lighter-gray: hsl(60, 5%, 93%) !default;
+
+/// Off White
+/// @type Color
+$off-white: hsl(60, 10%, 96%) !default;
+
+/// Light Blue
+/// @type Color
+$light-blue: hsl(210, 27%, 82%) !default;
+
+/// Pale Blue
+/// @type Color
+$pale-blue: hsl(213, 29%, 94%) !default;
+
+/// Blue Gray
+/// @type Color
+$blue-gray: 	hsla(214, 15%, 53%, 0.3) !default;
+
+/// Deep Navy
+/// @type Color
+$deep-navy: hsl(214, 49%, 19%) !default;
+
+/// LDark Blue
+/// @type Color
+$dark-blue: hsl(214, 72%, 24%) !default;
+
+/// Deep Blue
+/// @type Color
+$deep-blue: hsl(214, 70%, 35%);
+
+/// Faded Navy
+/// @type Color
+$faded-navy: 	hsla(215, 49%, 19%, 0.5) !default;
+
+/// Light Orange
+/// @type Color
+$light-orange: hsl(0, 100%, 95%) !default;
+
+/// Dark Gray
+/// @type Color
+$dark-gray: hsl(0, 0%, 18%) !default;
+
+/// Medium Gray
+/// @type Color
+$med-gray: hsl(0, 0%, 36%) !default;
+
+/// Light Medium Gray
+/// @type Color
+$light-med-gray: hsl(0, 0%, 66%) !default;
+
+/// Pure White
+/// @type Color
+$pure-white: hsl(0, 0%, 100%) !default;
+
+/// Light Gray
+/// @type Color
+$light-gray: hsla(0, 0%, 0%, 0.15) !default;
+
+/// Pure Black
+/// @type Color
+$pure-black: hsl(0, 0%, 0%) !default;
+
 
 /// Container's maximum width
 /// @type Length
