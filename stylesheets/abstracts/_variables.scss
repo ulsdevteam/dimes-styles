@@ -14,7 +14,7 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// Do not use color alone to communicate information.
 /// To meet WCAG Level AA, text must have a contrast ratio of at least 4.5:1, or 3:1 for large text (defined as 14pt bold or 18pt).
 
-//TODO: Remove color variables that can be replaced with Sass color functions in the component context.
+//TODO: Consolidate if possible and remove color variables that can be replaced with Sass color functions in the component context.
 
 /// Red Orange
 /// @type Color
