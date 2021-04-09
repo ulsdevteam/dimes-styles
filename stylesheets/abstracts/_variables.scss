@@ -32,6 +32,10 @@ $red-brown: hsl(19, 49%, 44%) !default;
 /// @type Color
 $med-brown: hsl(19, 83%, 34%) !default;
 
+/// Deep Brown
+/// @type Color
+$deep-brown: hsl(23, 100%, 20%) !default;
+
 /// Faded Orange
 /// @type Color
 $faded-orange: hsl(25, 87%, 64%) !default;
@@ -72,21 +76,25 @@ $blue-gray: hsla(214, 15%, 53%, 0.3) !default;
 /// @type Color
 $deep-navy: hsl(214, 49%, 19%) !default;
 
-/// Dark Blue
-/// @type Color
-$dark-blue: hsl(214, 72%, 24%) !default;
-
 /// Deep Blue
 /// @type Color
 $deep-blue: hsl(214, 70%, 35%);
+
+/// Dark Blue
+/// @type Color
+$dark-blue: hsl(214, 72%, 24%) !default;
 
 /// Faded Navy
 /// @type Color
 $faded-navy: hsla(215, 49%, 19%, 0.5) !default;
 
-/// Light Orange
+/// Pure Black
 /// @type Color
-$light-orange: hsl(0, 100%, 95%) !default;
+$pure-black: hsl(0, 0%, 0%) !default;
+
+/// Light Gray
+/// @type Color
+$light-gray: hsla(0, 0%, 0%, 0.15) !default;
 
 /// Dark Gray
 /// @type Color
@@ -104,13 +112,9 @@ $light-med-gray: hsl(0, 0%, 66%) !default;
 /// @type Color
 $pure-white: hsl(0, 0%, 100%) !default;
 
-/// Light Gray
+/// Light Orange
 /// @type Color
-$light-gray: hsla(0, 0%, 0%, 0.15) !default;
-
-/// Pure Black
-/// @type Color
-$pure-black: hsl(0, 0%, 0%) !default;
+$light-orange: hsl(0, 100%, 95%) !default;
 
 /// Container's maximum width
 /// @type Length

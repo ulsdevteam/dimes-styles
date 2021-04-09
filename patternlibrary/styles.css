@@ -1,0 +1,12 @@
+/* Styles for Pattern Library Pattern Library Development */
+
+/* Colors */
+.swatch {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  width: 210px;
+  height: 210px;
+  border-radius: 3px;
+  vertical-align: top;
+}
