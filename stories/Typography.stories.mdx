@@ -1,0 +1,36 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+import '../stylesheets/main.scss'
+
+<Meta title="Typography" />
+
+# Typography
+
+We use two fonts on our websites.
+
+## Serif
+**Font:** Manuale
+
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+
+<Typeset
+  fontSizes={[
+    12, 14, 18, 24, 36, 72
+  ]}
+  fontWeight={400}
+  fontFamily={"Open Sans"}
+/>
+
+
+## Sans-Serif
+**Font:** Lato
+
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+
+<Typeset
+  fontSizes={[
+    12, 14, 18, 24, 36, 72
+  ]}
+  fontWeight={400}
+  fontFamily={"Lato"}
+/>
