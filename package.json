@@ -42,6 +42,8 @@
     "@storybook/preset-scss": "^1.0.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.2",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.1",
     "sass": "^1.32.8",
     "sass-loader": "^10.0.1",
     "style-loader": "^2.0.0"
