@@ -9,6 +9,9 @@ This project uses [Dart Sass](https://sass-lang.com/dart-sass). Compile SCSS sty
 yarn compile
 ```
 
+## Storybook
+We use [Storybook](https://storybook.js.org/) to help us develop styles for components and provide and interactive UI. To run Storybook locally, run `yarn storybook`. Storybook should open in a new browser tab at `http://localhost:6006`.
+
 ## Tests
 Unit tests have been added to ensure that mixin output and Sass functions are correct. To run tests:
 ```
