@@ -4,9 +4,9 @@ export default {
   title: 'Components/Skip Link',
   component: SkipLink,
   args: {
-    text: 'Skip to main content'
+    text: 'Skip to main content',
+    hidden: false
   }
 }
 
-export const Displayed = (args) => SkipLink({ hidden: false, ...args })
-export const Hidden = (args) => SkipLink({ hidden: true, ...args })
+export const Default = (args) => SkipLink({ ...args })
