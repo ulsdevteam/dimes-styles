@@ -1,0 +1,11 @@
+<nav class="toc {{class}}" role="navigation" aria-label="{{ariaLabel}}">
+  <a href="#documentation" class="visually-hidden">skip navigation</a>
+  {{#if title}}
+  <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
+  {{/if}}
+  <div class="toc__list">
+    {{#each listItems}}
+    <a class="toc__list-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
+    {{/each}}
+  </div>
+</nav>
