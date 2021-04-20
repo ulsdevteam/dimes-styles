@@ -10,6 +10,7 @@ module.exports = {
         actions: false
       }
     },
+    '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
