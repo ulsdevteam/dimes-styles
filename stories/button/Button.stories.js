@@ -8,7 +8,7 @@ import colors from './colors.json'
 import sizes from './sizes.json'
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Buttons',
   component: Button,
   args: {
     text: 'Click me'
