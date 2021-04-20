@@ -9,4 +9,8 @@ export default {
   }
 }
 
-export const Default = (args) => SkipLink({ ...args })
+export const Colors = (args) => {
+  const colors = ['skip-link--blue', 'skip-link--orange']
+  const skipLinks = colors.map(c => SkipLink({ class: c, ...args })).join('')
+  return skipLinks
+}
