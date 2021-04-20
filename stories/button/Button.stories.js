@@ -1,5 +1,3 @@
-import { storiesOf } from '@storybook/html'
-
 import '../../dist/main.min.css'
 
 import Button from './button.handlebars'
