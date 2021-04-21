@@ -4,6 +4,7 @@ module.exports = {
     '../stories/**/*.stories.@(js|jsx|ts|tsx)'
   ],
   addons: [
+    '@storybook/addon-docs',
     {
       name: '@storybook/addon-essentials',
       options: {
@@ -12,7 +13,6 @@ module.exports = {
     },
     '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
-    '@storybook/addon-docs',
     '@storybook/addon-a11y',
     '@storybook/preset-scss'
   ],
