@@ -1,2 +1,2 @@
-<input type="checkbox" class="checkbox {{class}}" id="{{name}}" name="{{name}}">
-<label for="{{name}}" class="checkbox--blue">{{text}}</label>
+<input type="checkbox" class="checkbox {{class}}" id="{{name}}" name="{{name}}"{{#if required}} required{{/if}}>
+<label for="{{name}}" class="checkbox--blue">{{text}}{{#if required}} *{{/if}}</label>

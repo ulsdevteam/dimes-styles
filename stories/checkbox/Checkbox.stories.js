@@ -17,6 +17,13 @@ Colors.args = {
   name: 'subject'
 }
 
+export const Required = (args) => Checkbox(args)
+Required.args = {
+  text: 'Very important checkbox',
+  name: 'value',
+  required: true
+}
+
 export const GroupedCheckboxes = (args) => CheckboxGroup(args)
 GroupedCheckboxes.args = {
   legend: 'Fruits',
