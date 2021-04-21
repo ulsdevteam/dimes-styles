@@ -6,7 +6,7 @@ export default {
   component: Hero,
   args: {
     altText: 'Rockefeller Archive Center',
-    imageUrl: Logo,
+    logoUrl: Logo,
     text: 'The Rockefeller Archive Center is a major repository and research center for the study of philanthropy and its impact throughout the world.'
   }
 }

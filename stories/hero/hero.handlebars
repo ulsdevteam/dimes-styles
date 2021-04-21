@@ -1,10 +1,10 @@
-<header class="hero">
-  <div class="hero__wrapper">
-    <div class="hero__logo">
-      <img alt="{{altText}}" src="{{imageUrl}}">
-    </div>
-    <h1 class="hero__text">
-      {{text}}
-    </h1>
+<div class="hero">
+  <div class="hero__logo">
+    {{#if logoUrl}}
+    <img alt="{{altText}}" src="{{logoUrl}}">
+    {{/if}}
   </div>
-</header>
+  <h1 class="hero__text">
+    {{text}}
+  </h1>
+</div>
