@@ -1,0 +1,34 @@
+<header class="header {{class}}">
+  <div class="container">
+
+    {{# if withBrandImage}}
+      <div class="header__brand header__brand--image">
+        <a href="/" class="header__brand-image">
+          <img alt="Rockefeller Archive Center" src="/assets/img/header_logo_whiteoutline.svg">
+        </a>
+      </div>
+    {{/if}}
+
+    {{#if withBrandText}}
+      <div class="header__brand header__brand--text">
+        <a href="/" class="header__brand-title">{{brandTitle}}</a>
+        <p class="header__brand-subtitle">{{brandSubtitle}}</p>
+      </div>
+    {{/if}}
+
+    {{# if withDropdownItems}}
+      {{> dropdownItems}}
+    {{/if}}
+
+    {{#if withNavItems}}
+      {{> navItems}}
+    {{/if}}
+
+    {{# if withSocialIcons}}
+      <div class="header__social-icons">
+        {{> ../socialIcons/socialIcons}}
+      </div>
+    {{/if}}
+
+  </div>
+</header>
