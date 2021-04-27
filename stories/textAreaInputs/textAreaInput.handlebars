@@ -1,3 +1,3 @@
 <label for="{{name}}">Message{{#if required}} *{{/if}}</label>
-<textarea name="{{name}}" id="{{name}}" rows="5"{{#if invalid}}class="is-invalid" aria-invalide="true" aria-describedby="{{name}}-error"{{/if}}{{#if required}} required{{/if}}></textarea>
+<textarea name="{{name}}" id="{{name}}" rows="5"{{#if invalid}}class="is-invalid" aria-invalid="true" aria-describedby="{{name}}-error"{{/if}}{{#if required}} required{{/if}}></textarea>
 {{#if invalid}}<div id="{{name}}-error" class="input__error">This message must be shorter than 255 characters.</div>{{/if}}
