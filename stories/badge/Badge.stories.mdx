@@ -1,0 +1,16 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './Badge.stories.js';
+import Badge from './badge.handlebars';
+
+<Meta
+  title="Components/Badges"
+  args={{text:'12 matches'}}
+  component={Badge} />
+
+# Badge
+
+Badges are used to highlight brief data elements that do not need labels.
+
+They come in a number of colors:
+
+<Story story={stories.colors} />
