@@ -1,5 +1,3 @@
-import '../../dist/main.min.css'
-
 import Badge from './badge.handlebars'
 import badgeColors from './colors.json'
 
