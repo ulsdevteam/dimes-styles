@@ -1,11 +1,9 @@
 import { Meta, Story } from '@storybook/addon-docs/blocks';
-import * as stories from './Badge.stories.js';
-import Badge from './badge.handlebars';
+import * as badges from './Badge.stories.js';
 
 <Meta
   title="Components/Badges"
-  args={{text:'12 matches'}}
-  component={Badge} />
+  args={{text:'12 matches'}} />
 
 # Badge
 
@@ -32,4 +30,4 @@ No known issues.
 Badges come in blue and orange, which can be produced by adding a `badge--blue`
 or `badge--orange` class to the base `badge` class.
 
-<Story story={stories.colors} />
+<Story story={badges.colors} />
