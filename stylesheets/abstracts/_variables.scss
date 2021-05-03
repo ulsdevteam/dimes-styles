@@ -10,95 +10,72 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-/// Colors
-/// Do not use color alone to communicate information.
-/// To meet WCAG Level AA, text must have a contrast ratio of at least 4.5:1, or 3:1 for large text (defined as 14pt bold or 18pt).
-/// Color names derived from https://www.color-blindness.com/color-name-hue/
+
+// Color names derived from https://www.color-blindness.com/color-name-hue/
 
 //TODO: Consolidate colors by moving to a single hue (for blues and greys) and use consistent Sass color function math to create variations in components.
 
-/// Crusta Orange
-/// @type Color
+// Crusta Orange
 $crusta-orange: hsl(13, 86%, 60%) !default;
 
-/// Flame Orange
-/// @type Color
+// Flame Orange
 $flame-orange: hsl(17, 76%, 48%) !default;
 
-/// Umber Brown
-/// @type Color
+// Umber Brown
 $umber-brown: hsl(17, 87%, 38%) !default;
 
-/// Rust Red
-/// @type Color
+// Rust Red
 $rust-red: hsl(19, 83%, 34%) !default;
 
-/// Maroon Brown
-/// @type Color
+// Maroon Brown
 $maroon-brown: hsl(23, 100%, 20%) !default;
 
-/// Sandy Orange
-/// @type Color
+// Sandy Orange
 $sandy-orange: hsl(25, 87%, 64%) !default;
 
-/// Peach Orange
-/// @type Color
+// Peach Orange
 $peach-orange: hsl(30, 100%, 80%) !default;
 
-/// Wan White Grey
-/// @type Color
+// Wan White Grey
 $wan-white-grey: hsl(40, 10%, 88%) !default;
 
-/// Silver Grey
-/// @type Color
+// Silver Grey
 $silver-grey: hsl(45, 6%, 72%) !default;
 
-/// Desert Grey
-/// @type Color
+// Desert Grey
 $desert-grey: hsl(60, 10%, 96%) !default;
 
-/// Water Blue
-/// @type Color
+// Water Blue
 $water-blue: hsl(210, 27%, 82%) !default;
 
-/// Solitude Blue
-/// @type Color
+// Solitude Blue
 $solitude-blue: hsl(213, 29%, 94%) !default;
 
-/// Regal Blue
-/// @type Color
+// Regal Blue
 $regal-blue: hsl(214, 49%, 19%) !default;
 
-/// Yale Blue
-/// @type Color
+// Yale Blue
 $yale-blue: hsl(214, 70%, 35%);
 
-/// Midnight Blue
-/// @type Color
+// Midnight Blue
 $midnight-blue: hsl(214, 72%, 24%) !default;
 
-/// Black
-/// @type Color
+// Black
 $black: hsl(0, 0%, 0%) !default;
 
-/// Night Grey
-/// @type Color
+// Night Grey
 $night-grey: hsl(0, 0%, 18%) !default;
 
-/// Mortar Grey
-/// @type Color
+// Mortar Grey
 $mortar-grey: hsl(0, 0%, 36%) !default;
 
-/// Dark Grey
-/// @type Color
+// Dark Grey
 $dark-grey: hsl(0, 0%, 66%) !default;
 
-/// White
-/// @type Color
+// White
 $white: hsl(0, 0%, 100%) !default;
 
-/// Rose Violet
-/// @type Color
+// Rose Violet
 $rose-violet: hsl(0, 100%, 95%) !default;
 
 /// Container's maximum width
