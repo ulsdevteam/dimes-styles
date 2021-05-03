@@ -1,13 +1,15 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-sass-guidelines"
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-css-modules"
   ],
   "ignoreFiles": ["*/vendors/*.*"],
   "plugins": ["stylelint-a11y"],
   "rules": {
     "a11y/media-prefers-reduced-motion": true,
     "a11y/no-outline-none": true,
-    "a11y/selector-pseudo-class-focus": true
+    "a11y/selector-pseudo-class-focus": true,
+    "at-rule-no-unknown": null
   }
 }
