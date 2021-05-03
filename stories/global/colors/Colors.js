@@ -3,8 +3,8 @@ import variables from '../../../stylesheets/abstracts/_variables.scss'
 export const colors = {
   crustaOrange: variables.crustaorange,
   flameOrange: variables.flameorange,
-  desertOrange: variables.desertorange,
   rustRed: variables.rustred,
+  umberBrown: variables.umberbrown,
   maroonBrown: variables.maroonbrown,
   sandyOrange: variables.sandyorange,
   peachOrange: variables.peachorange,

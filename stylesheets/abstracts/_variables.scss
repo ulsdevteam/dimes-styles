@@ -25,9 +25,9 @@ $crusta-orange: hsl(13, 86%, 60%) !default;
 /// @type Color
 $flame-orange: hsl(17, 76%, 48%) !default;
 
-/// Desert Orange
+/// Umber Brown
 /// @type Color
-$desert-orange: hsl(19, 49%, 44%) !default;
+$umber-brown: hsl(17, 87%, 38%) !default;
 
 /// Rust Red
 /// @type Color
@@ -125,7 +125,6 @@ $base-url: '/assets/' !default;
   crustaorange: $crusta-orange;
   darkgrey: $dark-grey;
   desertgrey: $desert-grey;
-  desertorange: $desert-orange;
   flameorange: $flame-orange;
   maroonbrown: $maroon-brown;
   midnightblue: $midnight-blue;
@@ -138,6 +137,7 @@ $base-url: '/assets/' !default;
   sandyorange: $sandy-orange;
   silvergrey: $silver-grey;
   solitudeblue: $solitude-blue;
+  umberbrown: $umber-brown;
   wanwhitegrey: $wan-white-grey;
   waterblue: $water-blue;
   white: $white;
