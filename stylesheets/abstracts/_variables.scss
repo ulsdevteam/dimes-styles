@@ -119,3 +119,27 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+:export {
+  crustaOrange: $crusta-orange;
+  flameOrange: $flame-orange;
+  desertOrange: $desert-orange;
+  rustRed: $rust-red;
+  maroonBrown: $maroon-brown;
+  sandyOrange: $sandy-orange;
+  peachOrange: $peach-orange;
+  wanWhiteGrey: $wan-white-grey;
+  silverGrey: $silver-grey;
+  desertGrey: $desert-grey;
+  waterBlue: $water-blue;
+  solitudeBlue: $solitude-blue;
+  regalBlue: $regal-blue;
+  yaleBlue: $yale-blue;
+  midnightBlue: $midnight-blue;
+  black: $black;
+  nightGrey: $night-grey;
+  mortarGrey: $mortar-grey;
+  darkGrey: $dark-grey;
+  white: $white;
+  roseViolet: $rose-violet;
+}
