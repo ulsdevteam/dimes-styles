@@ -1,0 +1,35 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './Hero.stories.js';
+import Logo from '../assets/img/home_page_logo.svg'
+
+<Meta
+  title="Components/Hero"
+  args={{
+    altText: 'Rockefeller Archive Center',
+    logoUrl: Logo,
+    text: 'The Rockefeller Archive Center is a major repository and research center for the study of philanthropy and its impact throughout the world.'
+  }} />
+
+# Hero
+
+A hero is a section of a page which draws attention through the use of large
+images and text.
+
+## When to use
+
+Use a hero on the home page of a web site in order to quickly convey to users
+the purpose of the site and actions that are available to them there.
+
+## Best practices
+
+Always ensure that any images used in this component have alt text applied.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+<Story story={stories.basic} />
