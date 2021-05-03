@@ -10,7 +10,6 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-
 // Color names derived from https://www.color-blindness.com/color-name-hue/
 
 //TODO: Consolidate colors by moving to a single hue (for blues and greys) and use consistent Sass color function math to create variations in components.
