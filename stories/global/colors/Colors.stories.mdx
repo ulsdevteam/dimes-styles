@@ -1,0 +1,57 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+import {colors} from './Colors'
+
+<Meta title="Global/Colors" />
+
+# Colors
+
+The two primary colors are orange and a complimentary navy. The orange matches
+the orange of the Rockefeller Archive Center logo.
+
+<ColorPalette>
+  <ColorItem title="flame-orange" colors={[colors.flameOrange]} />
+  <ColorItem title="yale-blue" colors={[colors.yaleBlue]} />
+</ColorPalette>
+
+## Oranges
+
+<ColorPalette>
+  <ColorItem title="flame-orange" colors={[colors.flameOrange]} />
+  <ColorItem title="crusta-orange" colors={[colors.crustaOrange]} />
+  <ColorItem title="sandy-orange" colors={[colors.sandyOrange]} />
+  <ColorItem title="peach-orange" colors={[colors.peachOrange]} />
+  <ColorItem title="rose-violet" colors={[colors.roseViolet]} />
+</ColorPalette>
+
+## Blues
+
+<ColorPalette>
+  <ColorItem title="water-blue" colors={[colors.waterBlue]} />
+  <ColorItem title="solitude-blue" colors={[colors.solitudeBlue]} />
+  <ColorItem title="regal-blue" colors={[colors.regalBlue]} />
+  <ColorItem title="yale-blue" colors={[colors.yaleBlue]} />
+  <ColorItem title="midnight-blue" colors={[colors.midnightBlue]} />
+</ColorPalette>
+
+## Browns
+
+<ColorPalette>
+  <ColorItem title="$rust-red" colors={[colors.rustRed]} />
+  <ColorItem title="$maroon-brown" colors={[colors.maroonBrown]} />
+  <ColorItem title="desert-orange" colors={[colors.desertOrange]} />
+</ColorPalette>
+
+## Grays
+
+<ColorPalette>
+  <ColorItem title="wan-white-grey" colors={[colors.wanWhiteGrey]} />
+  <ColorItem title="silver-grey" colors={[colors.silverGrey]} />
+  <ColorItem title="desert-grey" colors={[colors.desertGrey]} />
+</ColorPalette>
+
+## Monochrome shades
+
+<ColorPalette>
+  <ColorItem title="Monochrome" colors={[colors.black, colors.nightGrey, colors.mortarGrey, colors.darkGrey, colors.white]} />
+</ColorPalette>
