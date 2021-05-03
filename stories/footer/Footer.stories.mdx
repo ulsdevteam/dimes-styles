@@ -1,0 +1,36 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './Footer.stories.js';
+
+<Meta title="Components/Footer" />
+
+# Footer
+
+A footer provides information about the Rockefeller Archive Center and links to
+key web pages.
+
+## When to use
+
+The footer should be used on all Rockefeller Archive Center web properties.
+
+## Best practices
+
+Determine if you need to add the secondary footer or not; generally this is only
+relevant if the site uses archival data.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Default implementation
+
+<Story story={stories.basic} />
+
+## With secondary footer
+
+On certain sites, the footer also includes a secondary footer, with additional links.
+
+<Story story={stories.withSecondaryFooter} />
