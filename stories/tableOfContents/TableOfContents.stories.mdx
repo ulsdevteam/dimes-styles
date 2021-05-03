@@ -1,0 +1,44 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './TableOfContents.stories.js';
+import listItems from './listItems';
+
+<Meta
+  title="Components/Table of Contents"
+  args={{
+    ariaLabel: 'table of contents',
+    listItems: listItems
+  }} />
+
+# Table of Contents
+
+A table of contents is a navigation element that helps users quickly jump to a
+section of a page.
+
+## When to use
+
+Use on long pages to provide a way for users to quickly scan the page contents
+without having to scroll.
+
+## Best practices
+
+Provide a `role=navigation` attribute to indicate the purpose of this element for assistive technology.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Colors
+The table of contents comes in a variety of colors. Use the `toc--neutral`,
+`toc--blue` and `toc--orange` classes.
+
+<Story story={stories.colors} />
+
+## Adding a title
+
+The table of contents can also have a title:
+
+<Story story={stories.withTitle} />
