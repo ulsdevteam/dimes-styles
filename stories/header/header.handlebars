@@ -1,7 +1,7 @@
 <header class="header {{class}}">
   <div class="container">
 
-    {{# if withBrandImage}}
+    {{# if withImageBrand}}
       <div class="header__brand header__brand--image">
         <a href="/" class="header__brand-image">
           <img alt="Rockefeller Archive Center" src="/assets/img/header_logo_whiteoutline.svg">
@@ -9,7 +9,7 @@
       </div>
     {{/if}}
 
-    {{#if withBrandText}}
+    {{#if withTextBrand}}
       <div class="header__brand header__brand--text">
         <a href="/" class="header__brand-title">{{brandTitle}}</a>
         <p class="header__brand-subtitle">{{brandSubtitle}}</p>

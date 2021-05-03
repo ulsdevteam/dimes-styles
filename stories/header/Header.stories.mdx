@@ -1,0 +1,59 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './Header.stories.js';
+
+<Meta title="Components/Header" />
+
+# Header
+
+The header shows users that they are on a Rockefeller Archive Center website,
+and which service they are using.
+
+## When to use
+
+A version of the header should be used on all Rockefeller Archive Center web properties.
+
+## Best practices
+
+There are a number of variations of the header; see below to select the most
+appropriate one for your use case.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Colors
+
+The header comes in white or navy. Use the `header--white` and `header--navy`
+classes.
+
+<Story story={stories.colors} />
+
+## Branding
+
+The header can have either a simple text brand:
+
+<Story story={stories.withTextBrand} />
+
+Or it can use an image in lieu of text. Make sure the image has appropriate `alt` text:
+
+<Story story={stories.withImageBrand} />
+
+## Navigation
+
+The header can contain navigation items. These can either be simple links:
+
+<Story story={stories.withNavItems} />
+
+Or they can be dropdown menus for more complex navigation:
+
+<Story story={stories.withDropdownItems} />
+
+## Social Media Icons
+
+Social media icons can be added to a header as well.
+
+<Story story={stories.withSocialIcons} />
