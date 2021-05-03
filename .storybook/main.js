@@ -14,7 +14,16 @@ module.exports = {
     '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    '@storybook/preset-scss'
+    {
+      name: '@storybook/preset-scss',
+      options: {
+        cssLoaderOptions: {
+          modules: {
+            compileType: 'icss' // allows use of :export directive
+          }
+        }
+      }
+    }
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
