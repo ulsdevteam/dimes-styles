@@ -1,0 +1,36 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './SkipLink.stories.js';
+
+<Meta
+  title="Components/Skip Link"
+  args={{
+    text: 'Skip to main content',
+    hidden: false
+  }} />
+
+# Skip Link
+
+Use the skip link component to help keyboard-only users skip to the main content
+on a page.
+
+## When to use
+
+All Rockefeller Archive Center web sites must use a skip link in the header.
+
+## Best practices
+
+Use the `visually-hidden` class to hide the skip link until it receives user focus.
+The skip link target may vary depending on your HTML structure.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Colors
+Skip links can be either blue or orange. Use the `skip-link--blue` and `skip-link--orange` classes.
+
+<Story story={stories.colors} />
