@@ -1,13 +1,8 @@
 import Header from './header.handlebars'
-import colors from './colors.json'
+import headerColors from './colors.json'
 
-export default {
-  title: 'Components/Header',
-  component: Header
-}
-
-export const Colors = () => {
-  const headers = colors.map(c => Header({
+export const colors = () => {
+  const headers = headerColors.map(c => Header({
     class: c,
     withBrandText: true,
     brandTitle: 'library.rockarch.org',
@@ -16,33 +11,33 @@ export const Colors = () => {
   return headers
 }
 
-export const WithTextBrand = () => Header(
+export const withTextBrand = () => Header(
   {
-    withBrandText: true,
+    withTextBrand: true,
     brandTitle: 'library.rockarch.org',
     brandSubtitle: 'The Online Bibliographic Catalog of Rockefeller Archive Center'
   }
 )
 
-export const WithImageBrand = () => Header(
+export const withImageBrand = () => Header(
   {
-    withBrandImage: true
+    withImageBrand: true
   }
 )
 
-export const WithNavItems = () => Header(
+export const withNavItems = () => Header(
   {
     withNavItems: true
   }
 )
 
-export const WithDropdownItems = () => Header(
+export const withDropdownItems = () => Header(
   {
     withDropdownItems: true
   }
 )
 
-export const WithSocialIcons = () => Header(
+export const withSocialIcons = () => Header(
   {
     withSocialIcons: true
   }

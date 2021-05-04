@@ -1,31 +1,26 @@
 import Checkbox from './checkbox.handlebars'
 import CheckboxGroup from './checkboxFieldset.handlebars'
-import colors from './colors.json'
-import items from './items.json'
+import checkboxColors from './colors.json'
+import checkboxItems from './items.json'
 
-export default {
-  title: 'Components/Checkboxes',
-  component: Checkbox
-}
-
-export const Colors = (args) => {
-  const badges = colors.map(c => Checkbox({ class: c, ...args })).join('')
+export const colors = (args) => {
+  const badges = checkboxColors.map(c => Checkbox({ class: c, ...args })).join('')
   return badges
 }
-Colors.args = {
+colors.args = {
   text: 'Rural development -- Congresses (2)',
   name: 'subject'
 }
 
-export const Required = (args) => Checkbox(args)
-Required.args = {
+export const required = (args) => Checkbox(args)
+required.args = {
   text: 'Very important checkbox',
   name: 'value',
   required: true
 }
 
-export const GroupedCheckboxes = (args) => CheckboxGroup(args)
-GroupedCheckboxes.args = {
+export const groupedCheckboxes = (args) => CheckboxGroup(args)
+groupedCheckboxes.args = {
   legend: 'Fruits',
-  items: items
+  items: checkboxItems
 }

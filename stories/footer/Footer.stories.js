@@ -1,10 +1,5 @@
 import Footer from './footer.handlebars'
 
-export default {
-  title: 'Components/Footer',
-  component: Footer
-}
+export const basic = () => Footer()
 
-export const Default = () => Footer()
-
-export const WithSecondaryFooter = () => Footer({ showSecondary: true })
+export const withSecondaryFooter = () => Footer({ showSecondary: true })
