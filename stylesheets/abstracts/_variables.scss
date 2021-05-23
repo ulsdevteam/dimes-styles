@@ -2,14 +2,7 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/// Regular font family
-/// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
+// Colors
 // Color names derived from https://www.color-blindness.com/color-name-hue/
 
 //TODO: Consolidate colors by moving to a single hue (for blues and greys) and use consistent Sass color function math to create variations in components.
@@ -77,14 +70,15 @@ $white: hsl(0, 0%, 100%) !default;
 // Rose Violet
 $rose-violet: hsl(0, 100%, 95%) !default;
 
-// Typography
+// Fonts
 $sans-serif-stack: 'Lato', sans-serif !default;
 $serif-stack: 'Manuale', serif !default;
-$font-weight-light: 300 !default;
+
+// Font weight
 $font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
 $font-weight-extra-bold: 800 !default;
-$font-weight-heavy: 900 !default;
+$font-weight-black: 900 !default;
 
 /// Container's maximum width
 /// @type Length
