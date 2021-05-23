@@ -1,7 +1,89 @@
 /**
  * Basic typography style for copy text
  */
+
+// TODO: Convert to relative units using base font size instead of pixels
+
+//Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,800,900|Manuale:400,700');
+
 body {
   color: $night-grey;
-  font: normal 125% / 1.4 $text-font-stack;
+  font-family: $serif-stack;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+  line-height: 26px;
+  margin: 0 0 10px;
+}
+
+strong,
+b {
+  font-family: inherit;
+  font-weight: $font-weight-bold;
+}
+
+em,
+i {
+  font-family: inherit;
+  font-style: italic;
+}
+
+h1 {
+  color: $night-grey;
+  font-family: $serif-stack;
+  font-size: 32px;
+  font-weight: $font-weight-bold;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $regal-blue;
+  font-family: $sans-serif-stack;
+  font-weight: $font-weight-bold;
+  margin: 0;
+}
+
+h2 {
+  border-bottom: 1.5px dotted $regal-blue;
+  font-size: 21px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  padding-bottom: 12px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+h4 {
+  color: $sandy-orange;
+  font-size: 14px;
+}
+
+a {
+  color: $flame-orange;
+  font-weight: $font-weight-bold;
+  text-decoration: underline; // underline by default
+
+  &:hover,
+  &:focus {
+    color: $crusta-orange;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+ul {
+  font-family: $serif-stack;
+  line-height: 23px;
+}
+
+.list--unstyled { //Remove default bullet and left indent from unordered list
+  list-style: none;
+  padding-left: 0;
 }
