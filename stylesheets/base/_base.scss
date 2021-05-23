@@ -20,16 +20,3 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
-/**
- * Basic styles for links
- */
-a {
-  color: $flame-orange;
-  text-decoration: none;
-
-  @include on-event {
-    color: $crusta-orange;
-    text-decoration: underline;
-  }
-}

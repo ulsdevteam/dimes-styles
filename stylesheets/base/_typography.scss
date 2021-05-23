@@ -28,6 +28,41 @@ i {
   font-style: italic;
 }
 
+/**
+ * Links
+ */
+
+a {
+  color: $flame-orange;
+  font-weight: $font-weight-bold;
+  text-decoration: underline; // underline by default
+
+  @include on-event {
+    color: $crusta-orange;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+/**
+ * Lists
+ */
+
+ul {
+  font-family: $serif-stack;
+  line-height: 23px;
+}
+
+//Remove default bullet and left indent from unordered list
+.list--unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/**
+ * Headings
+ */
+
 h1 {
   color: $night-grey;
   font-family: $serif-stack;
@@ -63,27 +98,4 @@ h3 {
 h4 {
   color: $sandy-orange;
   font-size: 14px;
-}
-
-a {
-  color: $flame-orange;
-  font-weight: $font-weight-bold;
-  text-decoration: underline; // underline by default
-
-  &:hover,
-  &:focus {
-    color: $crusta-orange;
-    cursor: pointer;
-    text-decoration: none;
-  }
-}
-
-ul {
-  font-family: $serif-stack;
-  line-height: 23px;
-}
-
-.list--unstyled { //Remove default bullet and left indent from unordered list
-  list-style: none;
-  padding-left: 0;
 }
