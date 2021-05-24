@@ -1,0 +1,76 @@
+import { Meta, Story, Typeset } from '@storybook/addon-docs/blocks';
+import * as headingsStories from './Headings.stories.js';
+import * as linkStories from './Links.stories.js';
+
+<Meta title="Global/Typography" />
+
+# Typography
+
+## Fonts
+We use two fonts on our websites for serif and sans serif text.
+
+### Serif
+**Font:** Manuale
+
+**Weights:** 400(regular), 700(bold)
+
+<Typeset
+  fontFamily={"Manuale"}
+  fontWeight={400}
+  fontSizes={[
+    12, 14, 18, 24, 36, 72
+  ]}
+/>
+
+
+### Sans-Serif
+**Font:** Lato
+
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(heavy)
+
+<Typeset
+  fontFamily={"Lato"}
+  fontWeight={400}
+  fontSizes={[
+    12, 14, 18, 24, 36, 72
+  ]}
+/>
+
+## Headings
+
+Heading elements break up the content of the page into related sections of information to create
+meaningful structure for page content, not just for visual style.
+
+### Best practices
+
+Use only one `h1` element per page, place heading in sequential order, and do not skip heading levels.
+
+A bottom border can be added with the `heading--bottom-border` class.
+
+### Known issues
+
+There are currently only partially defined styles for `h5` and `h6`.
+
+<Story story={headingsStories.headings} />
+
+## Links
+Links connect to URLS as from other web pages, files, email, or locations in the same page.
+
+### Best practices
+
+Link text should be descriptive of its target. For generic link text like "read more", use
+`aria-labelledby` to link to associated titles or `aria-label` to provide more specific
+descriptive text.
+
+For a bolder link, use the `link--bold` class.
+
+Links are underlined by default. Remove underlines by using the `link--no-underline` class
+only if the context on the page indicates that the text is a link even without the
+underline. For example, links in headings or a table of contents may not need underlines
+if users can understand that they're links.
+
+### Known issues
+
+No known issues.
+
+<Story story={linkStories.links} />
