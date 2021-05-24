@@ -77,6 +77,15 @@ $white: hsl(0, 0%, 100%) !default;
 // Rose Violet
 $rose-violet: hsl(0, 100%, 95%) !default;
 
+// Typography
+$sans-serif-stack: 'Lato', sans-serif !default;
+$serif-stack: 'Manuale', serif !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extra-bold: 800 !default;
+$font-weight-heavy: 900 !default;
+
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
