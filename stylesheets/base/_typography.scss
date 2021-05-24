@@ -34,7 +34,6 @@ i {
 
 a {
   color: $flame-orange;
-  font-weight: $font-weight-bold;
   text-decoration: underline; // underline by default
 
   @include on-event {
@@ -42,6 +41,14 @@ a {
     cursor: pointer;
     text-decoration: none;
   }
+}
+
+.link--bold {
+  font-weight: $font-weight-bold;
+}
+
+.link--no-underline {
+  text-decoration: none;
 }
 
 /**
