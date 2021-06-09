@@ -2,10 +2,9 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+// Event wrapper
+// Original tweet from Harry Roberts https://twitter.com/csswizardry/status/478938530342006784
+// $self [false] - Whether or not to include current selector
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -25,9 +24,8 @@
   }
 }
 
-/// Make a context based selector a little more friendly
-/// @author Kitty Giraudel
-/// @param {String} $context
+// Make a context based selector a little more friendly from Kitty Giraudel
+// $context is a string value
 @mixin when-inside($context) {
   #{$context} & {
     @content;

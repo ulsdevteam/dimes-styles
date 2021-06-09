@@ -1,12 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains basic typography styles for copy text
+// -----------------------------------------------------------------------------
+
 /**
- * Basic typography style for copy text
+ * Import Google fonts
  */
-
-// TODO: Convert to relative units using base font size instead of pixels
-
-//Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,800,900|Manuale:400,700');
 
+/**
+ * Apply basic text styles for body and bold/italic elements
+ */
 body {
   color: $night-grey;
   font-family: $serif-stack;
@@ -32,21 +35,33 @@ i {
  * Links
  */
 
+/** Links are underlined by default
+ * On link focus, hover, and active events:
+ * 1. Change the color
+ * 2. Show mouse cursor as pointer on hover
+ * 3. Remove link underline
+ */
 a {
   color: $flame-orange;
-  text-decoration: underline; // underline by default
+  text-decoration: underline;
 
   @include on-event {
-    color: $crusta-orange;
-    cursor: pointer;
-    text-decoration: none;
+    color: $crusta-orange; /* 1 */
+    cursor: pointer; /* 2 */
+    text-decoration: none; /* 3 */
   }
 }
 
+/**
+ * Make a link bold
+ */
 .link--bold {
   font-weight: $font-weight-bold;
 }
 
+/**
+ * Underline a link
+ */
 .link--no-underline {
   text-decoration: none;
 }
@@ -60,7 +75,9 @@ ul {
   line-height: 23px;
 }
 
-//Remove default bullet and left indent from unordered list
+/**
+ * Remove the default bullet and left indent from an unordered list
+ */
 .list--unstyled {
   list-style: none;
   padding-left: 0;
@@ -106,7 +123,9 @@ h4 {
   font-size: 14px;
 }
 
-// Add a dotted bottom border to text
+/**
+ * Add a dotted bottom border to heading text
+ */
 .heading--dotted-border {
   border-bottom: 1.5px dotted $regal-blue;
 }
