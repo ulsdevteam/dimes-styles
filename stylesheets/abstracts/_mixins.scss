@@ -33,3 +33,9 @@
     @content;
   }
 }
+
+// Default focus styles for consistency across browsers and improved accessibility.
+@mixin focus-default {
+  outline: solid 2px $mortar-grey;
+  outline-offset: 2px;
+}
