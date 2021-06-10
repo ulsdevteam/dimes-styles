@@ -60,19 +60,20 @@ a {
 }
 
 /**
- * Underline a link
- */
-.link--no-underline {
-  text-decoration: none;
-}
-
-/**
  * Lists
  */
 
 ul {
   font-family: $serif-stack;
   line-height: 23px;
+}
+
+/**
+ * Remove the default bullet and left indent from an unordered list
+ */
+.list--unstyled {
+  list-style: none;
+  padding-left: 0;
 }
 
 /**
