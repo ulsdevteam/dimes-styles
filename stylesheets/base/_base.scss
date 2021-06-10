@@ -20,3 +20,13 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+/**
+ * Apply default focus styles to buttons and links. Where these styles are
+ * not sufficient based on background color or other factors, they can be overridden at the
+ * component level.
+ */
+button:focus,
+a:focus {
+  @include focus-default;
+}
