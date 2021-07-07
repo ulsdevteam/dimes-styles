@@ -80,18 +80,16 @@ $font-weight-bold: 700 !default;
 $font-weight-extra-bold: 800 !default;
 $font-weight-heavy: 900 !default;
 
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
+//Neat grid
+$gutters-default: 15px !default;
 
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+$neat-grid: (
+  gutter: $gutters-default
 ) !default;
+
+// Breakpoints map
+$break-md: 580px !default;
+$break-lg: 1024px !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

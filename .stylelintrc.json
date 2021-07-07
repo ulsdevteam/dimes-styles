@@ -4,7 +4,7 @@
     "stylelint-config-sass-guidelines",
     "stylelint-config-css-modules"
   ],
-  "ignoreFiles": ["*/vendors/*.*"],
+  "ignoreFiles": ["*/vendors/**/**/**.*"],
   "plugins": ["stylelint-a11y"],
   "rules": {
     "a11y/media-prefers-reduced-motion": true,

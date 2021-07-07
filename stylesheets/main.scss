@@ -7,7 +7,9 @@
   'abstracts/mixins';
 
 // 2. Vendors
-@import 'vendors/normalize';
+@import
+  'vendors/normalize',
+  'vendors/neat/neat';
 
 // 3. Base stuff
 @import
