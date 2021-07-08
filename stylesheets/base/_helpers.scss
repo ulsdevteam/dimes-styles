@@ -12,18 +12,29 @@
 }
 
 /**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
+ * Main content containers and wrapper
+ * 1. Use Neat grid
+ * 2. Use default gutter values for margins
+ * 3. Calculate width
+ * 4. Make the container full width
  */
 .container {
-  margin-left: auto; /* 2 */
-  margin-right: auto; /* 2 */
-  max-width: $max-width; /* 1 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
-  width: 100%; /* 1 */
+  @include grid-container; /* 1 */
+
+  margin-left: $gutters-default; /* 2 */
+  margin-right: $gutters-default; /* 2 */
+  width: calc(100% - (#{$gutters-default}) * 2); /* 3 */
+}
+
+.container--full-width {
+  @include grid-container;
+
+  width: 100%; /* 4 */
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 /**
@@ -52,4 +63,8 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.visually-hidden {
+  @include visually-hidden;
 }

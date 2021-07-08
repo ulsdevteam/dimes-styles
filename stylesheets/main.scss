@@ -7,7 +7,9 @@
   'abstracts/mixins';
 
 // 2. Vendors
-@import 'vendors/normalize';
+@import
+  'vendors/normalize',
+  'vendors/neat/neat';
 
 // 3. Base stuff
 @import
@@ -23,7 +25,8 @@
 // 5. Components
 @import
   'components/button',
-  'components/badge';
+  'components/badge',
+  'components/icon';
 
 // 6. Page-specific styles
 @import
