@@ -1,4 +1,4 @@
-import TextareaInput from './textareaInput.handlebars'
+import TextareaInput from './textareaInputs.handlebars'
 
 export const basic = (args) => TextareaInput(args)
 
