@@ -2,7 +2,7 @@
 // This file contains all styles related to icons
 // -----------------------------------------------------------------------------
 
-.material-icons {
+.material-icon {
   direction: ltr;
   display: inline-block;
   font-family: $icons;
@@ -17,4 +17,12 @@
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+.material-icon--space-before {
+  margin-left: 3px;
+}
+
+.material-icon--space-after {
+  margin-right: 3px;
 }
