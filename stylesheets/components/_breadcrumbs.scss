@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the breadcrumbs component
+// -----------------------------------------------------------------------------
+
+.rac-breadcrumb {
+  background-color: $off-white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 80px;
+}
+
+.rac-breadcrumb ol {
+  @media screen and (min-width: $break-md) {
+    @include grid-column(12);
+  }
+
+  @media screen and (min-width: $break-lg) {
+    @include grid-column(8);
+    @include grid-push(2);
+
+    padding-left: $gutters-default;
+  }
+}
+
+.rac-breadcrumb li,
+a {
+  color: $med-gray;
+  font-family: $sans-serif-stack;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.075em;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.rac-breadcrumb-item {
+  display: inline-block;
+  padding-left: 0.5rem;
+
+  &::before {
+    content: '/';
+    display: inline-block;
+    padding-right: 0.5rem;
+  }
+}
