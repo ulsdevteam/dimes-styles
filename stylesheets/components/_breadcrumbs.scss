@@ -2,27 +2,43 @@
 // This file contains all styles related to the breadcrumbs component
 // -----------------------------------------------------------------------------
 
+/**
+ * Class for breadcrumbs content block.
+ * 1. Allow flex item to wrap into multiple lines on small screens.
+ * 2. Center content within the specified number of grid columns.
+ * 3. Remove default ordered list numbers that would otherwise be displayed.
+ */
 .breadcrumbs {
   background-color: $desert-grey;
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin-bottom: 80px;
+  flex-wrap: wrap; /* 1 */
+  justify-content: center; /* 2 */
+  list-style: none; /* 3 */
 }
 
+/**
+ * Class to adjust the layout of the breadcrumbs list based on screen size
+ * 1. When the screen is smaller than the medium breakpoint width, use a 12-column grid.
+ * 2. When the screen is larger than the large breakpoint, use an 8-column grid.
+ * 3. When the screen is larger than the large breakpoint, push the list to the left 2 columns by changing its left margin.
+ * 4. Remove default ordered list numbers that would otherwise be displayed.
+ */
 .breadcrumbs ol {
   @media screen and (min-width: $break-md) {
-    @include grid-column(12);
+    @include grid-column(12); /* 1 */
   }
 
   @media screen and (min-width: $break-lg) {
-    @include grid-column(8);
-    @include grid-push(2);
+    @include grid-column(8); /* 2 */
+    @include grid-push(2); /* 3 */
 
-    padding-left: $gutters-default;
+    padding-left: $gutters-default; /* 4 */
   }
 }
 
+/**
+ * Class to specify the color and typography for both the breadcrumb links and current page item.
+ */
 .breadcrumbs__item,
 .breadcrumbs__link {
   color: $mortar-grey;
@@ -34,11 +50,17 @@
   text-transform: uppercase;
 }
 
+/**
+ * Class to define the layout and spacing of the breadcrumbs items.
+ * 1. Layout items horizontally within their containing block.
+ * 2. Specify space between items.
+ * 3. Specify the layout and spacing of the "/" character that comes before each item.
+ */
 .breadcrumbs__item {
-  display: inline-block;
-  padding-left: 8px;
+  display: inline-block; /* 1 */
+  padding-left: 8px; /* 2 */
 
-  &::before {
+  &::before { /* 3 */
     content: '/';
     display: inline-block;
     padding-right: 8px;
