@@ -34,7 +34,7 @@ $modal-header-height: 52px;
 .modal {
   background-color: $white;
   border: 1px solid $night-grey;
-  border-radius: 3px;
+  border-radius: $border-radius-default;
   bottom: $modal-content-margin;
   font-family: $sans-serif-stack;
   left: $modal-content-margin;
