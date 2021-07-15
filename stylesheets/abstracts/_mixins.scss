@@ -37,3 +37,12 @@
   outline: solid 2px $mortar-grey;
   outline-offset: 2px;
 }
+
+/**
+* Adds default transition unless users have set a preference for reduced motion.
+**/
+@mixin transition-default {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: all 0.2s ease;
+  }
+}
