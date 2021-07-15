@@ -37,3 +37,67 @@
   outline: solid 2px $mortar-grey;
   outline-offset: 2px;
 }
+
+/**
+* Adds default transition unless users have set a preference for reduced motion.
+**/
+@mixin transition-default {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: all 0.2s ease;
+  }
+}
+
+/**
+* Mixins for responsive media queries.
+**/
+@mixin md-up {
+  @media screen and (min-width: $break-md) { @content; }
+}
+
+@mixin lg-up {
+  @media screen and (min-width: $break-lg) { @content; }
+}
+
+/**
+* Shows element only on medium or larger screens
+**/
+@mixin show-on-md-up {
+  display: none;
+
+  @include md-up {
+    display: inherit;
+  }
+}
+
+/**
+* Hides element on medium or larger screens
+**/
+@mixin hide-on-md-up {
+  display: inherit;
+
+  @include md-up {
+    display: none;
+  }
+}
+
+/**
+* Shows element only on large screens
+**/
+@mixin show-on-lg-up {
+  display: none;
+
+  @include lg-up {
+    display: inherit;
+  }
+}
+
+/**
+* Hides element only on large screens
+**/
+@mixin hide-on-lg-up {
+  display: inherit;
+
+  @include lg-up {
+    display: none;
+  }
+}
