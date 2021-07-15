@@ -78,7 +78,9 @@
 }
 
 /**
-* Mixins for responsive media queries.
+* Mixins for responsive media queries. These mixins presume a mobile-first approach:
+* styles are developed for mobile devices and modified as necessary for larger
+* screens (rather than the other way around).
 **/
 @mixin md-up {
   @media screen and (min-width: $break-md) { @content; }
