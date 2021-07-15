@@ -5,35 +5,12 @@
 /**
  * Class for breadcrumbs content block.
  * 1. Allow flex item to wrap into multiple lines on small screens.
- * 2. Center content within the specified number of grid columns.
- * 3. Remove default ordered list numbers that would otherwise be displayed.
+ * 2. Remove default ordered list numbers that would otherwise be displayed.
  */
 .breadcrumbs {
-  background-color: $desert-grey;
   display: flex;
   flex-wrap: wrap; /* 1 */
-  justify-content: center; /* 2 */
-  list-style: none; /* 3 */
-}
-
-/**
- * Class to adjust the layout of the breadcrumbs list based on screen size
- * 1. When the screen is smaller than the medium breakpoint width, use a 12-column grid.
- * 2. When the screen is larger than the large breakpoint, use an 8-column grid.
- * 3. When the screen is larger than the large breakpoint, push the list to the left 2 columns by changing its left margin.
- * 4. Remove default ordered list numbers that would otherwise be displayed.
- */
-.breadcrumbs ol {
-  @media screen and (min-width: $break-md) {
-    @include grid-column(12); /* 1 */
-  }
-
-  @media screen and (min-width: $break-lg) {
-    @include grid-column(8); /* 2 */
-    @include grid-push(2); /* 3 */
-
-    padding-left: $gutters-default; /* 4 */
-  }
+  list-style: none; /* 2 */
 }
 
 /**
