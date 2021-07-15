@@ -46,3 +46,90 @@
     transition: all 0.2s ease;
   }
 }
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/e460abb30cf2fef924c64ec1f7de8e3f8c23452a/dist/css/style.css#L103-L123
+ */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+* Show element when it receives user focus
+**/
+@mixin show-on-focus {
+  &:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+    z-index: 1000;
+  }
+}
+
+/**
+* Mixins for responsive media queries. These mixins presume a mobile-first approach:
+* styles are developed for mobile devices and modified as necessary for larger
+* screens (rather than the other way around).
+**/
+@mixin md-up {
+  @media screen and (min-width: $break-md) { @content; }
+}
+
+@mixin lg-up {
+  @media screen and (min-width: $break-lg) { @content; }
+}
+
+/**
+* Shows element only on medium or larger screens
+**/
+@mixin show-on-md-up {
+  display: none;
+
+  @include md-up {
+    display: inherit;
+  }
+}
+
+/**
+* Hides element on medium or larger screens
+**/
+@mixin hide-on-md-up {
+  display: inherit;
+
+  @include md-up {
+    display: none;
+  }
+}
+
+/**
+* Shows element only on large screens
+**/
+@mixin show-on-lg-up {
+  display: none;
+
+  @include lg-up {
+    display: inherit;
+  }
+}
+
+/**
+* Hides element only on large screens
+**/
+@mixin hide-on-lg-up {
+  display: inherit;
+
+  @include lg-up {
+    display: none;
+  }
+}
