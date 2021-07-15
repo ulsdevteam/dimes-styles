@@ -1,0 +1,140 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+/**
+* Mixin for text used in cards
+**/
+@mixin card-text {
+  color: $night-grey;
+  font-family: $sans-serif-stack;
+  font-size: 15px;
+  font-weight: $font-weight-normal;
+  margin-top: 8px;
+
+  @include lg-up {
+    margin-top: 10px;
+  }
+}
+
+/**
+* Mixin for title text used in cards
+**/
+@mixin card-title-text {
+  @include card-text;
+
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  margin-top: 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $night-grey;
+    text-decoration: none;
+  }
+}
+
+/**
+* Mixin for flex styles used in all card elements
+**/
+@mixin card-element-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/**
+* Styles the wrapper for the cards, which should be either a ul or an ol.
+**/
+.card-list {
+  @include card-element-flex;
+
+  padding: 0;
+}
+
+/**
+* Base card styles
+* 1. Relative positioning is necessary in order to make entire card clickable.
+* 2. Only use transition if users have not declared a preference for reduced motion.
+**/
+.card {
+  @include card-element-flex;
+
+  align-items: flex-start;
+  background-color: $desert-grey;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px $silver-grey, 0 0 4px 0 lighten($silver-grey, 5%);
+  box-sizing: border-box;
+  margin-bottom: $gutters-default;
+  padding: 26px 20px;
+  position: relative; /* 1 */
+
+  @include md-up {
+    min-height: 210px;
+    padding: 32px 20px;
+  }
+
+  @include lg-up {
+    min-height: 220px;
+    padding: 32px 26px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 2px $crusta-orange, 0 0 8px 2px lighten($silver-grey, 10%);
+
+    @media screen and (prefers-reduced-motion: no-preference) { /* 2 */
+      transition: $transition-default;
+    }
+  }
+}
+
+/**
+* Styles the card body, which contains the title and body text.
+* 1. Pushes content to the top of the card body.
+**/
+.card__body {
+  @include card-element-flex;
+
+  align-self: flex-start; /* 1 */
+  width: 100%;
+}
+
+/**
+* Styles the card footer, which contains footer text.
+* 1. Pushes content to the bottom of the footer.
+**/
+.card__footer {
+  @include card-element-flex;
+
+  align-self: flex-end; /* 1 */
+  padding-top: 22px;
+  width: 100%;
+}
+
+/**
+* Styles for card titles.
+* 1. Creates a pseudo element which makes the entire card clickable.
+* 2. Ensures that the card title will always be on a line by itself.
+**/
+.card__title {
+  @include card-title-text;
+
+  width: 100%; /* 2 */
+  &::after { /* 1 */
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.card__body-text {
+  @include card-text;
+}
+
+.card__footer-text {
+  @include card-text;
+}
