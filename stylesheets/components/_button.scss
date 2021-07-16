@@ -134,6 +134,12 @@
   background-color: transparent;
   border: 1px solid $dark-grey;
   color: $mortar-grey;
+
+  &:hover,
+  &:focus {
+    border-color: darken($dark-grey, 20%);
+    color: darken($mortar-grey, 20%);
+  }
 }
 
 .btn--gray {
