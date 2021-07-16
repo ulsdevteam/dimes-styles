@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component
+// -----------------------------------------------------------------------------
+
+.pagination__list {
+  font-family: $sans-serif-stack;
+  list-style: none;
+  padding-left: 0;
+
+  @include md-up {
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .material-icons {
+    font-size: 23px;
+    line-height: 23px;
+    margin-bottom: 3px;
+    pointer-events: unset;
+  }
+}
+
+.pagination__page,
+.pagination__break {
+  display: inline-block;
+  padding: 0 5px;
+
+  @include lg-up {
+    padding: 0 7px;
+  }
+}
+
+.pagination__button {
+  display: inline-block;
+}
+
+.pagination__page a,
+.pagination__break a {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: normal;
+  margin: 0;
+}
+
+.page__active a {
+  color: $night-grey;
+  cursor: default;
+}
+
+.pagination__button a:hover,
+.pagination__button a:focus,
+.pagination__page a:hover,
+.pagination__page a:focus,
+.pagination__break a:hover,
+.pagination__break a:focus {
+  text-decoration: underline;
+}
+
+.page__active a:hover,
+.page__active a:focus {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: none;
+}
+
+.pagination__button.disabled a {
+  color: $night-grey;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    cursor: inherit;
+    text-decoration: none;
+  }
+}
