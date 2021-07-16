@@ -101,6 +101,8 @@ $break-lg: 1024px !default;
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
 
+$transition-default: all 0.2s ease;
+
 :export {
   black: $black;
   crustaorange: $crusta-orange;
