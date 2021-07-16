@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the breadcrumbs component
+// -----------------------------------------------------------------------------
+
+/**
+ * Class for breadcrumbs content block.
+ * 1. Allow flex item to wrap into multiple lines on small screens.
+ * 2. Remove default ordered list numbers that would otherwise be displayed.
+ */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap; /* 1 */
+  list-style: none; /* 2 */
+}
+
+/**
+ * Styles to specify the color and typography for both the breadcrumb links and current page item.
+ */
+.breadcrumbs__item,
+.breadcrumbs__link {
+  color: $mortar-grey;
+  font-family: $sans-serif-stack;
+  font-size: 11px;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.75px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/**
+ * Class to define the layout and spacing of the breadcrumbs items.
+ * 1. Layout items horizontally within their containing block.
+ * 2. Specify space between items.
+ * 3. Specify the layout and spacing of the "/" character that comes before each item.
+ */
+.breadcrumbs__item {
+  display: inline-block; /* 1 */
+  padding-left: 8px; /* 2 */
+
+  &::before { /* 3 */
+    content: '/';
+    display: inline-block;
+    padding-right: 8px;
+  }
+}
