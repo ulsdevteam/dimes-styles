@@ -1,3 +1,180 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+/**
+* Defines base styles for buttons.
+**/
+.btn {
+  @include transition-default;
+
+  border-radius: $border-radius-default;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $sans-serif-stack;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &:disabled {
+    cursor: unset;
+    opacity: 0.7;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/**
+* Styles for buttons which take up the full width of their parent element.
+**/
+.btn--block {
+  display: flex;
+  width: 100%;
+}
+
+/**
+* Styles for button sizes. Font sizes and padding are adjusted for each size.
+**/
+.btn--sm {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 8px 10px;
+
+  .material-icon {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.btn--md {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 13px 14px;
+
+  .material-icon {
+    font-size: 20px;
+    line-height: 15px;
+  }
+}
+
+.btn--lg {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 18px;
+
+  .material-icon {
+    font-size: 20px;
+    line-height: 17px;
+  }
+}
+
+/**
+* Styles for button colors. Sets background, border and text color, and adjusts
+* each on hover and/or focus.
+**/
+.btn--blue {
+  background-color: $yale-blue;
+  border-color: $yale-blue;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: darken($yale-blue, 10%);
+    border-color: darken($yale-blue, 10%);
+    color: $white;
+  }
+}
+
+.btn--light-blue {
+  background-color: $solitude-blue;
+  border-color: $regal-blue;
+  color: $regal-blue;
+
+  &:hover,
+  &:focus {
+    background-color: darken($solitude-blue, 10%);
+    color: $regal-blue;
+  }
+}
+
+.btn--navy {
+  background-color: $regal-blue;
+  border-color: $regal-blue;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($regal-blue, 10%);
+    border-color: lighten($regal-blue, 10%);
+    color: $white;
+  }
+}
+
+.btn--orange {
+  background-color: $flame-orange;
+  border-color: $flame-orange;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: darken($flame-orange, 10%);
+    border-color: darken($flame-orange, 10%);
+    color: $desert-grey;
+  }
+}
+
+.btn--transparent {
+  background-color: transparent;
+  border: 1px solid $dark-grey;
+  color: $mortar-grey;
+
+  &:hover,
+  &:focus {
+    border-color: darken($dark-grey, 20%);
+    color: darken($mortar-grey, 20%);
+  }
+}
+
+.btn--gray {
+  background-color: $desert-grey;
+  border-color: $dark-grey;
+  color: $mortar-grey;
+
+  &:hover,
+  &:focus {
+    background-color: darken($desert-grey, 5%);
+    color: $mortar-grey;
+  }
+}
+
+.btn--dark-gray {
+  background-color: $dark-grey;
+  border-color: $dark-grey;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    background-color: darken($dark-grey, 5%);
+    border-color: darken($dark-grey, 5%);
+    color: $black;
+  }
+}
+
+.btn--black {
+  background-color: $black;
+  border-color: $white;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($black, 20%);
+    color: $white;
+  }
+}
