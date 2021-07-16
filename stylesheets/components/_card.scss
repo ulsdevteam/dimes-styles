@@ -44,7 +44,7 @@
 }
 
 /**
-* Styles the wrapper for the cards, which should be either a ul or an ol.
+* Styles the wrapper for the cards, which should be a ul element.
 **/
 .card-list {
   @include card-element-flex;
