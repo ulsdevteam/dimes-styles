@@ -1,9 +1,10 @@
 [
-  "btn-blue",
-  "btn--navy",
-  "btn--orange",
-  "btn--transparent",
-  "btn--gray",
-  "btn--dark-gray",
-  "btn--black"
+  "btn--sm btn--light-blue",
+  "btn--sm btn--blue",
+  "btn--sm btn--navy",
+  "btn--sm btn--orange",
+  "btn--sm btn--transparent",
+  "btn--sm btn--gray",
+  "btn--sm btn--dark-gray",
+  "btn--sm btn--black"
 ]
