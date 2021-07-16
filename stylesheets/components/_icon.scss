@@ -2,7 +2,7 @@
 // This file contains all styles related to icons
 // -----------------------------------------------------------------------------
 
-.material-icons {
+@mixin material-icon {
   direction: ltr;
   display: inline-block;
   font-family: $icons;
@@ -17,4 +17,8 @@
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+.material-icons {
+  @include material-icon;
 }

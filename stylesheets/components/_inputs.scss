@@ -1,0 +1,202 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to form inputs
+// -----------------------------------------------------------------------------
+
+/**
+* Mixin for input text
+**/
+@mixin input-text {
+  color: $night-grey;
+  font-family: $sans-serif-stack;
+  font-size: 14px;
+}
+
+/**
+* Mixin for placeholder text
+**/
+@mixin placeholder-text {
+  color: $mortar-grey;
+  font-size: 18px;
+}
+
+/**
+* Mixin for input placeholders
+**/
+@mixin placeholder {
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    @include input-text;
+    @include placeholder-text;
+  }
+
+  &::-ms-input-placeholder { /* Edge - only work on some properties */
+    @include input-text;
+    @include placeholder-text;
+  }
+
+  &:-ms-input-placeholder { /* IE 10+ */
+    @include input-text;
+    @include placeholder-text;
+  }
+}
+
+/**
+* Base styles for all inputs
+**/
+input,
+fieldset,
+select,
+textarea {
+  @include input-text;
+  @include placeholder;
+}
+
+fieldset {
+  border: 1px solid $night-grey;
+}
+
+label {
+  @include input-text;
+}
+
+/**
+* Helper class to make form labels visually hidden but still available to screen readers
+**/
+.hide-label {
+  @include visually-hidden;
+}
+
+.input__error {
+  background-color: lighten($flame-orange, 45%);
+  border: 1px solid $flame-orange;
+  border-radius: 3px;
+  color: $night-grey;
+  display: block;
+  font-family: $sans-serif-stack;
+  font-size: 13px;
+  font-style: italic;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/**
+* Styles for checkboxes
+* 1. Moves the actual checkbox off the screen.
+* 2. Expands the label so pseudo elements can be added.
+* 3. Unchecked checkboxes.
+* 4. Checked checkboxes.
+* 5. Transition between checked and unchecked checkboxes.
+**/
+[type=checkbox] {
+  margin-right: 5px;
+}
+
+.checkbox:focus + label::before {
+  outline: 2px solid $mortar-grey;
+}
+
+.checkbox:disabled + label::before {
+  background-color: $wan-white-grey;
+  border: 1px solid $mortar-grey;
+}
+
+.checkbox:disabled + label {
+  color: $mortar-grey;
+  cursor: not-allowed;
+}
+
+.checkbox:not(:checked),
+.checkbox:checked { /* 1 */
+  left: -9999px;
+  position: absolute;
+}
+
+.checkbox:not(:checked) + label,
+.checkbox:checked + label { /* 2 */
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+
+.checkbox:not(:checked) + label::before,
+.checkbox:checked + label::before { /* 3 */
+  content: '';
+  height: 16px;
+  left: 0;
+  margin-left: 3px;
+  position: absolute;
+  top: 0;
+  width: 16px;
+}
+
+.checkbox:not(:checked) + label::after,
+.checkbox:checked + label::after { /* 4 */
+  @include transition-default;
+
+  content: '\2713';
+  font-family: monospace;
+  font-size: 16px;
+  height: 16px;
+  left: 0;
+  line-height: 16px;
+  margin-left: 3px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 16px;
+}
+
+[type='checkbox']:not(:checked) + label::after { /* 5 */
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type='checkbox']:checked + label::after { /* 5 */
+  opacity: 1;
+  transform: scale(1);
+}
+
+/**
+* Styles for checkbox colors
+**/
+.checkbox--blue:not(:checked) + label::before,
+.checkbox--blue:checked + label::before {
+  background-color: $white;
+  border: 1px solid $regal-blue;
+}
+
+.checkbox--blue:not(:checked) + label::after,
+.checkbox--blue:checked + label::after {
+  background-color: $yale-blue;
+  border: 1px solid $yale-blue;
+  color: $white;
+}
+
+.checkbox--orange:not(:checked) + label::before,
+.checkbox--orange:checked + label::before {
+  background-color: $white;
+  border: 1px solid $rust-red;
+}
+
+.checkbox--orange:not(:checked) + label::after,
+.checkbox--orange:checked + label::after {
+  background-color: $flame-orange;
+  border: 1px solid $flame-orange;
+  color: $white;
+}
+
+.checkbox--white:not(:checked) + label,
+.checkbox--white:checked + label {
+  background-color: $white;
+}
+
+.checkbox--white:not(:checked) + label::before,
+.checkbox--white:checked + label::before {
+  border: 1px solid $night-grey;
+}
+
+.checkbox--white:not(:checked) + label::after,
+.checkbox--white:checked + label::after {
+  background-color: $white;
+  border: 1px solid $night-grey;
+  color: $night-grey;
+}
