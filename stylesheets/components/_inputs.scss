@@ -58,13 +58,6 @@ label {
   @include input-text;
 }
 
-/**
-* Helper class to make form labels visually hidden but still available to screen readers
-**/
-.hide-label {
-  @include visually-hidden;
-}
-
 .input__error {
   background-color: lighten($flame-orange, 45%);
   border: 1px solid $flame-orange;
