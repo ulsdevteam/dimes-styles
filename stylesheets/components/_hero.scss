@@ -2,6 +2,9 @@
 // This file contains all styles related to the hero component
 // -----------------------------------------------------------------------------
 
+/**
+ * Class for hero content block.
+ */
 .hero {
   align-items: center;
   box-sizing: border-box;
@@ -21,6 +24,9 @@
   }
 }
 
+/**
+ * Styles the image used in a hero.
+ */
 .hero__logo {
   height: auto;
   text-align: left;
@@ -38,6 +44,9 @@
   }
 }
 
+/**
+ * Styles the image used in a hero.
+ */
 .hero__text {
   text-align: left;
   width: 100%;
