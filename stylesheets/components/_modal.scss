@@ -2,6 +2,8 @@
 // This file contains all styles related to the modal component.
 // -----------------------------------------------------------------------------
 
+@use 'sass:color';
+
 /**
 * Variables for modals
 **/
@@ -17,7 +19,7 @@ $modal-header-height: 52px;
 .modal__overlay {
   @include transition-default;
 
-  background-color: lighten($silver-grey, 5%);
+  background-color: color.adjust($black, $alpha: -0.4);
   bottom: 0;
   left: 0;
   position: fixed; /* 1 */
