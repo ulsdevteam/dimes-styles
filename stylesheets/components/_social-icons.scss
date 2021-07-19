@@ -19,14 +19,6 @@
 
   &:hover,
   &:focus {
-    @media screen and (prefers-reduced-motion: reduce) {
-      svg g,
-      svg path {
-        fill: $flame-orange;
-        transition: none;
-      }
-    }
-
     svg g,
     svg path {
       fill: $flame-orange;
