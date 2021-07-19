@@ -15,11 +15,6 @@
   @include md-up {
     flex-wrap: nowrap;
     justify-content: center;
-    margin-top: 113px;
-  }
-
-  @include lg-up {
-    margin-top: 103px;
   }
 }
 
