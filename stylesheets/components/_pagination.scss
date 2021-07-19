@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component
+// -----------------------------------------------------------------------------
+
+/**
+ * Class for pagination to specify typography and list style for paginated lists.
+ */
+.pagination__list {
+  font-family: $sans-serif-stack;
+  list-style: none;
+  padding-left: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  .material-icon {
+    font-size: 23px;
+    line-height: 23px;
+    margin-bottom: 3px;
+    pointer-events: unset;
+  }
+}
+
+/**
+ * Styles the layout of page numbers and the break ellipses in the paginated list.
+ */
+.pagination__page,
+.pagination__break {
+  display: inline-block;
+  padding: 0 5px;
+
+  @include lg-up {
+    padding: 0 7px;
+  }
+}
+
+/**
+ * Class that defines the layout of pagination arrow buttons.
+ */
+.pagination__button {
+  display: inline-block;
+}
+
+/**
+ * Styles the typography and layout for text in anchor elements for page numbers and the break ellipses.
+ */
+.pagination__page a,
+.pagination__break a {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: normal;
+  margin: 0;
+}
+
+/**
+ * Styles the color and cursor actions for the active page list item.
+ */
+.page__active a {
+  color: $night-grey;
+  cursor: default;
+}
+
+/**
+ * Styles to underline page and break ellipses on focus and hover.
+ */
+.pagination__page a:hover,
+.pagination__page a:focus,
+.pagination__break a:hover,
+.pagination__break a:focus {
+  text-decoration: underline;
+}
+
+/**
+ * Styles to define the hover and focus color and cursor actions on the active page.
+ */
+.page__active a:hover,
+.page__active a:focus {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: none;
+}
+
+/**
+ * Class to define the styles for the deactivated pagination arrows.
+ */
+.pagination__button.disabled a {
+  color: $night-grey;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    cursor: inherit;
+  }
+}
