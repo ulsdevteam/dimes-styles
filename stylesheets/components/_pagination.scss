@@ -66,10 +66,8 @@
 }
 
 /**
- * Styles to underline buttons, page, and break ellipses on focus and hover.
+ * Styles to underline page and break ellipses on focus and hover.
  */
-.pagination__button a:hover,
-.pagination__button a:focus,
 .pagination__page a:hover,
 .pagination__page a:focus,
 .pagination__break a:hover,
@@ -89,7 +87,6 @@
 
 /**
  * Class to define the styles for the deactivated pagination arrows.
- 1. Turns off text-decorations for inactive buttons.
  */
 .pagination__button.disabled a {
   color: $night-grey;
@@ -99,6 +96,5 @@
   &:focus {
     color: inherit;
     cursor: inherit;
-    text-decoration: none; /* 1 */
   }
 }
