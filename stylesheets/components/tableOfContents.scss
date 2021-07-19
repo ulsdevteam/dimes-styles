@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table of contents component
+// -----------------------------------------------------------------------------
+
+.rac-side-nav {
+  @media screen and (min-width: $break-md) {
+    display: flex;
+    margin-bottom: 60px;
+    position: sticky;
+    top: 60px;
+  }
+}
+
+.side-nav {
+  background: $burnt-orange;
+  display: none;
+  min-height: 250px;
+  padding: 36px 20px;
+  position: absolute;
+  width: calc(50% - 60px);
+
+  @media screen and (min-width: $break-md) {
+    display: block;
+    position: unset;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $break-lg) {
+    padding: 36px 25px;
+
+    a {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.side-nav a {
+  color: $pure-white;
+  display: block;
+  font-family: $sans-serif-stack;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17px;
+  list-style: none;
+  text-align: left;
+  width: 100%;
+
+  &:focus {
+    outline: 2px solid $pure-white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.rac-orange-button {
+  @include grid-column(12);
+
+  margin-bottom: 28px;
+  margin-left: 0;
+  margin-top: -52px;
+
+  @media screen and (min-width: $break-md) {
+    display: none;
+  }
+}
