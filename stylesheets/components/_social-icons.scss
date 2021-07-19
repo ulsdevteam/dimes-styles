@@ -19,10 +19,12 @@
 
   &:hover,
   &:focus {
-    svg g,
-    svg path {
-      fill: $flame-orange;
-      transition: $transition-default;
+    @media (prefers-reduced-motion) {
+      svg g,
+      svg path {
+        fill: $flame-orange;
+        transition: $transition-default;
+      }
     }
   }
 }
