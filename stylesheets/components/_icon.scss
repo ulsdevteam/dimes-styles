@@ -2,16 +2,20 @@
 // This file contains all styles related to icons
 // -----------------------------------------------------------------------------
 
-@mixin material-icon {
+/**
+* Mixin for material icons. Accepts optional arguments for font-size and line-height.
+**/
+@mixin material-icon($font-size: 24px, $line-height: normal) {
   direction: ltr;
   display: inline-block;
   font-family: $icons;
   font-feature-settings: 'liga';
-  font-size: 24px;
+  font-size: $font-size;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: $font-weight-normal;
   letter-spacing: normal;
+  line-height: $line-height;
   pointer-events: none;
   text-transform: none;
   vertical-align: middle;
@@ -19,6 +23,9 @@
   word-wrap: normal;
 }
 
-.material-icons {
+/**
+* Base class for material icons.
+**/
+.material-icon {
   @include material-icon;
 }
