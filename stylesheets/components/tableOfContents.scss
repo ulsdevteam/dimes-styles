@@ -3,14 +3,12 @@
 // -----------------------------------------------------------------------------
 
 .toc {
-  display: flex;
   margin-bottom: 60px;
   position: sticky;
   top: 60px;
 }
 
 .toc__list {
-  display: block;
   min-height: 250px;
   padding: 36px 20px;
   width: 100%;
@@ -18,15 +16,17 @@
   @include lg-up {
     padding: 36px 25px;
   }
+
+  a:active {
+    @include focus-default;
+  }
 }
 
+.toc__title,
 .toc__list-item {
   display: block;
   font-family: $sans-serif-stack;
-  font-size: 14px;
-  font-weight: $font-weight-heavy;
   line-height: 17px;
-  list-style: none;
   text-align: left;
   text-decoration: none;
   width: 100%;
@@ -34,26 +34,34 @@
   @include lg-up {
     line-height: 18px;
   }
+}
 
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
+.toc__title {
+  font-size: 21px;
+  font-weight: $font-weight-bold;
+  margin: 0 0 20px;
+}
 
-  &:active,
-  &:focus {
-    @include focus-default;
-  }
+.toc__list-item {
+  font-size: 14px;
+  font-weight: $font-weight-heavy;
+  list-style: none;
 
   &:not(:last-child) {
     margin-bottom: 20px;
   }
 }
 
+.toc__list-item :hover,
+.toc__title :hover {
+  cursor: pointer;
+}
+
 .toc--neutral {
   background-color: $desert-grey;
 
-  .toc__list-item {
+  .toc__list-item,
+  .toc__title {
     color: $night-grey;
   }
 }
@@ -61,7 +69,8 @@
 .toc--blue {
   background-color: $solitude-blue;
 
-  .toc__list-item {
+  .toc__list-item,
+  .toc__title {
     color: $regal-blue;
   }
 }
@@ -70,7 +79,8 @@
   background-color: $flame-orange;
 }
 
-.toc--orange .toc__list-item {
+.toc--orange .toc__list-item,
+.toc--orange .toc__title {
   color: $white;
 
   &:active,
