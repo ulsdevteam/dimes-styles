@@ -19,7 +19,7 @@
 
   &:hover,
   &:focus {
-    @media (prefers-reduced-motion) {
+    @media (prefers-reduced-motion: no-preference) {
       svg g,
       svg path {
         fill: $flame-orange;
