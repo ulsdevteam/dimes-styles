@@ -64,6 +64,8 @@ fieldset {
 * 3. Unchecked checkboxes.
 * 4. Checked checkboxes.
 * 5. Transition between checked and unchecked checkboxes.
+* 6. Adds checkmark HTML entity.
+* 7. Ensures appeareance and width of checkbox is consistent.
 **/
 [type=checkbox] {
   margin-right: 5px;
@@ -111,8 +113,8 @@ fieldset {
 .checkbox:checked + label::after { /* 4 */
   @include transition-default;
 
-  content: '\2713';
-  font-family: monospace;
+  content: '\2713'; /* 6 */
+  font-family: monospace; /* 7 */
   font-size: 16px;
   height: 16px;
   left: 0;
