@@ -1,13 +1,13 @@
 [
-  {"text": "Purpose", "active": true},
-  {"text": "Objectives", "active": false},
-  {"text": "Mandate", "active": false},
-  {"text": "Scope", "active": false},
-  {"text": "Challenges", "active": false},
-  {"text": "Principles", "active": false},
-  {"text": "Categories of Commitment", "active": false},
-  {"text": "Frequency of Policy Review", "active": false},
-  {"text": "Roles and Responsibilities", "active": false},
-  {"text": "Appendix A: Glossary", "active": false},
-  {"text": "Appendix B: Sources Consulted", "active": false}
+  {"text": "Purpose"},
+  {"text": "Objectives"},
+  {"text": "Mandate"},
+  {"text": "Scope"},
+  {"text": "Challenges"},
+  {"text": "Principles"},
+  {"text": "Categories of Commitment"},
+  {"text": "Frequency of Policy Review"},
+  {"text": "Roles and Responsibilities"},
+  {"text": "Appendix A: Glossary"},
+  {"text": "Appendix B: Sources Consulted"}
 ]

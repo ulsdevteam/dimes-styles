@@ -2,58 +2,47 @@
 // This file contains all styles related to the table of contents component
 // -----------------------------------------------------------------------------
 
-.rac-side-nav {
-  @media screen and (min-width: $break-md) {
-    display: flex;
-    margin-bottom: 60px;
-    position: sticky;
-    top: 60px;
-  }
+.toc {
+  display: flex;
+  margin-bottom: 60px;
+  position: sticky;
+  top: 60px;
 }
 
-.side-nav {
-  background: $burnt-orange;
-  display: none;
+.toc__list {
+  display: block;
   min-height: 250px;
   padding: 36px 20px;
-  position: absolute;
-  width: calc(50% - 60px);
+  width: 100%;
 
-  @media screen and (min-width: $break-md) {
-    display: block;
-    position: unset;
-    width: 100%;
-  }
-
-  @media screen and (min-width: $break-lg) {
+  @include lg-up {
     padding: 36px 25px;
-
-    a {
-      font-size: 14px;
-      line-height: 18px;
-    }
   }
 }
 
-.side-nav a {
-  color: $pure-white;
+.toc__list-item {
   display: block;
   font-family: $sans-serif-stack;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: $font-weight-heavy;
   line-height: 17px;
   list-style: none;
   text-align: left;
+  text-decoration: none;
   width: 100%;
 
-  &:focus {
-    outline: 2px solid $pure-white;
-    text-decoration: none;
+  @include lg-up {
+    line-height: 18px;
   }
 
   &:hover {
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    @include focus-default;
   }
 
   &:not(:last-child) {
@@ -61,14 +50,31 @@
   }
 }
 
-.rac-orange-button {
-  @include grid-column(12);
+.toc--neutral {
+  background-color: $desert-grey;
 
-  margin-bottom: 28px;
-  margin-left: 0;
-  margin-top: -52px;
+  .toc__list-item {
+    color: $night-grey;
+  }
+}
 
-  @media screen and (min-width: $break-md) {
-    display: none;
+.toc--blue {
+  background-color: $solitude-blue;
+
+  .toc__list-item {
+    color: $regal-blue;
+  }
+}
+
+.toc--orange {
+  background-color: $flame-orange;
+}
+
+.toc--orange .toc__list-item {
+  color: $white;
+
+  &:active,
+  &:focus {
+    outline-color: $white;
   }
 }
