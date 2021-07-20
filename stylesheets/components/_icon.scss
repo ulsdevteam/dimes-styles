@@ -29,3 +29,11 @@
 .material-icon {
   @include material-icon;
 }
+
+.material-icon--space-before {
+  margin-left: 3px;
+}
+
+.material-icon--space-after {
+  margin-right: 3px;
+}
