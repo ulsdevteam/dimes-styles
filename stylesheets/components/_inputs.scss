@@ -50,12 +50,19 @@ textarea {
   @include placeholder;
 }
 
-fieldset {
-  border: 1px solid $night-grey;
-}
-
 label {
   @include input-text;
+}
+
+fieldset {
+  border: 1px solid $night-grey;
+  display: flex;
+  flex-wrap: wrap;
+
+  input,
+  label {
+    width: 100%;
+  }
 }
 
 .input__error {
