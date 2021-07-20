@@ -21,12 +21,15 @@
 
 /**
 * Base styles for all inputs
+* 1. Ensures that labels sit on top of inputs.
 **/
 input,
 fieldset,
 select,
 textarea {
   @include input-text;
+
+  width: 100%; /* 1 */
 }
 
 label {
