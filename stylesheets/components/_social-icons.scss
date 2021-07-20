@@ -2,6 +2,9 @@
 // This file contains all styles related to social media icons
 // -----------------------------------------------------------------------------
 
+/**
+ * Class for social icons content block.
+ */
 .social-icons {
   @include lg-up {
     display: flex;
@@ -9,6 +12,9 @@
   }
 }
 
+/**
+ * Styles to specify the color, layout, and spacing of social media icons.
+ */
 .social-icons__icon {
   display: inline-block;
   height: 30px;
