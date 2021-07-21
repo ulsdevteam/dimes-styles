@@ -17,6 +17,6 @@ required.args = {
 
 export const groupedCheckboxes = (args) => CheckboxGroup(args)
 groupedCheckboxes.args = {
-  legend: 'Fruits',
+  legend: 'Format',
   items: checkboxItems
 }
