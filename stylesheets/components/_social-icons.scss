@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to social media icons
+// -----------------------------------------------------------------------------
+
+/**
+ * Class for social icons content block.
+ */
+.social-icons {
+  @include lg-up {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/**
+ * Styles to specify the color, layout, and spacing of social media icons.
+ */
+.social-icons__icon {
+  display: inline-block;
+  height: 30px;
+  pointer-events: visibleFill;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+
+  &:hover,
+  &:focus {
+    @media (prefers-reduced-motion: no-preference) {
+      svg g,
+      svg path {
+        fill: $flame-orange;
+        transition: $transition-default;
+      }
+    }
+  }
+}
