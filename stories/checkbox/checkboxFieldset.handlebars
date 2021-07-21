@@ -1,7 +1,9 @@
 <fieldset>
   <legend>{{legend}}</legend>
   {{#each items}}
-  <input type="checkbox" class="checkbox" id="{{this.name}}" name="{{this.name}}">
-  <label for="{{this.name}}" class="checkbox--blue">{{this.text}}</label>
+  <div class="input-group">
+    <input type="checkbox" class="checkbox checkbox--blue" id="{{this.name}}" name="{{this.name}}">
+    <label for="{{this.name}}" class="checkbox--blue">{{this.text}}</label>
+  </div>
   {{/each}}
 </fieldset>
