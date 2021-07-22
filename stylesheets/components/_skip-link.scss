@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the skip-link component
+// -----------------------------------------------------------------------------
+
+/**
+ * Class that defines the style for skipLink elements.
+**/
+.skip-link {
+  background: $flame-orange;
+  color: $desert-grey;
+  font-family: $sans-serif-stack;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  padding: 15px 20px 18px;
+  position: absolute;
+  text-align: center;
+
+  &:focus {
+    color: $desert-grey;
+  }
+}
