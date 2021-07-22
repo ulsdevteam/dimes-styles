@@ -17,6 +17,11 @@
   text-align: center;
   top: 60px;
 
+  &:hover {
+    background-color: inherit;
+    color: $desert-grey;
+  }
+
   &:focus {
     color: $desert-grey;
   }
