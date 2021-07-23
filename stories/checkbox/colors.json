@@ -1,5 +1,5 @@
 [
-  "checkbox--blue",
-  "checkbox--orange",
-  "checkbox--white"
+  {"text": "Apple", "name": "apple", "class": "checkbox--blue"},
+  {"text": "Pear", "name": "pear", "class": "checkbox--orange"},
+  {"text": "Peach", "name": "peach", "class": "checkbox--white"}
 ]
