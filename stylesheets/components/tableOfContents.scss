@@ -37,14 +37,9 @@
 .toc__list-item {
   display: block;
   font-family: $sans-serif-stack;
-  line-height: 17px;
   text-align: left;
   text-decoration: none;
   width: 100%;
-
-  @include lg-up {
-    line-height: 18px; /* 1 */
-  }
 }
 
 /**
@@ -59,7 +54,12 @@
 .toc__list-item {
   font-size: 14px;
   font-weight: $font-weight-heavy;
+  line-height: 17px;
   list-style: none;
+
+  @include lg-up {
+    line-height: 18px; /* 1 */
+  }
 
   &:not(:last-child) {
     margin-bottom: 20px;
