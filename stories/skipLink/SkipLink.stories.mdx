@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
 import * as stories from './SkipLink.stories.js';
 
 <Meta
@@ -32,4 +32,6 @@ No related components.
 
 The color flame-orange does not meet WCAG contrast requirements against the current background.
 
-<Story story={stories.basic} />
+<Canvas>
+  <Story story={stories.basic} height='100px'/>
+</Canvas>
