@@ -24,7 +24,7 @@
   &:focus {
     @include show-on-focus;
 
-    color: inherit; /* 1 */
+    color: $desert-grey; /* 1 */
     text-decoration: underline; /* 1 */
   }
 
