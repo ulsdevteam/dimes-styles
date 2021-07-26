@@ -3,17 +3,13 @@ import CheckboxGroup from './checkboxFieldset.handlebars'
 import checkboxColors from './colors.json'
 import checkboxItems from './items.json'
 
-export const colors = (args) => {
-  const badges = checkboxColors.map(c => Checkbox({ class: c, ...args })).join('')
-  return badges
-}
-colors.args = {
-  text: 'Rural development -- Congresses (2)',
-  name: 'subject'
-}
+export const colors = (args) => (
+  checkboxColors.map(c => Checkbox({ class: c.class, name: c.name, text: c.text, ...args })).join('')
+)
 
 export const required = (args) => Checkbox(args)
 required.args = {
+  class: 'checkbox--orange',
   text: 'Very important checkbox',
   name: 'value',
   required: true
@@ -21,6 +17,6 @@ required.args = {
 
 export const groupedCheckboxes = (args) => CheckboxGroup(args)
 groupedCheckboxes.args = {
-  legend: 'Fruits',
+  legend: 'Format',
   items: checkboxItems
 }

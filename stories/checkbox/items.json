@@ -1,8 +1,6 @@
 [
-  {"text": "Apple", "name": "apple"},
-  {"text": "Banana", "name": "banana"},
-  {"text": "Pear", "name": "pear"},
-  {"text": "Peach", "name": "peach"},
-  {"text": "Grape", "name": "grape"},
-  {"text": "Mango", "name": "mango"}
+  {"text": "documents (25)", "name": "documents"},
+  {"text": "photographs (13)", "name": "photographs"},
+  {"text": "audio (1)", "name": "audio"},
+  {"text": "moving image (1)", "name": "moving image"}
 ]
