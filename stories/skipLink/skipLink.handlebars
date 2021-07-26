@@ -1,1 +1,7 @@
-<a href="#main" class="skip-link {{class}}{{#if hidden}} visually-hidden{{/if}}">{{text}}</a>
+<a href="#main" class="skip-link"{{#if shown}} style="clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+  z-index: 1000;"{{/if}}
+>{{text}}</a>

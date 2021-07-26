@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the skip-link component
+// -----------------------------------------------------------------------------
+
+/**
+ * Skip link styles mixin. Allows users to position the skip link as desired
+ * with $left and $top variables.
+ * 1. Overrides for default link styling.
+**/
+@mixin skip-link($left: 0, $top: 0) {
+  @include visually-hidden;
+
+  background: $flame-orange;
+  color: $desert-grey;
+  font-family: $sans-serif-stack;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  left: $left;
+  padding: 15px 20px 18px;
+  position: absolute;
+  text-align: center;
+  top: $top;
+
+  &:focus {
+    @include show-on-focus;
+
+    color: $desert-grey; /* 1 */
+    text-decoration: underline; /* 1 */
+  }
+
+  &:hover {
+    color: $desert-grey; /* 1 */
+    text-decoration: none; /* 1 */
+  }
+}
+
+/**
+ * Class that uses the default skip link styles.
+**/
+.skip-link {
+  @include skip-link;
+}
