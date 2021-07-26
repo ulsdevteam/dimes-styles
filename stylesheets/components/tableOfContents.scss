@@ -4,11 +4,13 @@
 
 /**
 * Styles for table of contents navigation
+* 1. Keeps table of contents visible on the page while scrolling
 **/
 .toc {
   margin-bottom: 60px;
-  position: sticky;
+  position: sticky; /* 1 */
   top: 60px;
+  width: 100%;
 }
 
 /**
@@ -18,7 +20,6 @@
 .toc__list {
   min-height: 250px;
   padding: 36px 20px;
-  width: 100%;
 
   @include lg-up {
     padding: 36px 25px;
