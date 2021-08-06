@@ -1,10 +1,8 @@
 <nav class="toc {{class}}" role="navigation" aria-label="{{ariaLabel}}">
-  <div class="toc__list">
-    {{#if title}}
-    <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
-    {{/if}}
-    {{#each listItems}}
-    <a class="toc__list-item" href="#{{this.text}}">{{this.text}}</a>
-    {{/each}}
-  </div>
+  {{#if title}}
+  <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
+  {{/if}}
+  {{#each listItems}}
+  <a class="toc__list-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
+  {{/each}}
 </nav>
