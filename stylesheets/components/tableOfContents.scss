@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table of contents component
+// -----------------------------------------------------------------------------
+
+/**
+* Styles for table of contents navigation
+* 1. Keeps table of contents visible on the page while scrolling
+* 2. When site enables functionality to track visible sections of page, shows focus on toc link
+**/
+.toc {
+  margin-bottom: 60px;
+  min-height: 250px;
+  padding: 36px 20px 16px;
+  position: sticky; /* 1 */
+  top: 60px;
+  width: 100%;
+
+  @include lg-up {
+    padding: 36px 25px 16px;
+  }
+
+  .active {
+    @include focus-default; /* 2 */
+  }
+}
+
+/**
+* Styles for the the contents links, including the title
+**/
+.toc__title,
+.toc__list-item {
+  display: block;
+  font-family: $sans-serif-stack;
+  margin: 0 0 20px;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+}
+
+/**
+* Styles for table of contents title. Font size and weight are the same as an h2 element
+* 1. Creates more vertical space between items on large screens
+**/
+.toc__title {
+  font-size: 21px;
+  font-weight: $font-weight-bold;
+}
+
+.toc__list-item {
+  font-size: 14px;
+  font-weight: $font-weight-heavy;
+  line-height: 17px;
+  list-style: none;
+
+  @include lg-up {
+    line-height: 18px; /* 1 */
+  }
+}
+
+.toc__list-item :hover,
+.toc__title :hover {
+  cursor: pointer;
+}
+
+/**
+* Styles to create three table of contents color options
+* 1. Changes outline color to be visible on the orange background
+**/
+.toc--neutral {
+  background-color: $desert-grey;
+
+  .toc__list-item,
+  .toc__title {
+    color: $night-grey;
+  }
+}
+
+.toc--blue {
+  background-color: $solitude-blue;
+
+  .toc__list-item,
+  .toc__title {
+    color: $regal-blue;
+  }
+}
+
+.toc--orange {
+  background-color: $flame-orange;
+
+  .active {
+    outline-color: $white; /* 1 */
+  }
+}
+
+.toc--orange .toc__list-item,
+.toc--orange .toc__title {
+  color: $white;
+
+  &:focus {
+    outline-color: $white; /* 1 */
+  }
+}

@@ -23,22 +23,29 @@ without having to scroll.
 
 Provide a `role=navigation` attribute to indicate the purpose of this element for assistive technology.
 
+Optionally use `class="active"` to indicate when a specific section of contents is visible on the page, if that
+functionality is built into the table of contents implementation.
+
 ## Related components
 
 No related components.
 
 ## Known issues
 
-No known issues.
+`toc--orange` does not meet WCAG requirements for color contrast.
 
 ## Colors
 The table of contents comes in a variety of colors. Use the `toc--neutral`,
 `toc--blue` and `toc--orange` classes.
 
-<Story story={stories.colors} />
+<Story story={stories.neutral} />
+
+<Story story={stories.blue} />
+
+<Story story={stories.orange} />
 
 ## Adding a title
 
-The table of contents can also have a title:
+The table of contents can also have one or more titles to separate sections:
 
 <Story story={stories.withTitle} />
