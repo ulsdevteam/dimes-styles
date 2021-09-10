@@ -134,3 +134,12 @@
     display: none;
   }
 }
+
+/**
+* Mixin for input text
+**/
+@mixin input-text {
+  color: $night-grey;
+  font-family: $sans-serif-stack;
+  font-size: 14px;
+}
