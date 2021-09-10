@@ -178,3 +178,25 @@
     color: $white;
   }
 }
+
+/**
+* Defines styles for button associated with the search-form component.
+* 1. Align button with search input box instead of label.
+**/
+
+.btn--search {
+  align-self: flex-end; /* 1 */
+  border-color: $rust-red;
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 12px 14px;
+
+  &:focus {
+    box-shadow: 0 0 0 1px $white inset;
+    outline: none;
+  }
+
+  .material-icon {
+    font-size: 36px;
+  }
+}
