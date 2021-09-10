@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the minimap component.
+// -----------------------------------------------------------------------------
+
+@mixin transition-area {
+  &:hover {
+    border: 1px solid $night-grey;
+    transform: scale(1.5);
+  }
+}
+
+$minimap-width: 5%;
+
+.minimap {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  height: calc(100vh - 60px);
+  position: sticky;
+  top: 60px;
+  width: $minimap-width;
+  z-index: 998;
+}
+
+.minimap__box {
+  background-color: $wan-white-grey;
+  box-sizing: border-box;
+  height: 12px;
+  margin: 1px 1px 0 0;
+  width: 12px;
+}
+
+.minimap__row {
+  box-sizing: border-box;
+  height: 12px;
+  position: fixed;
+  width: $minimap-width;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .minimap__digital-hit {
+    @include transition-area;
+
+    background-color: $yale-blue;
+    transition: none;
+  }
+}
+
+.minimap__digital-hit {
+  @include transition-area;
+
+  background-color: $yale-blue;
+  transition: $transition-default;
+}
+
+.minimap__hit {
+  @include transition-area;
+
+  background: $flame-orange;
+}
