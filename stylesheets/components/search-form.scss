@@ -1,8 +1,11 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the search form component
-// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+// This file contains styles related to the search form component including input and select
+// -----------------------------------------------------------------------------------------
 
-.search-form {
+/**
+* Defines layout styles for elements of search component.
+**/
+.search {
   display: flex;
   flex-wrap: wrap;
 }
@@ -22,27 +25,40 @@
   width: 100%;
 }
 
+/**
+* Defines styles for search input box and associated text.
+* 1. Removes rounded corners on iOS
+* 2. Changes font-size from the standard input-text mixin
+**/
 .input__search input {
   @include input-text;
 
-  appearance: none;
+  appearance: none; /* 1 */
   border: 1px solid $night-grey;
-  border-radius: 0;
-  font-size: 18px;
+  border-radius: 0; /* 1 */
+  font-size: 18px; /* 2 */
   height: 62px;
   padding: 20px;
   width: 100%;
 }
 
+/**
+* Defines styles for select.
+* 1. Align select with search input box instead of label
+* 2. Only display select on large screens
+**/
 .select__search--wrapper {
   align-self: flex-end; /* 1 */
-  display: none;
+  display: none; /* 2 */
   position: relative;
 
   @media screen and (min-width: $break-lg) {
-    display: inline-block;
+    display: inline-block; /* 2 */
   }
 
+  /**
+  * Specify size and placement of icon to replace default select expand arrow
+  **/
   .material-icon {
     font-size: 20px;
     position: absolute;
@@ -51,10 +67,15 @@
   }
 }
 
+/**
+* Defines styles for select and associated text. Note that with the native select element,
+* there is no ability to style the select options.
+* 1. Remove the default select expand arrow, which is replaced with an icon in the html.
+**/
 .select__search select {
   @include input-text;
 
-  appearance: none;
+  appearance: none; /* 1 */
   background-color: $white;
   border: 1px solid $night-grey;
   border-radius: 0;
