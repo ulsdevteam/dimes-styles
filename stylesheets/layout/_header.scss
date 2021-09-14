@@ -2,12 +2,20 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
+/**
+* Header text mixin
+* 1. Removes default link underline
+**/
 @mixin header-text {
   font-family: $sans-serif-stack;
   font-size: 12px;
-  text-decoration: none;
+  text-decoration: none; /* 1 */
 }
 
+/**
+* Header title mixin
+*1. Assumes title is always a link and underlines on event
+**/
 @mixin header-title {
   @include header-text;
 
@@ -23,10 +31,14 @@
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: underline; /* 1 */
   }
 }
 
+/**
+* Header sub-title mixin
+*1. Assumes title is always a link and underlines on event
+**/
 @mixin header-subtitle {
   @include header-text;
 
@@ -51,6 +63,10 @@
   }
 }
 
+/**
+* Styles for header. Header is not fixed/sticky by default,
+* so custom styles are required to implement that.
+**/
 .header {
   height: 60px;
   width: 100%;
@@ -64,6 +80,9 @@
   }
 }
 
+/**
+* Styles for header colors.
+**/
 .header--white {
   background: $white;
   color: $regal-blue;
@@ -73,7 +92,7 @@
   }
 }
 
-.header--navy {
+.header--blue {
   background: $regal-blue;
   color: $white;
 
@@ -82,6 +101,9 @@
   }
 }
 
+/**
+* Styles for header branding section that includes title, subtitle, and/or image.
+**/
 .header__brand {
   @include grid-column(11);
 
