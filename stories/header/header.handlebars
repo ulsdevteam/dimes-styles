@@ -1,10 +1,10 @@
 <header class="header {{class}}">
   <div class="container">
 
-    {{# if withImageBrand}}
+    {{#if withImageBrand}}
       <div class="header__brand header__brand--image">
         <a href="/" class="header__brand-image">
-          <img alt="Rockefeller Archive Center" src="/assets/img/header_logo_whiteoutline.svg">
+          <img alt="Rockefeller Archive Center" src="{{logoUrl}}">
         </a>
       </div>
     {{/if}}
@@ -16,7 +16,7 @@
       </div>
     {{/if}}
 
-    {{# if withDropdownItems}}
+    {{#if withDropdownItems}}
       {{> dropdownItems}}
     {{/if}}
 
@@ -24,7 +24,7 @@
       {{> navItems}}
     {{/if}}
 
-    {{# if withSocialIcons}}
+    {{#if withSocialIcons}}
       <div class="header__social-icons">
         {{> ../socialIcons/socialIcons}}
       </div>

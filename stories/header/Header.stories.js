@@ -1,5 +1,6 @@
 import Header from './header.handlebars'
 import headerColors from './colors.json'
+import Logo from '../assets/img/rac_logo.svg'
 
 export const colors = () => {
   const headers = headerColors.map(c => Header({
@@ -21,7 +22,8 @@ export const withTextBrand = () => Header(
 
 export const withImageBrand = () => Header(
   {
-    withImageBrand: true
+    withImageBrand: true,
+    logoUrl: Logo
   }
 )
 
