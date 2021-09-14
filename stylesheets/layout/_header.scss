@@ -1,3 +1,135 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+@mixin header-text {
+  font-family: $sans-serif-stack;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+@mixin header-title {
+  @include header-text;
+
+  font-weight: $font-weight-heavy;
+  letter-spacing: 0.1em;
+  line-height: 13px;
+  text-transform: uppercase;
+
+  @include md-up {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+@mixin header-subtitle {
+  @include header-text;
+
+  font-style: italic;
+  line-height: 13px;
+}
+
+@mixin header-nav-link {
+  @include header-text;
+
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.1em;
+  line-height: 60px;
+
+  @include md-up {
+    line-height: 70px;
+  }
+
+  @include lg-up {
+    line-height: 60px;
+  }
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+
+  @include md-up {
+    height: 70px;
+  }
+
+  @include lg-up {
+    height: 60px;
+  }
+}
+
+.header--white {
+  background: $white;
+  color: $regal-blue;
+
+  a {
+    color: $regal-blue;
+  }
+}
+
+.header--navy {
+  background: $regal-blue;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+.header__brand {
+  @include grid-column(11);
+
+  box-sizing: border-box;
+  margin-left: 9px 0 0 20px;
+  z-index: 3;
+
+  @include md-up {
+    margin-top: 16px;
+  }
+
+  @include lg-up {
+    @include grid-column(7);
+
+    margin-top: 21px;
+    padding-left: 50px;
+  }
+}
+
+.header__brand-title {
+  @include header-title;
+
+  margin: 0;
+
+  @include md-up {
+    margin-right: 10px;
+  }
+
+  @include lg-up {
+    float: left;
+  }
+}
+
+.header__brand-subtitle {
+  @include header-subtitle;
+
+  margin: 0;
+
+  @include lg-up {
+    float: left;
+    margin-top: 4px;
+  }
+}
+
+.header__brand-image {
+  margin: 2px 0;
+
+  img {
+    height: 56px;
+  }
+}

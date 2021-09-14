@@ -73,7 +73,7 @@
 
 /**
 * Primary Footer styles.
-* 1. Insertion of a visual line break without causiung screen readers to pause.
+* 1. Insertion of a visual line break without causing screen readers to pause.
 **/
 .footer-primary { background: $wan-white-grey; }
 .footer-primary__text { @include footer-primary-text; }
