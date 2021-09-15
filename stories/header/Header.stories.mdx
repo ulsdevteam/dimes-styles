@@ -1,7 +1,10 @@
 import { Meta, Story } from '@storybook/addon-docs/blocks';
 import * as stories from './Header.stories.js';
 
-<Meta title="Components/Header" />
+<Meta title="Components/Header"
+args={{
+    hideMobileDropdown: false
+  }} />
 
 # Header
 
@@ -45,7 +48,9 @@ Or it can use an image in lieu of text. Make sure the image has appropriate `alt
 ## Navigation
 
 The header can contain navigation items. These can simple links. Use the `header--blue`
-class in this case:
+class in this case. On small screens, the navigation items are replaced by a button and
+with a dropdown that shows the links. To see what this looks like, switch to the Canvas 
+tab and toggle the "hideMobileDropdown" switch:
 
 <Story story={stories.withNavItems} />
 

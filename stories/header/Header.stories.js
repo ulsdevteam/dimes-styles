@@ -1,7 +1,6 @@
 import Header from './header.handlebars'
 import headerColors from './colors.json'
 import Logo from '../assets/img/rac_logo.svg'
-import { BUILDER_KEYS } from '@babel/types'
 
 export const colors = () => {
   const headers = headerColors.map(c => Header({
@@ -29,9 +28,13 @@ export const withImageBrand = () => {
   return headers
 }
 
-export const withNavItems = () => Header(
+export const withNavItems = (args) => Header(
   {
+    ...args,
     class: "header--blue",
+    withTextBrand: true,
+    brandTitle: 'library.rockarch.org',
+    brandSubtitle: 'The Online Collection & Catalog of Rockefeller Archive Center',
     withNavItems: true
   }
 )
