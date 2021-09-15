@@ -53,6 +53,13 @@
   @include visually-hidden;
 }
 
+/**
+ * Defines a class to hide element on large screens
+ **/
+.hide-on-lg-up {
+  @include hide-on-lg-up;
+}
+
 .show-on-focus {
   @include show-on-focus;
 }
