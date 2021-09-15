@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// This file contains styles related to navigation of the site/application.
+// For related components, see styles for the dropdown component and header layout.
+// -----------------------------------------------------------------------------
+
+/**
+* Header navigation link mixin
+**/
+@mixin header-nav-link {
+  @include header-text;
+
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.1em;
+  line-height: 60px;
+  text-transform: uppercase;
+
+  @include md-up {
+    line-height: 70px;
+  }
+
+  @include lg-up {
+    line-height: 60px;
+  }
+}
+
+/**
+* Styles for navigation to be used within header.
+* 1. Prevents icon from wrapping below link on certain screen sizes
+**/
+.nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav__list {
+  @include show-on-lg-up;
+
+  margin: 0;
+  padding: 0;
+
+  @include lg-up {
+    margin-right: -15px; /* 1 */
+  }
+}
+
+.nav__item {
+  border-left: 1px solid $mortar-grey;
+  display: inline-block;
+  position: relative;
+
+  @include md-up {
+    padding: 0 14px;
+  }
+
+  &:hover,
+  &:focus-within {
+    @include transition-default;
+
+    text-decoration: underline;
+  }
+}
+
+.nav__link {
+  @include header-nav-link;
+
+  &:focus {
+    outline: 1px;
+  }
+}
+
+/**
+* Styles for the hamburger button that opens a navigation dropdown
+* on small screens.
+**/
+.nav__btn--mobile {
+  border: 0;
+  padding: 15px;
+
+  &:hover {
+    @include transition-default;
+  }
+
+  &.material-icons {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

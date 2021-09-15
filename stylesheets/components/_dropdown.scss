@@ -1,0 +1,114 @@
+// -----------------------------------------------------------------------------
+// This file contains styles related to the dropdown component, including buttons
+// associated lists of links. These are typically used for mobile contexts when
+// we need to collapse sets of items into a dropdown list.
+//
+// For related styles, see styles for the dropdown component and header layout.
+// -----------------------------------------------------------------------------
+
+/**
+* Styles for the hamburger button that opens the navigation dropdown
+* on small screens from the header.
+**/
+.dropdown {
+  position: relative;
+}
+
+/**
+* Styles for a dropdown list of items, typically used on small screens.
+* 1. Items only receive focus when the dropdown list is open.
+**/
+.dropdown__list {
+  @include transition-default;
+
+  border-radius: 3px;
+  list-style: none;
+  margin-top: 5px;
+  padding: 20px 0;
+  position: absolute;
+  right: 0;
+  width: 500px;
+  z-index: -999; /* 1 */
+
+  &.open {
+    opacity: 1;
+    z-index: 1000; /* 1 */
+  }
+
+  &.closed {
+    opacity: 0;
+  }
+}
+
+/**
+* Styles for a dropdown list of items specifically on small screens
+* like the dropdown opened by the navigation hamburger button (.nav__btn--mobile).
+**/
+.dropdown__list--mobile {
+  border-radius: 0;
+  height: 100%;
+  margin-top: 10px;
+  position: fixed;
+  right: 0;
+  top: 50px;
+  width: 240px;
+}
+
+/**
+* Styles for dropdown list background colors. Choose the class that
+* matches the button color class that should be used to style the list
+* items.
+**/
+.dropdown__list--navy {
+  background-color: $regal-blue;
+}
+
+.dropdown__list--orange {
+  background-color: $flame-orange;
+}
+
+/**
+* Styles to control how a dropdown appears on the screen when opened
+* or closed.
+**/
+.dropdown__list--slide-left {
+  &.open {
+    transform: translateX(0);
+  }
+
+  &.closed {
+    transform: translateX(270px);
+  }
+}
+
+.dropdown__list--slide-down {
+  &.open {
+    transform: translateY(0);
+  }
+
+  &.closed {
+    transform: translateY(-5px);
+  }
+}
+
+/**
+* Styles for items in a dropdown list. These classes can be
+*used along with specific button color classes.
+**/
+.dropdown__btn {
+  border-radius: 0;
+  display: flex;
+  font-size: 12px;
+  line-height: 21px;
+  margin: 0;
+  padding: 10px 14px;
+
+  &.material-icons {
+    font-size: 21px;
+    margin-right: 15px;
+  }
+}
+
+.dropdown__btn--mobile {
+  padding: 12px 24px;
+}
