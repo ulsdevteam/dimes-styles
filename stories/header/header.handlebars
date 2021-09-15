@@ -1,5 +1,5 @@
 <header class="header {{class}}">
-  <div class="container">
+  {{!-- <div class="container"> --}}
 
     {{#if withTextBrand}}
       <div class="header__brand header__brand--text">
@@ -9,8 +9,8 @@
     {{/if}}
 
     {{#if withImageBrand}}
-      <div class="header__brand header__brand-image">
-        <a href="/">
+      <div class="header__brand">
+        <a href="/" class="header__brand-image">
           <img alt="Rockefeller Archive Center" src="{{logoUrl}}">
         </a>
       </div>
@@ -30,5 +30,5 @@
       </div>
     {{/if}}
 
-  </div>
+  {{!-- </div> --}}
 </header>
