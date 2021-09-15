@@ -1,6 +1,13 @@
 <header class="header {{class}}">
   <div class="container">
 
+    {{#if withTextBrand}}
+      <div class="header__brand header__brand--text">
+        <a href="/" class="header__brand-title">{{brandTitle}}</a>
+        <p class="header__brand-subtitle">{{brandSubtitle}}</p>
+      </div>
+    {{/if}}
+
     {{#if withImageBrand}}
       <div class="header__brand header__brand-image">
         <a href="/">
@@ -9,19 +16,12 @@
       </div>
     {{/if}}
 
-    {{#if withTextBrand}}
-      <div class="header__brand header__brand--text">
-        <a href="/" class="header__brand-title">{{brandTitle}}</a>
-        <p class="header__brand-subtitle">{{brandSubtitle}}</p>
-      </div>
+    {{#if withNavItems}}
+      {{> navItems}}
     {{/if}}
 
     {{#if withDropdownItems}}
       {{> dropdownItems}}
-    {{/if}}
-
-    {{#if withNavItems}}
-      {{> navItems}}
     {{/if}}
 
     {{#if withSocialIcons}}
