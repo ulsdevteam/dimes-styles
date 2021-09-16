@@ -39,8 +39,9 @@ export const withNavItems = (args) => Header(
   }
 )
 
-export const withDropdownItems = () => Header(
+export const withDropdownItems = (args) => Header(
   {
+    ...args,
     class: "header--white",
     withDropdownItems: true
   }

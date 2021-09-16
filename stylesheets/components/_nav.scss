@@ -4,7 +4,11 @@
 // -----------------------------------------------------------------------------
 
 /**
-* Header navigation link mixin
+* Mixins for navigation typography
+**/
+
+/**
+* Header navigation link typography mixin
 **/
 @mixin header-nav-link {
   @include header-text;
@@ -25,14 +29,73 @@
 }
 
 /**
-* Styles for navigation to be used within header.
-* 1. Prevents icon from wrapping below link on certain screen sizes
+* Header navigation item dropdown typography mixin
 **/
-.nav {
-  display: flex;
+@mixin nav-item-dropdown {
+  @include header-text;
+
+  font-size: 15px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.125em;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  @include lg-up {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  &:hover,
+  &:focus {
+    font-weight: $font-weight-heavy;
+  }
+}
+
+/**
+* Header navigation dropdown item title typography mixin
+**/
+@mixin nav-item-title {
+  @include header-text;
+
+  color: $white;
+  font-size: 16.5px;
+  font-weight: $font-weight-heavy;
+  letter-spacing: normal;
+  line-height: 20px;
+  text-transform: none;
+}
+
+/**
+* Header navigation dropdown item description typography mixin
+**/
+@mixin nav-item-description {
+  color: $white;
+  font-family: $serif-stack;
+  font-style: italic;
+  font-weight: $font-weight-normal;
+  letter-spacing: normal;
+  line-height: 20px;
+  opacity: 0.8;
+  text-transform: none;
+}
+
+/**
+* Wrapper class for nav list that aligns items on the
+* right side of the header.
+**/
+.nav__wrapper--right-align {
   margin-left: auto;
 }
 
+.nav__wrapper--center {
+  text-align: center;
+  width: 100%;
+}
+
+/**
+* Styles for navigation to be used within a header.
+* 1. Prevents icon from wrapping below link on certain screen sizes.
+**/
 .nav__list {
   @include show-on-lg-up;
 
@@ -44,6 +107,11 @@
   }
 }
 
+/**
+* Styles for navigation items and links be used within a header.
+* 1. Replace the default focus styles, which don't work well
+*    with the header items, with an underline.
+**/
 .nav__item {
   border-left: 1px solid $mortar-grey;
   display: inline-block;
@@ -53,11 +121,10 @@
     padding: 0 14px;
   }
 
-  &:hover,
   &:focus-within {
     @include transition-default;
 
-    text-decoration: underline;
+    text-decoration: underline; /* 1 */
   }
 }
 
@@ -65,7 +132,7 @@
   @include header-nav-link;
 
   &:focus {
-    outline: 1px;
+    outline: inherit; /* 1 */
   }
 }
 
@@ -81,8 +148,137 @@
     @include transition-default;
   }
 
-  &.material-icon {
+  .material-icon {
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+/**
+* Styles for a list of navigation items that contain dropdown
+* lists of sub-navigation items.
+* 1. Do not display until the dropdown is open.
+* 2. Matches position to height of header.
+**/
+.nav__item--dropdown {
+  border: 0;
+  display: none; /* 1 */
+  position: relative;
+  text-align: right;
+  top: 60px; /* 2 */
+  z-index: 2;
+
+  @media screen and (min-width: $break-lg) {
+    background: none;
+    box-sizing: content-box;
+    display: inline-block;
+    top: 0;
+  }
+}
+
+/**
+* Styles for the navigation button/s that are used to open
+* a dropdown sub-menu of navigation items.
+* 1. Styles that apply only when the dropdown is open based
+*    on the aria-expanded attribute. When aria-expanded=false,
+*    these styles do not appear.
+* 2. When the user clicks on the icon, it does not block the
+*    button click.
+**/
+.nav__btn--dropdown {
+  @include nav-item-dropdown;
+
+  background: unset;
+  border: 0;
+  padding: 15px 20px 15px 0;
+
+  @include md-up {
+    padding-right: 30px;
+  }
+
+  @include lg-up {
+    display: inline-block;
+    margin: 20px 25px 0;
+    padding: 0 0 14px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &[aria-expanded=true] {
+    border-bottom: 8px solid; /* 1 */
+    color: $flame-orange; /* 1 */
+    outline: none; /* 1 */
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .material-icon {
+    font-size: 15px;
+    opacity: 0.7;
+    pointer-events: none; /* 2 */
+    vertical-align: middle;
+
+    @include lg-up {
+      font-size: 21px;
+      margin-left: 7px;
+    }
+  }
+}
+
+/**
+* Styles for the dropdown list of navigation items
+* 1. Positions the dropdown to appear just below the bottom
+* edge of the header on large screens.
+**/
+.nav__list--dropdown {
+  background: $maroon-brown;
+  padding-top: 22px;
+  position: static;
+  width: 100%;
+
+  @include lg-up {
+    margin: -4px 0 0; /* 1 */
+    position: absolute;
+    width: 360px;
+    z-index: 1;
+  }
+}
+
+/**
+* Styles for the dropdown navigation list items.
+**/
+
+.nav__list--dropdown li {
+  background: $maroon-brown;
+  height: auto;
+  margin: 0;
+  min-width: 300px;
+  padding: 12px 28px;
+  text-align: left;
+
+  &:hover,
+  &:focus-within {
+    background: $rust-red;
+    text-decoration: none;
+  }
+
+  &:focus-within {
+    outline: 1px solid $white;
+  }
+}
+
+.nav__link-title {
+  @include nav-item-title;
+
+  margin: 0 3px;
+  width: 100%;
+}
+
+.nav__link-description {
+  @include nav-item-description;
+
+  margin: 0;
+  width: 100%;
 }

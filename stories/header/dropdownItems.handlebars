@@ -1,11 +1,11 @@
-<nav class="nav" aria-label="Main">
-
-  <ul class="nav__list">
+<nav class="wrapper nav__wrapper--center" aria-label="Main">
+  <ul class="nav__list list--unstyled">
     <li class="nav__item--dropdown">
-      <button aria-expanded="false" aria-controls="id-collections-menu">
+      <button class="nav__btn--dropdown" {{#if showDesktopDropdown}}aria-expanded="true"{{/if}} aria-controls="id-collections-menu">
         Collections
         <span aria-hidden="true" class="material-icon">keyboard_arrow_down</span>
       </button>
+      {{#if showDesktopDropdown}}
       <ul id="id-collections-menu" class="nav__list--dropdown">
         <li class="nav__item">
           <a class="nav__link" href="/about-us/overview#collections">
@@ -39,9 +39,10 @@
         </li>
       </ul>
     </li>
+    {{/if}}
 
     <li class="nav__item--dropdown">
-      <button aria-expanded="false" aria-controls="id-resources-menu">
+      <button class="nav__btn--dropdown" aria-expanded="false" aria-controls="id-resources-menu">
         Resources
         <span aria-hidden="true" class="material-icon">keyboard_arrow_down</span>
       </button>
@@ -92,7 +93,7 @@
     </li>
 
     <li class="nav__item--dropdown">
-      <button aria-expanded="false" aria-controls="id-about-menu">
+      <button class="nav__btn--dropdown" aria-expanded="false" aria-controls="id-about-menu">
         About Us
         <span aria-hidden="true" class="material-icon">keyboard_arrow_down</span>
       </button>
