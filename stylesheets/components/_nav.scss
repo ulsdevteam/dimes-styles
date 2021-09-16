@@ -80,13 +80,15 @@
 }
 
 /**
-* Wrapper class for nav list that aligns items on the
-* right side of the header.
+* Wrapper class for nav list that aligns items on the right side of the header.
 **/
 .nav__wrapper--right-align {
   margin-left: auto;
 }
 
+/**
+* Wrapper class for nav list that aligns items in the center of the header.
+**/
 .nav__wrapper--center {
   text-align: center;
   width: 100%;
@@ -109,8 +111,8 @@
 
 /**
 * Styles for navigation items and links be used within a header.
-* 1. Replace the default focus styles, which don't work well
-*    with the header items, with an underline.
+* 1. Replace the default focus styles, which don't look good with the header
+*    items, with an underline.
 **/
 .nav__item {
   border-left: 1px solid $mortar-grey;
@@ -137,8 +139,7 @@
 }
 
 /**
-* Styles for the hamburger button that opens a navigation dropdown
-* on small screens.
+* Styles for the hamburger button that opens a navigation dropdown on small screens.
 **/
 .nav__btn--mobile {
   border: 0;
@@ -155,10 +156,11 @@
 }
 
 /**
-* Styles for a list of navigation items that contain dropdown
-* lists of sub-navigation items.
-* 1. Do not display until the dropdown is open.
-* 2. Matches position to height of header.
+* Styles for a list of navigation items that contain dropdown lists of
+* sub-navigation items.
+* 1. Do not display until the dropdown is opened.
+* 2. Position element based on height of header.
+* 3. Positions the element on top of elements that have a lower z-index value.
 **/
 .nav__item--dropdown {
   border: 0;
@@ -166,7 +168,7 @@
   position: relative;
   text-align: right;
   top: 60px; /* 2 */
-  z-index: 2;
+  z-index: 2; /* 3 */
 
   @media screen and (min-width: $break-lg) {
     background: none;
@@ -177,13 +179,12 @@
 }
 
 /**
-* Styles for the navigation button/s that are used to open
-* a dropdown sub-menu of navigation items.
-* 1. Styles that apply only when the dropdown is open based
-*    on the aria-expanded attribute. When aria-expanded=false,
-*    these styles do not appear.
-* 2. When the user clicks on the icon, it does not block the
-*    button click.
+* Styles for the navigation button/s that are used to open a dropdown sub-menu of
+* navigation items.
+* 1. Styles that apply only when the dropdown is open based on the aria-expanded
+*    attribute. When aria-expanded=false, these styles do not appear.
+* 2. When the user clicks on the icon, it does not block the button click.
+* 3. Positions the element on top of elements that have a lower z-index value.
 **/
 .nav__btn--dropdown {
   @include nav-item-dropdown;
@@ -201,7 +202,7 @@
     margin: 20px 25px 0;
     padding: 0 0 14px;
     position: relative;
-    z-index: 2;
+    z-index: 2; /* 2 */
   }
 
   &[aria-expanded=true] {
@@ -229,8 +230,9 @@
 
 /**
 * Styles for the dropdown list of navigation items
-* 1. Positions the dropdown to appear just below the bottom
-* edge of the header on large screens.
+* 1. Positions the dropdown to appear just below the bottom edge of the header
+*    on large screens.
+* 2. Positions this element underneath elements with a higher z-index value.
 **/
 .nav__list--dropdown {
   background: $maroon-brown;
@@ -242,12 +244,13 @@
     margin: -4px 0 0; /* 1 */
     position: absolute;
     width: 360px;
-    z-index: 1;
+    z-index: 1; /* 2 */
   }
 }
 
 /**
 * Styles for the dropdown navigation list items.
+* 1. Removes link underline and replaces with an outline on focus.
 **/
 
 .nav__list--dropdown li {
@@ -261,11 +264,11 @@
   &:hover,
   &:focus-within {
     background: $rust-red;
-    text-decoration: none;
+    text-decoration: none; /* 1 */
   }
 
   &:focus-within {
-    outline: 1px solid $white;
+    outline: 1px solid $white; /* 1 */
   }
 }
 

@@ -16,7 +16,8 @@
 
 /**
 * Styles for a dropdown list of items, typically used on small screens.
-* 1. Items only receive focus when the dropdown list is open.
+* 1. The negative z-index value places the dropdown list under all other
+* values until it is opened.
 **/
 .dropdown__list {
   @include transition-default;
@@ -91,8 +92,8 @@
 }
 
 /**
-* Styles for items in a dropdown list. These classes can be
-*used along with specific button color classes.
+* Styles for items in a dropdown list. These classes can be used along with
+* specific button color classes.
 **/
 .dropdown__btn {
   border-radius: 0;
