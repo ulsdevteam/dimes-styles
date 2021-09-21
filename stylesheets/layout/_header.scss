@@ -121,3 +121,12 @@
     height: 56px; /* 1 */
   }
 }
+
+/**
+* Styles for header div that contain social icons component.
+**/
+.header__social-icons {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
