@@ -51,18 +51,15 @@
 * Styles for header. Header is not fixed/sticky by default,
 * so custom styles are required to implement that.
 **/
-// .header {
-//   align-items: center;
-//   display: flex;
-//   min-height: 60px;
-//   padding: 0 15px;
-//   width: 100%;
-// }
 
 .header {
   min-height: 60px;
-  padding: 0;
+  padding: 0 15px;
   width: 100%;
+
+  .wrapper {
+    min-height: 60px;
+  }
 }
 
 /**
@@ -93,6 +90,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  margin-right: auto;
   z-index: 3;
 
   @include lg-up {
