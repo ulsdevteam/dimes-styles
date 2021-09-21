@@ -51,11 +51,17 @@
 * Styles for header. Header is not fixed/sticky by default,
 * so custom styles are required to implement that.
 **/
+// .header {
+//   align-items: center;
+//   display: flex;
+//   min-height: 60px;
+//   padding: 0 15px;
+//   width: 100%;
+// }
+
 .header {
-  align-items: center;
-  display: flex;
   min-height: 60px;
-  padding: 0 15px;
+  padding: 0;
   width: 100%;
 }
 

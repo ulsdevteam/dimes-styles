@@ -7,8 +7,7 @@
 // -----------------------------------------------------------------------------
 
 /**
-* Styles for the hamburger button that opens the navigation dropdown
-* on small screens from the header.
+* Styles for the dropdown container.
 **/
 .dropdown {
   position: relative;
@@ -41,8 +40,8 @@
 }
 
 /**
-* Styles for a dropdown list of items specifically on small screens
-* like the dropdown opened by the navigation hamburger button (.nav__btn--mobile).
+* Styles for a dropdown list of items used on small screens
+* like the dropdown opened by the navigation menu button.
 **/
 .dropdown__list--mobile {
   border-radius: 0;
@@ -50,7 +49,7 @@
   margin-top: 10px;
   position: fixed;
   right: 0;
-  top: 50px;
+  top: 60px;
   width: 240px;
 }
 
@@ -92,7 +91,7 @@
 }
 
 /**
-* Styles for items in a dropdown list. These classes can be used along with
+* Items in a dropdown list styled as buttons. These classes can be used along with
 * specific button color classes.
 **/
 .dropdown__btn {

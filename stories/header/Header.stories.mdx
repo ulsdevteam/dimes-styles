@@ -3,8 +3,9 @@ import * as stories from './Header.stories.js';
 
 <Meta title="Components/Header"
 args={{
-    hideMobileDropdown: false,
-    showDesktopDropdown: false
+    hideMobileNavItems: false,
+    hideMobileDropdownItems: false,
+    showDropdownItems: false
   }} />
 
 # Header
@@ -49,15 +50,17 @@ Or it can use an image in lieu of text. Make sure the image has appropriate `alt
 
 ## Navigation
 
-The header can contain navigation items. These can simple links. Use the `header--blue`
+The header can contain navigation items. These can be simple links. Use the `header--blue`
 class in this case. On small screens, the navigation items are replaced by a button and
 with a dropdown that shows the links. To see what this looks like, switch to the Canvas
-tab and toggle the "hideMobileDropdown" switch on a mobile view:
+tab and toggle the "hideMobileNavItems" switch on a mobile view:
 
 <Story story={stories.withNavItems} />
 
-Or they can be dropdown menus for more complex navigation. Use the `header--white`
-class in this case:
+They can also contain dropdown menus for more complex navigation. Use the `header--white`
+class in this case. To see what this looks like, switch to the Canvas
+tab and toggle the "showDropdownItems" switch on any screensize, and the "hasmobileDropdownItems
+on a mobile view.
 
 <Story story={stories.withDropdownItems} />
 
