@@ -2,6 +2,6 @@ import Minimap from './minimap.handlebars'
 
 export const basic = () => Minimap()
 
-export const tenAcross = () => Minimap({ count: 10 })
+export const tenAcross = () => Minimap({ countAcross: 10 })
 
-export const twentyAcross = () => Minimap({ count: 20 })
+export const twentyAcross = () => Minimap({ countAcross: 20 })
