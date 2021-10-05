@@ -36,8 +36,7 @@ $grid-col-count: 20;
 /**
 * Styles for minimap that uses grid display. On medium and small screens, styles
 * assume the minimap will be inside of a modal.
-* 1. Ensures that minimal does not overlap with header.
-* 2. Increases gutter space between grid items on small screens.
+* 1. Increases gutter space between grid items on small screens.
 **/
 .minimap {
   align-content: start;
@@ -50,10 +49,7 @@ $grid-col-count: 20;
   z-index: 998;
 
   @include lg-up {
-    gap: 1px; /* 2 */
-    height: calc(100vh - 60px); /* 1 */
-    position: sticky; /* 1 */
-    top: 60px;/* 1 */
+    gap: 1px; /* 1 */
   }
 }
 
