@@ -19,6 +19,20 @@ $grid-col-count: 20;
 }
 
 /**
+* Styles for checkmark content shown for visited links
+* 1. Checkmark
+* 2. Font size is an imperfect solution, because it is small on large squares
+* and impacts box layout for very small squares.
+**/
+@mixin checkmark {
+  content: '\2713'; /* 1 */
+  font-family: monospace;
+  font-size: 20px; /* 2 */
+  line-height: 0;
+  pointer-events: none;
+}
+
+/**
 * Mixin for styles on hover, focus, or active events used for minimap links.
 **/
 @mixin transition-area {
@@ -34,6 +48,35 @@ $grid-col-count: 20;
 }
 
 /**
+* Mixin for minimap hit links with a "color" variable argument.
+* 1. Allow checkmark for visited links to be centered in the box.
+**/
+@mixin minimap-hit($color) {
+  @include transition-area;
+
+  align-items: center; /* 1 */
+  background: $color;
+  color: $color;
+  display: flex; /* 1 */
+  justify-content: center; /* 1 */
+  text-decoration: none;
+
+  @include on-event {
+    border-color: darken($color, 20%);
+    color: $color;
+  }
+
+  &::after {
+    @include checkmark;
+  }
+
+  &:visited {
+    background-color: darken($color, 10%);
+    color: $white;
+  }
+}
+
+/**
 * Styles for minimap that uses grid display. On medium and small screens, styles
 * assume the minimap will be inside of a modal.
 * 1. Increases gutter space between grid items on small screens.
@@ -42,13 +85,13 @@ $grid-col-count: 20;
   align-content: start;
   display: grid;
   float: left;
-  gap: 8px; /* 2 */
+  gap: 8px; /* 1 */
   grid-template-rows: auto;
   height: 100%;
   width: 100%;
   z-index: 998;
 
-  @include lg-up {
+  @include md-up {
     gap: 1px; /* 1 */
   }
 }
@@ -73,29 +116,9 @@ $grid-col-count: 20;
 * Styles for the minimap links.
 **/
 .minimap__digital-hit {
-  @include transition-area;
-
-  background: $yale-blue;
-
-  @include on-event {
-    border-color: darken($yale-blue, 20%);
-  }
-
-  &:visited {
-    background-color: darken($yale-blue, 10%);
-  }
+  @include minimap-hit($yale-blue);
 }
 
-.minimap__hit {
-  @include transition-area;
-
-  background: $flame-orange;
-
-  @include on-event {
-    border-color: darken($flame-orange, 20%);
-  }
-
-  &:visited {
-    background-color: darken($flame-orange, 10%);
-  }
+.minimap__record-hit {
+  @include minimap-hit($flame-orange);
 }
