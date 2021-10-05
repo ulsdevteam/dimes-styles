@@ -2,60 +2,104 @@
 // This file contains all styles related to the minimap component.
 // -----------------------------------------------------------------------------
 
+/**
+* Creates classes .minimap--{{count}}-across that specify the number of
+* 1fr grid-templates-columns between 1 and 20. For example, the
+* .minimap--5-across class specifies 5 columns. For more than 20
+* columns, adjust the $grid-col-count variable.
+**/
+$grid-col-count: 20;
+
+@mixin grid-col-count-class {
+  @for $count from 1 through $grid-col-count {
+    .minimap--#{$count}-across {
+      grid-template-columns: repeat($count, 1fr);
+    }
+  }
+}
+
+/**
+* Mixin for styles on hover, focus, or active events used for minimap links.
+**/
 @mixin transition-area {
-  &:hover {
-    border: 1px solid $night-grey;
-    transform: scale(1.5);
+  @include on-event {
+    border: 2px solid;
+    border-radius: 2px;
+    outline: none;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transform: scale(1.25);
+    }
   }
 }
 
-$minimap-width: 5%;
-
+/**
+* Styles for minimap that uses grid display. On medium and small screens, styles
+* assume the minimap will be inside of a modal.
+* 1. Ensures that minimal does not overlap with header.
+* 2. Increases gutter space between grid items on small screens.
+**/
 .minimap {
-  align-content: flex-start;
-  display: flex;
-  flex-wrap: wrap;
+  align-content: start;
+  display: grid;
   float: left;
-  height: calc(100vh - 60px);
-  position: sticky;
-  top: 60px;
-  width: $minimap-width;
+  gap: 8px; /* 2 */
+  grid-template-rows: auto;
+  height: 100%;
+  width: 100%;
   z-index: 998;
-}
 
-.minimap__box {
-  background-color: $wan-white-grey;
-  box-sizing: border-box;
-  height: 12px;
-  margin: 1px 1px 0 0;
-  width: 12px;
-}
-
-.minimap__row {
-  box-sizing: border-box;
-  height: 12px;
-  position: fixed;
-  width: $minimap-width;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .minimap__digital-hit {
-    @include transition-area;
-
-    background-color: $yale-blue;
-    transition: none;
+  @include lg-up {
+    gap: 1px; /* 2 */
+    height: calc(100vh - 60px); /* 1 */
+    position: sticky; /* 1 */
+    top: 60px;/* 1 */
   }
 }
 
+/**
+* Includes the classes to specify grid-template-columns number
+**/
+@include grid-col-count-class;
+
+/**
+* Styles for the minimap grid item boxes.
+* 1. Ensures that the boxes are square.
+**/
+.minimap__box {
+  aspect-ratio: 1/1; /* 1 */
+  background-color: $wan-white-grey;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+/**
+* Styles for the minimap links.
+**/
 .minimap__digital-hit {
   @include transition-area;
 
-  background-color: $yale-blue;
-  transition: $transition-default;
+  background: $yale-blue;
+
+  @include on-event {
+    border-color: darken($yale-blue, 20%);
+  }
+
+  &:visited {
+    background-color: darken($yale-blue, 10%);
+  }
 }
 
 .minimap__hit {
   @include transition-area;
 
   background: $flame-orange;
+
+  @include on-event {
+    border-color: darken($flame-orange, 20%);
+  }
+
+  &:visited {
+    background-color: darken($flame-orange, 10%);
+  }
 }
