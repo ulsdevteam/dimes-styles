@@ -20,20 +20,6 @@ $grid-col-count: 20;
 }
 
 /**
-* Styles for checkmark content shown for visited links
-* 1. Checkmark
-* 2. Font size is an imperfect solution, because it is small on large squares
-* and impacts box layout for very small squares.
-**/
-@mixin checkmark {
-  content: '\2713'; /* 1 */
-  font-family: monospace;
-  font-size: 20px; /* 2 */
-  line-height: 0;
-  pointer-events: none;
-}
-
-/**
 * Mixin for styles on hover, focus, or active events used for minimap links.
 **/
 @mixin transition-area {
@@ -51,6 +37,8 @@ $grid-col-count: 20;
 /**
 * Mixin for minimap hit links with a "color" variable argument.
 * 1. Allow checkmark for visited links to be centered in the box.
+* 2. Styles for checkmark, which is visible via a color change once link has been
+*    visited.
 **/
 @mixin minimap-hit($color) {
   @include transition-area;
@@ -67,13 +55,13 @@ $grid-col-count: 20;
     color: $color;
   }
 
-  &::after {
-    @include checkmark;
+  .material-icon {
+    font-size: 20px; /* 2 */
   }
 
   &:visited {
     background-color: darken($color, 10%);
-    color: $white;
+    color: $white; /* 2 */
   }
 }
 
