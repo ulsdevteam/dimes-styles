@@ -12,6 +12,8 @@ A minimap shows the location of hits within a large results set.
 The minimap is used to help users navigate search results within a collection.
 
 ## Best practices
+Web Content Accessibility Guidelines (WCAG) Level AA specify that the target size
+have an area of at least 24 by 24 CSS pixels.
 
 ## Related components
 
@@ -23,7 +25,8 @@ No known issues.
 
 ## Default implementation
 
-The minimap takes up the entire width and height of the container that wraps it.
+The minimap takes up the entire width and height of the container that wraps it,
+although that container size must allow a minimum box width of 24px.
 
 <Story story={stories.basic} />
 

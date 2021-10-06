@@ -7,13 +7,14 @@
 * 1fr grid-templates-columns between 1 and 20. For example, the
 * .minimap--5-across class specifies 5 columns. For more than 20
 * columns, adjust the $grid-col-count variable.
+* 1. min of 24px ensures WCAG AA spec for target area size.
 **/
 $grid-col-count: 20;
 
 @mixin grid-col-count-class {
   @for $count from 1 through $grid-col-count {
     .minimap--#{$count}-across {
-      grid-template-columns: repeat($count, 1fr);
+      grid-template-columns: repeat($count, minmax(24px, 1fr)); /* 1 */
     }
   }
 }
