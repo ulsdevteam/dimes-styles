@@ -30,6 +30,7 @@ $grid-col-count: 20;
 
     @media (prefers-reduced-motion: no-preference) {
       transform: scale(1.25);
+      transition-duration: 0.15s;
     }
   }
 }
