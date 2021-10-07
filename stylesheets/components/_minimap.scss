@@ -48,10 +48,25 @@ $grid-col-count: 20;
     font-size: 18px; /* 2 */
   }
 
-  &:visited,
-  &:active {
+  &:visited {
     background-color: darken($color, 10%);
     color: $white; /* 2 */
+  }
+}
+
+/**
+* Mixin for minimap hit links that are currently active with a "color" variable argument.
+**/
+@mixin minimap-hit-active ($color) {
+  border: 3px solid darken($color, 22%);
+  color: $white;
+
+  @include lg-up {
+    border: 2px solid darken($color, 22%);
+  }
+
+  @include on-event {
+    color: $white;
   }
 }
 
@@ -104,4 +119,15 @@ $grid-col-count: 20;
 
 .minimap__record-hit {
   @include minimap-hit($flame-orange);
+}
+
+/**
+* Styles for the minimap links that are currently active.
+**/
+.minimap__digital-hit--active {
+  @include minimap-hit-active($yale-blue);
+}
+
+.minimap__record-hit--active {
+  @include minimap-hit-active ($flame-orange);
 }
