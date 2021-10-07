@@ -32,12 +32,14 @@ $grid-col-count: 20;
   color: $color;
   display: flex; /* 1 */
   justify-content: center; /* 1 */
+  margin: 0;
   text-decoration: none;
 
   @include on-event {
     border: 3px solid darken($color, 22%);
     color: $color;
     outline: none;
+    text-decoration: none;
 
     @include lg-up {
       border: 2px solid darken($color, 22%);
