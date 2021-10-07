@@ -20,30 +20,13 @@ $grid-col-count: 20;
 }
 
 /**
-* Mixin for styles on hover, focus, or active events used for minimap links.
-**/
-@mixin transition-area {
-  @include on-event {
-    border: 2px solid;
-    border-radius: 2px;
-    outline: none;
-
-    @media (prefers-reduced-motion: no-preference) {
-      transform: scale(1.25);
-      transition-duration: 0.15s;
-    }
-  }
-}
-
-/**
-* Mixin for minimap hit links with a "color" variable argument.
+* Mixin for minimap hit links with a "color" variable argument, including styles
+* on hover, focus, or active events for minimap links.
 * 1. Allow checkmark for visited links to be centered in the box.
 * 2. Styles for checkmark, which is visible via a color change once link is active
 *    or has been visited.
 **/
 @mixin minimap-hit($color) {
-  @include transition-area;
-
   align-items: center; /* 1 */
   background: $color;
   color: $color;
@@ -52,12 +35,17 @@ $grid-col-count: 20;
   text-decoration: none;
 
   @include on-event {
-    border-color: darken($color, 20%);
+    border: 3px solid darken($color, 22%);
     color: $color;
+    outline: none;
+
+    @include lg-up {
+      border: 2px solid darken($color, 22%);
+    }
   }
 
   .material-icon {
-    font-size: 20px; /* 2 */
+    font-size: 18px; /* 2 */
   }
 
   &:visited,
@@ -82,7 +70,7 @@ $grid-col-count: 20;
   width: 100%;
   z-index: 998;
 
-  @include md-up {
+  @include lg-up {
     gap: 1px; /* 1 */
   }
 }
@@ -99,8 +87,12 @@ $grid-col-count: 20;
 .minimap__box {
   aspect-ratio: 1/1; /* 1 */
   background-color: $wan-white-grey;
-  border-radius: 2px;
+  border-radius: 3px;
   box-sizing: border-box;
+
+  @include lg-up {
+    border-radius: 2px;
+  }
 }
 
 /**
