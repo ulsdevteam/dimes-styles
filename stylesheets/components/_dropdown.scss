@@ -110,4 +110,8 @@
 
 .dropdown__btn--mobile {
   padding: 12px 24px;
+
+  &:focus {
+    outline-offset: 0;
+  }
 }

@@ -280,6 +280,7 @@
 
 /**
 * Styles for the menu button that opens a navigation dropdown on small screens.
+* 1. Removes default outline offset on focus so that the outline stays within the header.
 **/
 .nav__btn--mobile {
   border: 0;
@@ -287,6 +288,10 @@
 
   &:hover {
     @include transition-default;
+  }
+
+  &:focus {
+    outline-offset: 0; /* 1 */
   }
 
   .material-icon {
