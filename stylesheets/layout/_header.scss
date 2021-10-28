@@ -124,9 +124,21 @@
 
 /**
 * Styles for header div that contain social icons component.
+* 1. Adjust size of icons to be smaller than the default 24px svg
 **/
 .header__social-icons {
-  align-items: center;
-  display: flex;
-  margin-left: auto;
+  display: none;
+
+  @include lg-up {
+    align-self: center;
+    display: block;
+    line-height: 0;
+    position: absolute;
+    right: 40px;
+    width: 150px;
+  }
+
+  .social-icons__icon svg {
+    width: 16px; /* 1 */
+  }
 }
