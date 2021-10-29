@@ -4,7 +4,7 @@ import * as stories from './Header.stories.js';
 <Meta title="Components/Header"
 args={{
     hideMobileNavItems: false,
-    hideMobileDropdownItems: false,
+    showMobileDropdownItems: false,
     showDropdownItems: false
   }} />
 
@@ -30,7 +30,9 @@ Media Icons component is an optional component.
 
 ## Known issues
 
-No known issues.
+In the header with dropdown items, when the dropdown is open the dropdown buttons in the header move. 
+It is unclear if this is something that can be fixed in the styles, or is related to Storybook's
+rendering.
 
 ## Colors
 
@@ -60,8 +62,8 @@ tab and toggle the "hideMobileNavItems" switch on a mobile view:
 
 They can also contain dropdown menus for more complex navigation. Use the `header--white`
 class in this case. To see what this looks like, switch to the Canvas
-tab and toggle the "showDropdownItems" switch on any screensize, and the "hasmobileDropdownItems
-on a mobile view.
+tab and toggle the "showDropdownItems" switch on any screensize, and the "showmobileDropdownItems"
+on a mobile view. Use javascript to implement the function to show/hide the mobile `id="nav-toggle"` button.
 
 <Story story={stories.withDropdownItems} />
 

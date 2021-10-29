@@ -162,7 +162,7 @@
 **/
 .nav__item--dropdown {
   border: 0;
-  // display: none; /* 1 */
+  display: none; /* 1 */
   text-align: right;
 
   @include lg-up {
@@ -224,10 +224,8 @@
 
 /**
 * Styles for the dropdown list of navigation items
-* 1. Positions the dropdown to appear just below the bottom edge of the header
-*    on large screens.
-* 2. On large screens, positions the dropdown under the nav buttons and below the header.
-* 3. Positions this element underneath the border-bottom of the nav__btn--dropdown.
+* 1. On large screens, positions the dropdown under the nav buttons and below the header.
+* 2. Positions this element underneath the border-bottom of the nav__btn--dropdown.
 **/
 .nav__list--dropdown {
   background: $maroon-brown;
@@ -236,10 +234,9 @@
   width: 100%;
 
   @include lg-up {
-    margin: -4px 0 0; /* 1 */
-    position: absolute; /* 2 */
+    position: absolute; /* 1 */
     width: 360px;
-    z-index: 1; /* 3 */
+    z-index: 1; /* 2 */
   }
 }
 
