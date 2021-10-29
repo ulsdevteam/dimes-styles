@@ -1,5 +1,7 @@
-# styles
-Style Library for the Rockefeller Archive Center.
+# RAC Style Library and Guide
+Style library and guide for Rockefeller Archive Center websites.
+
+[![Build Status](https://travis-ci.org/RockefellerArchiveCenter/styles.svg?branch=base)](https://travis-ci.org/RockefellerArchiveCenter/styles)
 
 ## Getting started
 Install dependencies using `yarn install`.
