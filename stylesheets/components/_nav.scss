@@ -277,51 +277,38 @@
 
 /**
 * Styles for the menu button that opens a navigation dropdown on small screens.
-* 1. Removes default outline offset on focus so that the outline stays within the header.
+* 1. Pushes menu button to the right side of the nav flexbox.
+* 2. Aligns right icon margin with navigation buttons.
+* 3. Removes default outline offset on focus so that the outline stays within the header.
 **/
 .nav__btn--mobile {
+  background: unset;
   border: 0;
-  padding: 15px;
+  margin-left: auto; /* 1 */
+  margin-right: 10px; /* 2 */
 
   &:hover {
     @include transition-default;
   }
 
   &:focus {
-    outline-offset: 0; /* 1 */
-  }
-
-  .material-icon {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
-/**
-* Styles for the menu button that opens a navigation dropdown on small screens
-* when used with the dropdown navigation buttons.
-* 1. Pushes menu button to the right side of the nav flexbox.
-* 2. Aligns right icon margin with navigation buttons.
-**/
-.nav__btn--mobile-dropdown {
-  background: unset;
-  margin-left: auto; /* 1 */
-  margin-right: 15px; /* 2 */
-}
-
-/**
-* Styles for orange mobile menu button.
-**/
-.nav__btn--orange {
-  color: $flame-orange;
-  margin-top: 15px;
-  padding: 5px;
-
-  &:active {
-    color: $rust-red;
+    outline-offset: 0; /* 3 */
   }
 
   .material-icon {
     font-size: 40px;
+  }
+}
+
+/**
+* Styles for orange mobile menu button.
+* 1. Vertical align button in the center of the header
+**/
+.nav__btn--orange {
+  color: $flame-orange;
+  margin-top: 8px; /* 1 */
+
+  &:active {
+    color: $rust-red;
   }
 }
