@@ -2,60 +2,134 @@
 // This file contains all styles related to the minimap component.
 // -----------------------------------------------------------------------------
 
-@mixin transition-area {
-  &:hover {
-    border: 1px solid $night-grey;
-    transform: scale(1.5);
+/**
+* Creates classes .minimap--{{count}}-across that specify the number of
+* 1fr grid-templates-columns between 1 and 20. For example, the
+* .minimap--5-across class specifies 5 columns. For more than 20
+* columns, adjust the $grid-col-count variable.
+* 1. min of 24px ensures accessibility of target area size.
+**/
+$grid-col-count: 20;
+
+@mixin grid-col-count-class {
+  @for $count from 1 through $grid-col-count {
+    .minimap--#{$count}-across {
+      grid-template-columns: repeat($count, minmax(24px, 1fr)); /* 1 */
+    }
   }
 }
 
-$minimap-width: 5%;
+/**
+* Mixin for minimap hit links with a "color" variable argument, including styles
+* on hover, focus, or active events for minimap links.
+* 1. Allow checkmark for visited links to be centered in the box.
+* 2. Styles for checkmark, which is visible via a color change once link is active
+*    or has been visited.
+**/
+@mixin minimap-hit($color) {
+  align-items: center; /* 1 */
+  background: $color;
+  color: $color;
+  display: flex; /* 1 */
+  justify-content: center; /* 1 */
+  margin: 0;
+  text-decoration: none;
 
+  @include on-event {
+    border: 3px solid darken($color, 22%);
+    color: $color;
+    outline: none;
+    text-decoration: none;
+
+    @include lg-up {
+      border: 2px solid darken($color, 22%);
+    }
+  }
+
+  .material-icon {
+    font-size: 18px; /* 2 */
+  }
+
+  &:visited {
+    background-color: darken($color, 10%);
+    color: $white; /* 2 */
+  }
+}
+
+/**
+* Mixin for minimap hit links that are currently active with a "color" variable argument.
+**/
+@mixin minimap-hit-active ($color) {
+  border: 3px solid darken($color, 22%);
+  color: $white;
+
+  @include lg-up {
+    border: 2px solid darken($color, 22%);
+  }
+
+  @include on-event {
+    color: $white;
+  }
+}
+
+/**
+* Styles for minimap that uses grid display. On medium and small screens, styles
+* assume the minimap will be inside of a modal.
+* 1. Increases gutter space between grid items on small screens.
+**/
 .minimap {
-  align-content: flex-start;
-  display: flex;
-  flex-wrap: wrap;
+  align-content: start;
+  display: grid;
   float: left;
-  height: calc(100vh - 60px);
-  position: sticky;
-  top: 60px;
-  width: $minimap-width;
+  gap: 8px; /* 1 */
+  grid-template-rows: auto;
+  height: 100%;
+  width: 100%;
   z-index: 998;
-}
 
-.minimap__box {
-  background-color: $wan-white-grey;
-  box-sizing: border-box;
-  height: 12px;
-  margin: 1px 1px 0 0;
-  width: 12px;
-}
-
-.minimap__row {
-  box-sizing: border-box;
-  height: 12px;
-  position: fixed;
-  width: $minimap-width;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .minimap__digital-hit {
-    @include transition-area;
-
-    background-color: $yale-blue;
-    transition: none;
+  @include lg-up {
+    gap: 1px; /* 1 */
   }
 }
 
-.minimap__digital-hit {
-  @include transition-area;
+/**
+* Includes the classes to specify grid-template-columns number
+**/
+@include grid-col-count-class;
 
-  background-color: $yale-blue;
-  transition: $transition-default;
+/**
+* Styles for the minimap grid item boxes.
+* 1. Ensures that the boxes are square.
+**/
+.minimap__box {
+  aspect-ratio: 1/1; /* 1 */
+  background-color: $wan-white-grey;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  @include lg-up {
+    border-radius: 2px;
+  }
 }
 
-.minimap__hit {
-  @include transition-area;
+/**
+* Styles for the minimap links.
+**/
+.minimap__digital-hit {
+  @include minimap-hit($yale-blue);
+}
 
-  background: $flame-orange;
+.minimap__record-hit {
+  @include minimap-hit($flame-orange);
+}
+
+/**
+* Styles for the minimap links that are currently active.
+**/
+.minimap__digital-hit--active {
+  @include minimap-hit-active($yale-blue);
+}
+
+.minimap__record-hit--active {
+  @include minimap-hit-active ($flame-orange);
 }
