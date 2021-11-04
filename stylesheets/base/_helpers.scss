@@ -53,6 +53,17 @@
   @include visually-hidden;
 }
 
+/**
+ * Defines classes to show or hide elements based on mixins.
+ **/
+.hide-on-lg-up {
+  @include hide-on-lg-up;
+}
+
+.show-on-lg-up {
+  @include show-on-lg-up;
+}
+
 .show-on-focus {
   @include show-on-focus;
 }

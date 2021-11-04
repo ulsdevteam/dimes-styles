@@ -6,10 +6,9 @@
  * Class for social icons content block.
  */
 .social-icons {
-  @include lg-up {
-    display: flex;
-    justify-content: space-evenly;
-  }
+  display: flex;
+  justify-content: space-between;
+  max-width: 250px;
 
   a {
     text-decoration: none;
@@ -21,11 +20,11 @@
  */
 .social-icons__icon {
   display: inline-block;
-  height: 30px;
+  height: auto;
   pointer-events: visibleFill;
   text-align: center;
   vertical-align: middle;
-  width: 40px;
+  width: 100%;
 
   &:hover,
   &:focus {
