@@ -31,7 +31,7 @@ $grid-col-count: 20;
   background: $color;
   color: $color;
   display: flex; /* 1 */
-  justify-content: center; /* 1 */
+  justify-content: right; /* 1 */
   margin: 0;
   text-decoration: none;
 
@@ -48,7 +48,8 @@ $grid-col-count: 20;
   }
 
   .material-icon {
-    font-size: 18px; /* 2 */
+    align-self: flex-start;
+    font-size: 11px; /* 2 */
   }
 
   &:visited {
