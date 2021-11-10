@@ -1,6 +1,5 @@
 language: node_js
 cache: yarn
-sudo: required
 node_js:
   - "stable"
 cache:
