@@ -22,12 +22,11 @@ $grid-col-count: 20;
 /**
 * Mixin for minimap hit links with a "color" variable argument, including styles
 * on hover, focus, or active events for minimap links.
-* 1. Allow checkmark for visited links to be centered in the box.
+* 1. Checkmark for visited links is located in the top right corner of the the box.
 * 2. Styles for checkmark, which is visible via a color change once link is active
 *    or has been visited.
 **/
 @mixin minimap-hit($color) {
-  align-items: center; /* 1 */
   background: $color;
   color: $color;
   display: flex; /* 1 */
@@ -48,8 +47,8 @@ $grid-col-count: 20;
   }
 
   .material-icon {
-    align-self: flex-start;
-    font-size: 11px; /* 2 */
+    align-self: flex-start; /* 1 */
+    font-size: 12px; /* 2 */
   }
 
   &:visited {
