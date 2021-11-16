@@ -1,9 +1,8 @@
 // -----------------------------------------------------------------------------
-// This file contains styles related to the dropdown component, including buttons
-// associated lists of links. These are typically used for mobile contexts when
-// we need to collapse sets of items into a dropdown list.
+// This file contains styles related to the dropdown menu component, including the button
+// associated with lists of links or menu items.
 //
-// For related styles, see styles for the dropdown component and header layout.
+// For related styles, see styles for the nav component and header layout.
 // -----------------------------------------------------------------------------
 
 /**
@@ -14,7 +13,7 @@
 }
 
 /**
-* Styles for a dropdown list of items, typically used on small screens.
+* Styles for a dropdown list or menu of items, typically used on small screens.
 * 1. The negative z-index value places the dropdown list under all other
 * values until it is opened.
 **/
@@ -24,9 +23,7 @@
   border-radius: 3px;
   margin-top: 5px;
   padding: 20px 0;
-  position: absolute;
-  right: 0;
-  width: 500px;
+  width: 270px;
   z-index: -999; /* 1 */
 
   &.open {
@@ -102,7 +99,7 @@
   margin: 0;
   padding: 10px 14px;
 
-  &.material-icon {
+  .material-icon {
     font-size: 21px;
     margin-right: 15px;
   }
