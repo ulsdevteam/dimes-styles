@@ -47,7 +47,7 @@ $grid-col-count: 20;
   }
 
   .material-icon {
-    font-size: 18px; /* 2 */
+    @include material-icon(18px); /* 2 */
   }
 
   &:visited {

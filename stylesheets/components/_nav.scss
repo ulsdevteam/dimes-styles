@@ -178,7 +178,6 @@
 *    attribute. When aria-expanded=false, these styles do not appear.
 * 2. Positions the border on top of the dropdown when it is open because they
 *    overlap.
-* 3. When the user clicks on the icon, it does not block the button click.
 **/
 .nav__btn--dropdown {
   @include nav-item-dropdown;
@@ -210,10 +209,9 @@
   }
 
   .material-icon {
-    font-size: 15px;
+    @include material-icon(15px);
+
     opacity: 0.7;
-    pointer-events: none; /* 3 */
-    vertical-align: middle;
 
     @include lg-up {
       font-size: 21px;
@@ -296,7 +294,7 @@
   }
 
   .material-icon {
-    font-size: 40px;
+    @include material-icon(40px, normal);
   }
 }
 

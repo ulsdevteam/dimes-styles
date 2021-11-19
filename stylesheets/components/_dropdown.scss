@@ -100,7 +100,8 @@
   padding: 10px 14px;
 
   .material-icon {
-    font-size: 21px;
+    @include material-icon(21px);
+
     margin-right: 15px;
   }
 }

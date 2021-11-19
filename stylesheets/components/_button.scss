@@ -48,8 +48,7 @@
   padding: 8px 10px;
 
   .material-icon {
-    font-size: 16px;
-    line-height: 16px;
+    @include material-icon(16px, 16px);
   }
 }
 
@@ -59,8 +58,7 @@
   padding: 13px 14px;
 
   .material-icon {
-    font-size: 20px;
-    line-height: 15px;
+    @include material-icon(20px, 15px);
   }
 }
 
@@ -70,8 +68,7 @@
   padding: 18px;
 
   .material-icon {
-    font-size: 20px;
-    line-height: 17px;
+    @include material-icon(20px, 17px);
   }
 }
 
