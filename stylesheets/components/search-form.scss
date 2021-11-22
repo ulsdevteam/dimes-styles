@@ -82,7 +82,7 @@
   * Specify size and placement of icon to replace default select expand arrow
   **/
   .material-icon {
-    @include material-icon(20px, normal);
+    @include material-icon(20px);
 
     position: absolute;
     right: 22px;
