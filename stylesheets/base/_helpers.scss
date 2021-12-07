@@ -13,26 +13,23 @@
 
 /**
  * Main content containers and wrapper
- * 1. Use Neat grid
+ * 1. Use CSS grid to create 12-column grid
  * 2. Use default gutter values for margins
- * 3. Calculate width
- * 4. Make the container full width
+ * 4. Make the container full width without gutters
+ * 5. Flexbox wrapper class
  */
 .container {
-  @include grid-container; /* 1 */
+  @include twelve-column-grid;
 
-  margin-left: $gutters-default; /* 2 */
-  margin-right: $gutters-default; /* 2 */
+  margin: 0 $gutters-default; /* 2 */
   width: calc(100% - (#{$gutters-default}) * 2); /* 3 */
 }
 
 .container--full-width {
-  @include grid-container;
-
-  width: 100%; /* 4 */
+  @include twelve-column-grid; /* 4 */
 }
 
-.wrapper {
+.wrapper { /* 5 */
   display: flex;
   justify-content: center;
 }
