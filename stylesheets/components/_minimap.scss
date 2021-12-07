@@ -43,8 +43,9 @@ $grid-col-count: 20;
   }
 
   .material-icon {
+    @include material-icon(12px); /* 2 */
+
     align-self: flex-start; /* 1 */
-    font-size: 12px; /* 2 */
   }
 
   &:visited {
