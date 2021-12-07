@@ -67,3 +67,21 @@
 .show-on-focus {
   @include show-on-focus;
 }
+
+/**
+* Base class for material icons setting 24px font size and normal line-height.
+**/
+.material-icon {
+  @include material-icon;
+}
+
+/**
+* Helper classes to adjust icon positions
+**/
+.material-icon--space-before {
+  margin-left: 3px;
+}
+
+.material-icon--space-after {
+  margin-right: 3px;
+}

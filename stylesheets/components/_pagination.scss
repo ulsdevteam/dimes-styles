@@ -15,8 +15,8 @@
   }
 
   .material-icon {
-    font-size: 23px;
-    line-height: 23px;
+    @include material-icon(23px, 23px);
+
     margin-bottom: 3px;
     pointer-events: unset;
   }
