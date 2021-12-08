@@ -105,21 +105,21 @@
 
 .footer-primary__address {
   @include md-up {
-    @include grid-column(col-start / span 6);
+    @include grid-column(1, 7);
   }
 
   @include lg-up {
-    @include grid-column(col-start / span 3);
+    @include grid-column(1, 4);
   }
 }
 
 .footer-primary__reading-room {
   @include md-up {
-    @include grid-column(col-start 7 / span 6);
+    @include grid-column(7, 13);
   }
 
   @include lg-up {
-    @include grid-column(col-start 4 / span 3);
+    @include grid-column(4, 7);
   }
 }
 
@@ -129,14 +129,8 @@
   margin-bottom: 30px;
   margin-left: 0;
 
-  @include md-up {
-    @include grid-column;
-
-    margin-left: 0;
-  }
-
   @include lg-up {
-    @include grid-column(col-start 10 / span 3);
+    @include grid-column(10, 13);
 
     text-align: right;
   }
@@ -154,7 +148,7 @@
 .footer-secondary__link { @include footer-secondary-link; }
 
 .footer-secondary__list {
-  @include grid-column(col-start / span 12);
+  @include grid-column;
 
   list-style: none;
   padding: 0;
