@@ -79,9 +79,10 @@
 
 /**
 * Mixins for grid column layout to be used with the .container helper class that
-* creates a 12-column layout. Specify the starting and ending column.
-* Eg. grid-column(10 / 13) takes up the right 3 columns on the page.
-* The default mixin is a full 12 columns starting from column 1.
+* creates a 12-column layout (with 13 grid-lines). Specify the starting and ending
+* grid-line numbers or column span. Eg. grid-column(10, span 3) takes up the right
+3 columns on the page. The default mixin is a full 12 columns starting from the first
+* grid-line of the first column.
 **/
 
 @mixin twelve-column-grid {
@@ -89,7 +90,7 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
-@mixin grid-column($grid-column-start: 1, $grid-column-end: 13) {
+@mixin grid-column($grid-column-start: 1, $grid-column-end: span 12) {
   grid-column-end: $grid-column-end;
   grid-column-start: $grid-column-start;
 }
