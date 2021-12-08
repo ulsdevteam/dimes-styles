@@ -154,6 +154,8 @@
 .footer-secondary__link { @include footer-secondary-link; }
 
 .footer-secondary__list {
+  @include grid-column(col-start / span 12);
+
   list-style: none;
   padding: 0;
 
