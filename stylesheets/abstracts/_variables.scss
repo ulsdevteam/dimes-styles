@@ -84,12 +84,8 @@ $font-weight-heavy: 900 !default;
 // Border radius
 $border-radius-default: 3px;
 
-//Neat grid
+// Gutters for grid container
 $gutters-default: 15px !default;
-
-$neat-grid: (
-  gutter: $gutters-default
-) !default;
 
 // Breakpoints map
 $break-md: 580px !default;
