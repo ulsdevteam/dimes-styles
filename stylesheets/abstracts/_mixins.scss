@@ -43,7 +43,7 @@
 **/
 @mixin transition-default {
   @media screen and (prefers-reduced-motion: no-preference) {
-    transition: all 0.2s ease;
+    transition: $transition-default;
   }
 }
 

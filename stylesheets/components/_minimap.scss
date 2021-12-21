@@ -35,8 +35,6 @@ $grid-col-count: 20;
   text-decoration: none;
 
   @include on-event {
-    @include transition-default;
-
     border: 2px solid darken($color, 22%);
     color: $color;
     outline: none;
