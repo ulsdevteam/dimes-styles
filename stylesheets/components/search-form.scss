@@ -74,7 +74,7 @@
   display: none; /* 2 */
   position: relative;
 
-  @media screen and (min-width: $break-lg) {
+  @include lg-up {
     display: inline-block; /* 2 */
   }
 

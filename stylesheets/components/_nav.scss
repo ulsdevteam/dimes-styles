@@ -226,6 +226,8 @@
 * 2. Positions this element underneath the border-bottom of the nav__btn--dropdown.
 **/
 .nav__list--dropdown {
+  @include transition-default;
+
   background: $maroon-brown;
   padding: 22px 0 0;
   position: static;
@@ -284,10 +286,6 @@
   border: 0;
   margin-left: auto; /* 1 */
   margin-right: 10px; /* 2 */
-
-  &:hover {
-    @include transition-default;
-  }
 
   &:focus {
     outline-offset: 0; /* 3 */

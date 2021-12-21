@@ -32,15 +32,9 @@
 @mixin footer-primary-link {
   @include footer-primary-text;
 
-  font-weight: $font-weight-normal;
-  text-decoration: underline;
-
-  @media screen and (prefers-reduced-motion: no-preference) {
-    &:hover,
-    &:focus {
-      color: $flame-orange;
-      transition: $transition-default;
-    }
+  &:hover,
+  &:focus {
+    color: $flame-orange;
   }
 }
 
@@ -59,15 +53,9 @@
 @mixin footer-secondary-link {
   @include footer-secondary-text;
 
-  text-decoration: underline;
-
-  @media screen and (prefers-reduced-motion: no-preference) {
-    &:hover,
-    &:focus {
-      color: $desert-grey;
-      text-decoration: none;
-      transition: $transition-default;
-    }
+  &:hover,
+  &:focus {
+    color: $desert-grey;
   }
 }
 
