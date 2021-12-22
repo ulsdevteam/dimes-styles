@@ -3,6 +3,21 @@
 // -----------------------------------------------------------------------------
 
 /**
+* Defines mixins for button sizes and colors
+**/
+@mixin button-size($font-size, $line-height, $padding, ) {
+  font-size: $font-size;
+  line-height: $line-height;
+  padding: $padding;
+}
+
+@mixin button-color($background-color, $border-color, $color) {
+  background-color: $background-color;
+  border-color: $border-color;
+  color: $color;
+}
+
+/**
 * Defines base styles for buttons.
 **/
 .btn {
@@ -42,10 +57,9 @@
 * Styles for button sizes. Font sizes and padding are adjusted for each size.
 **/
 .btn--sm {
-  font-size: 10px;
+  @include button-size(10px, 16px, 8px 10px);
+
   font-weight: bold;
-  line-height: 16px;
-  padding: 8px 10px;
 
   .material-icon {
     @include material-icon(16px, 16px);
@@ -53,9 +67,7 @@
 }
 
 .btn--md {
-  font-size: 12px;
-  line-height: 15px;
-  padding: 13px 14px;
+  @include button-size(12px, 15px, 13px 14px);
 
   .material-icon {
     @include material-icon(20px, 15px);
@@ -63,9 +75,7 @@
 }
 
 .btn--lg {
-  font-size: 14px;
-  line-height: 18px;
-  padding: 18px;
+  @include button-size(14px, 18px, 18px);
 
   .material-icon {
     @include material-icon(20px, 17px);
@@ -77,9 +87,7 @@
 * each on hover and/or focus.
 **/
 .btn--blue {
-  background-color: $yale-blue;
-  border-color: $yale-blue;
-  color: $white;
+  @include button-color($yale-blue, $yale-blue, $white);
 
   &:hover,
   &:focus {
@@ -90,9 +98,7 @@
 }
 
 .btn--light-blue {
-  background-color: $solitude-blue;
-  border-color: $regal-blue;
-  color: $regal-blue;
+  @include button-color($solitude-blue, $regal-blue, $regal-blue);
 
   &:hover,
   &:focus {
@@ -102,9 +108,7 @@
 }
 
 .btn--navy {
-  background-color: $regal-blue;
-  border-color: $regal-blue;
-  color: $white;
+  @include button-color($regal-blue, $regal-blue, $white);
 
   &:hover,
   &:focus {
@@ -115,9 +119,7 @@
 }
 
 .btn--orange {
-  background-color: $flame-orange;
-  border-color: $flame-orange;
-  color: $white;
+  @include button-color($flame-orange, $flame-orange, $white);
 
   &:hover,
   &:focus {
@@ -128,9 +130,7 @@
 }
 
 .btn--transparent {
-  background-color: transparent;
-  border: 1px solid $dark-grey;
-  color: $mortar-grey;
+  @include button-color(transparent, $dark-grey, $mortar-grey);
 
   &:hover,
   &:focus {
@@ -140,9 +140,7 @@
 }
 
 .btn--gray {
-  background-color: $desert-grey;
-  border-color: $dark-grey;
-  color: $mortar-grey;
+  @include button-color($desert-grey, $dark-grey, $mortar-grey);
 
   &:hover,
   &:focus {
@@ -152,9 +150,7 @@
 }
 
 .btn--dark-gray {
-  background-color: $dark-grey;
-  border-color: $dark-grey;
-  color: $black;
+  @include button-color($dark-grey, $dark-grey, $black);
 
   &:hover,
   &:focus {
@@ -165,9 +161,7 @@
 }
 
 .btn--black {
-  background-color: $black;
-  border-color: $white;
-  color: $white;
+  @include button-color($black, $white, $white);
 
   &:hover,
   &:focus {

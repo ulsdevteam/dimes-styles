@@ -4,10 +4,10 @@
 
 /**
 * Creates classes .minimap--{{count}}-across that specify the number of
-* 1fr grid-templates-columns between 1 and 20. For example, the
+* 1fr grid-template-columns between 1 and 20. For example, the
 * .minimap--5-across class specifies 5 columns. For more than 20
 * columns, adjust the $grid-col-count variable.
-* 1. min of 24px ensures accessibility of target area size.
+* 1. Minimum of 24px ensures accessibility of target area size.
 **/
 $grid-col-count: 20;
 
