@@ -21,7 +21,7 @@ deploy:
   skip_cleanup: true
   on:
     repo: RockefellerArchiveCenter/${APPLICATION_NAME}
-    branch: base
+    branch: deploy
   bucket: $AWS_BUCKET_NAME
   region: us-east-1
 notifications:
