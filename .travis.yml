@@ -10,6 +10,8 @@ cache:
     - node_modules
 install:
   - yarn install
+before_script:
+  - yarn build-storybook
 script:
   - yarn lint
   - yarn test
