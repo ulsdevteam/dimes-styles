@@ -2,6 +2,9 @@ language: node_js
 cache: yarn
 node_js:
   - "stable"
+env:
+  global:
+    - APPLICATION_NAME: styles
 cache:
   directories:
     - node_modules
@@ -10,5 +13,16 @@ install:
 script:
   - yarn lint
   - yarn test
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  local_dir: $DEPLOY_DIR
+  skip_cleanup: true
+  on:
+    repo: RockefellerArchiveCenter/${APPLICATION_NAME}
+    branch: base
+  bucket: $AWS_BUCKET_NAME
+  region: us-east-1
 notifications:
   email: false
