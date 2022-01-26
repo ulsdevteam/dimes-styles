@@ -28,7 +28,7 @@
     "lint-fix": "npx stylelint 'stylesheets/**/*.scss' --fix",
     "test": "jest --testRegex test_ --env=node --passWithNoTests",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --out .output",
+    "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-aws-s3"
   },
   "browserslist": [
