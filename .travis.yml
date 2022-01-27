@@ -2,8 +2,6 @@ language: node_js
 node_js:
   - "lts/*"
 cache: yarn
-node_js:
-  - "stable"
 env:
   global:
     - APPLICATION_NAME: styles
