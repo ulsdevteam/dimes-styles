@@ -1,7 +1,8 @@
 import { create } from '@storybook/theming'
+import Logo from '/stories/assets/img/rac_logo_small.svg'
 
 export default create({
   base: 'light',
-  brandTitle: 'RAC Style Guide',
-  brandImage: 'https://rockarch.org/assets/img/home_page_logo.svg'
+  brandTitle: 'Rockefeller Archive Center Style Guide',
+  brandImage: Logo
 })
