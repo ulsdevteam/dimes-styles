@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the modal component.
+// -----------------------------------------------------------------------------
+
+@use 'sass:color';
+
+/**
+* Variables for modals
+**/
+$modal-content-margin: 10%;
+$modal-header-height: 52px;
+
+/**
+* Styles for the modal overlay, which sits on top of other page content, but
+* underneath the modal itself.
+* 1. Position is fixed and set to cover the entire screen.
+* 2. Z-index value should position overlay on top of other content.
+**/
+.modal__overlay {
+  @include transition-default;
+
+  background-color: color.adjust($black, $alpha: -0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed; /* 1 */
+  right: 0;
+  top: 0;
+  z-index: 1000; /* 2 */
+}
+
+/**
+* Styles for the modal.
+* 1. modal is absolutely positioned at the center of the screen.
+* 2. Z-index value positions modal on top of modal overlay.
+**/
+.modal {
+  background-color: $white;
+  border: 1px solid $night-grey;
+  border-radius: $border-radius-default;
+  bottom: $modal-content-margin;
+  font-family: $sans-serif-stack;
+  left: $modal-content-margin;
+  overflow: auto;
+  position: absolute; /* 1 */
+  right: $modal-content-margin;
+  top: $modal-content-margin;
+  z-index: 1001; /* 2 */
+}
+
+/**
+* Styles for the modal header.
+* 1. Setting a fixed height allows for calculation of the modal body height below.
+**/
+.modal__header {
+  background-color: $night-grey;
+  box-sizing: border-box;
+  color: $white;
+  display: flex;
+  height: $modal-header-height; /* 1 */
+  justify-content: space-between;
+  padding: 16px 20px 10px;
+  width: 100%;
+}
+
+.modal__header-title {
+  color: inherit;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__header-button {
+  background-color: inherit;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+/**
+* Styles for the modal body.
+* 1. Applying a minimum-height ensures the modal is centered on the page.
+**/
+.modal__body {
+  min-height: calc(80vh - $modal-header-height); /* 1 */
+  padding: 20px;
+}

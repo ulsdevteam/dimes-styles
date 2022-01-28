@@ -8,8 +8,7 @@
 
 // 2. Vendors
 @import
-  'vendors/normalize',
-  'vendors/neat/neat';
+  'vendors/normalize';
 
 // 3. Base stuff
 @import
@@ -24,9 +23,21 @@
 
 // 5. Components
 @import
-  'components/button',
   'components/badge',
-  'components/icon';
+  'components/breadcrumbs',
+  'components/button',
+  'components/card',
+  'components/dropdown',
+  'components/hero',
+  'components/inputs',
+  'components/minimap',
+  'components/modal',
+  'components/nav',
+  'components/pagination',
+  'components/search-form',
+  'components/social-icons',
+  'components/skip-link',
+  'components/tableOfContents';
 
 // 6. Page-specific styles
 @import

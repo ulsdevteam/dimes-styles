@@ -1,3 +1,150 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+/**
+* Primary Footer title mixin
+**/
+@mixin footer-primary-title-text {
+  font-family: $sans-serif-stack;
+  font-size: 21px;
+  font-weight: $font-weight-heavy;
+  letter-spacing: 4px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+/**
+* Primary Footer text mixin
+**/
+@mixin footer-primary-text {
+  color: $regal-blue;
+  font-family: $serif-stack;
+  font-size: 15px;
+  font-weight: $font-weight-normal;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+/**
+* Primary Footer link mixin
+**/
+@mixin footer-primary-link {
+  @include footer-primary-text;
+
+  &:hover,
+  &:focus {
+    color: $flame-orange;
+  }
+}
+
+/**
+* Secondary Footer text mixin.
+**/
+@mixin footer-secondary-text {
+  @include footer-primary-text;
+
+  color: $white;
+}
+
+/**
+* Secondary Footer link mixin
+**/
+@mixin footer-secondary-link {
+  @include footer-secondary-text;
+
+  &:hover,
+  &:focus {
+    color: $desert-grey;
+  }
+}
+
+/**
+* Primary Footer styles.
+* 1. Insertion of a visual line break without causing screen readers to pause.
+**/
+.footer-primary { background: $wan-white-grey; }
+.footer-primary__text { @include footer-primary-text; }
+.footer-primary__link { @include footer-primary-link; }
+
+.footer-primary__title {
+  @include grid-column;
+  @include footer-primary-title-text;
+
+  margin: 60px 0 28px;
+  padding-bottom: 0;
+
+  .line-break {
+    display: table; /* 1 */
+  }
+}
+
+.footer-primary__address,
+.footer-primary__reading-room {
+  @include grid-column;
+
+  margin-bottom: 40px;
+  margin-left: 0;
+
+  @include md-up {
+    margin-bottom: 50px;
+  }
+}
+
+.footer-primary__address {
+  @include md-up {
+    @include grid-column(span 6);
+  }
+
+  @include lg-up {
+    @include grid-column(span 3);
+  }
+}
+
+.footer-primary__reading-room {
+  @include md-up {
+    @include grid-column(7, span 6);
+  }
+
+  @include lg-up {
+    @include grid-column(4, span 3);
+  }
+}
+
+.footer-primary__social {
+  @include grid-column;
+
+  margin-bottom: 30px;
+  margin-left: 0;
+
+  @include lg-up {
+    @include grid-column(10, span 3);
+
+    text-align: right;
+  }
+}
+
+.footer-primary__policy-link:not(:first-child) {
+  margin-left: 28px;
+}
+
+/**
+* Secondary Footer styles.
+**/
+.footer-secondary { background: $regal-blue; }
+.footer-secondary__text { @include footer-secondary-text; }
+.footer-secondary__link { @include footer-secondary-link; }
+
+.footer-secondary__list {
+  @include grid-column;
+
+  list-style: none;
+  padding: 0;
+
+  @include lg-up { text-align: right; }
+}
+
+.footer-secondary__list-item {
+  display: inline-block;
+  padding-right: 28px;
+}

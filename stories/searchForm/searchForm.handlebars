@@ -1,38 +1,40 @@
 <form role="search" action="/search/" method="get">
   <div class="search">
     <div class="input-group__search">
-      <div class="{{# if hideLabel}}hide-label {{/if}}input__search">
-        <label for="query">Enter a search term</label>
+      <div class="input__search">
+        <label for="query" class="{{#if hideLabel}}visually-hidden {{/if}}">Enter a search term</label>
         <input type="search" id="query" name="query" placeholder="Search..." maxlength="255" size="60" aria-required="true" required="">
       </div>
       {{#if controlsInline}}
       <div class="select__search--wrapper">
-        <div class="hide-label select__search">
-          <label for="field">Choose a search field</label>
+        <div class="select__search">
+          <label for="field" class="visually-hidden">Choose a search category</label>
           <select name="field" id="field">
             <option value="">Everything</option>
             <option value="title">Title</option>
             <option value="author">Author</option>
             <option value="subject">Subject</option>
           </select>
+          <span class="material-icon" aria-hidden="true">expand_more</span>
         </div>
       </div>
       {{/if}}
       {{#if button}}
-      <button type="submit" class="btn btn--search"><span class="material-icons" aria-hidden="true">search</span></button>
+      <button type="submit" class="btn btn--orange search__submit-btn" aria-label="submit search"><span class="material-icon" aria-hidden="true">search</span></button>
       {{/if}}
     </div>
     {{#if controlsBlock}}
     <div class="input-group__search-controls">
       <div class="select__search--wrapper">
-        <div class="hide-label select__search">
-          <label for="field">Choose a search field</label>
+        <div class="select__search">
+          <label for="field" class="visually-hidden">Choose a search category</label>
           <select name="field" id="field">
             <option value="">Everything</option>
             <option value="title">Title</option>
             <option value="author">Author</option>
             <option value="subject">Subject</option>
           </select>
+          <span class="material-icon" aria-hidden="true">expand_more</span>
         </div>
       </div>
     </div>

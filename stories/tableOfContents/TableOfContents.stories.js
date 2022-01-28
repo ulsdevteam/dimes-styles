@@ -1,9 +1,9 @@
 import TableOfContents from './tableOfContents.handlebars'
 
-export const colors = (args) => {
-  const componentColors = ['toc--neutral', 'toc--blue', 'toc--orange']
-  const tocs = componentColors.map(c => TableOfContents({ class: c, ...args })).join('')
-  return tocs
-}
+export const neutral = (args) => TableOfContents({ class: 'toc--neutral', ...args })
+
+export const blue = (args) => TableOfContents({ class: 'toc--blue', ...args })
+
+export const orange = (args) => TableOfContents({ class: 'toc--orange', ...args })
 
 export const withTitle = (args) => TableOfContents({ class: 'toc--neutral', title: 'Digital Preservation Policy', ...args })

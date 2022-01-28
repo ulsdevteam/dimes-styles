@@ -37,3 +37,148 @@
   outline: solid 2px $mortar-grey;
   outline-offset: 2px;
 }
+
+/**
+* Adds default transition unless users have set a preference for reduced motion.
+**/
+@mixin transition-default {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    transition: $transition-default;
+  }
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/e460abb30cf2fef924c64ec1f7de8e3f8c23452a/dist/css/style.css#L103-L123
+ */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+* Show element when it receives user focus
+**/
+@mixin show-on-focus {
+  &:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+    z-index: 1000;
+  }
+}
+
+/**
+* Mixins for grid column layout to be used with the .container helper class that
+* creates a 12-column layout (with 13 grid-lines). Specify the starting and ending
+* grid-line numbers or column span. Eg. grid-column(10, span 3) takes up the right
+3 columns on the page. The default mixin is a full 12 columns starting from the first
+* grid-line of the first column.
+**/
+
+@mixin twelve-column-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin grid-column($grid-column-start: 1, $grid-column-end: span 12) {
+  grid-column-end: $grid-column-end;
+  grid-column-start: $grid-column-start;
+}
+
+/**
+* Mixins for responsive media queries. These mixins presume a mobile-first approach:
+* styles are developed for mobile devices and modified as necessary for larger
+* screens (rather than the other way around).
+**/
+
+@mixin md-up {
+  @media screen and (min-width: $break-md) { @content; }
+}
+
+@mixin lg-up {
+  @media screen and (min-width: $break-lg) { @content; }
+}
+
+/**
+* Shows element only on medium or larger screens
+**/
+@mixin show-on-md-up {
+  display: none;
+
+  @include md-up {
+    display: inherit;
+  }
+}
+
+/**
+* Hides element on medium or larger screens
+**/
+@mixin hide-on-md-up {
+  display: inherit;
+
+  @include md-up {
+    display: none;
+  }
+}
+
+/**
+* Shows element only on large screens
+**/
+@mixin show-on-lg-up {
+  display: none;
+
+  @include lg-up {
+    display: inherit;
+  }
+}
+
+/**
+* Hides element only on large screens
+**/
+@mixin hide-on-lg-up {
+  display: inherit;
+
+  @include lg-up {
+    display: none;
+  }
+}
+
+/**
+* Mixin for input text
+**/
+@mixin input-text {
+  color: $night-grey;
+  font-family: $sans-serif-stack;
+  font-size: 14px;
+}
+
+/**
+* Mixin for material icons. Accepts arguments for font-size and line-height.
+**/
+@mixin material-icon($font-size:24px, $line-height:normal) {
+  direction: ltr;
+  display: inline-block;
+  font-family: $icons;
+  font-feature-settings: 'liga';
+  font-size: $font-size;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+  letter-spacing: normal;
+  line-height: $line-height;
+  pointer-events: none;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: normal;
+}

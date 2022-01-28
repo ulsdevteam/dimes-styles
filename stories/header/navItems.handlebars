@@ -1,19 +1,20 @@
-<nav class="nav" aria-label="Main">
-  <ul class="nav__list">
-    <li class="nav__item">
-      <a class="nav__link" href="https://raccess.rockarch.org/" id="raccess">Sign in to RACcess <span class="material-icons" aria-hidden="true">arrow_right_alt</span></a>
+<nav class="nav-right" aria-label="Main">
+  <ul class="nav__list show-on-lg-up">
+    <li class="nav__item btn--navy">
+      <a class="nav__link" href="https://raccess.rockarch.org/" id="raccess">Sign in to RACcess <span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
     </li>
-    <li class="nav__item">
-      <a class="nav__link" href="/list/" id="list">My List (146) <span class="material-icons" aria-hidden="true">arrow_right_alt</span></a>
+    <li class="nav__item btn--navy">
+      <a class="nav__link" href="/list/" id="list">My List (146) <span class="material-icon" aria-hidden="true">arrow_right_alt</span></a>
     </li>
   </ul>
+
   <div class="dropdown hide-on-lg-up">
-    <button class="btn nav-mobile__btn closed" tabindex="0" aria-expanded="false">
-      <span class="material-icons" aria-hidden="true">menu</span>
+    <button class="btn btn--navy nav__btn--mobile closed" tabindex="0" aria-expanded="false">
+      <span class="material-icon">menu</span>
     </button>
-    <ul class="dropdown__list dropdown__list--mobile dropdown__list--slide-left closed">
-      <li><a id="menu-item-0" class="btn btn--navy btn--mobile-dropdown" href="https://raccess.rockarch.org" tabindex="-1">Sign in to RACcess<span class="material-icons" aria-hidden="true">east</span></a></li>
-      <li><a id="menu-item-1" class="btn btn--navy btn--mobile-dropdown" href="/list" tabindex="-1">My List<span class="material-icons" aria-hidden="true">east</span></a></li>
+    <ul class="dropdown__list dropdown__list--mobile list--unstyled dropdown__list--navy dropdown__list--slide-left {{#unless showMobileNavItems}}closed{{/unless}}">
+      <li><a id="menu-item-0" class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="https://raccess.rockarch.org" tabindex="-1">Sign in to RACcess<span class="material-icon" aria-hidden="true">east</span></a></li>
+      <li><a id="menu-item-1" class="btn btn--navy dropdown__btn dropdown__btn--mobile" href="/list" tabindex="-1">My List<span class="material-icon" aria-hidden="true">east</span></a></li>
     </ul>
   </div>
 </nav>

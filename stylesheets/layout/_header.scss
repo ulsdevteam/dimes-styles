@@ -1,3 +1,144 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
+// This file contains styles related to the header of the site/application.
+// For related components, see styles in the dropdown, nav, and social-icons components.
 // -----------------------------------------------------------------------------
+
+/**
+* Header text mixin
+* 1. Removes default link underline
+**/
+@mixin header-text {
+  font-family: $sans-serif-stack;
+  font-size: 12px;
+  text-decoration: none; /* 1 */
+}
+
+/**
+* Header title mixin
+*1. Assumes title is always a link and underlines on event
+**/
+@mixin header-title {
+  @include header-text;
+
+  font-weight: $font-weight-heavy;
+  letter-spacing: 0.1em;
+  line-height: 13px;
+  text-transform: uppercase;
+
+  @include md-up {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline; /* 1 */
+  }
+}
+
+/**
+* Header sub-title mixin
+*1. Assumes title is always a link and underlines on event
+**/
+@mixin header-subtitle {
+  @include header-text;
+
+  font-style: italic;
+  line-height: 13px;
+}
+
+/**
+* Styles for header. Header is not fixed/sticky by default,
+* so custom styles are required to implement that.
+**/
+
+.header {
+  min-height: 60px;
+  padding: 0 15px;
+  width: 100%;
+
+  .wrapper {
+    min-height: 60px;
+  }
+}
+
+/**
+* Styles for header colors.
+**/
+.header--white {
+  background-color: $white;
+  color: $regal-blue;
+
+  a {
+    color: $regal-blue;
+  }
+}
+
+.header--blue {
+  background-color: $regal-blue;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+/**
+* Styles for header branding section that includes title, subtitle, and/or image.
+**/
+.header__brand {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  z-index: 3;
+
+  @include lg-up {
+    padding-left: 65px;
+  }
+}
+
+.header__brand-title {
+  @include header-title;
+
+  margin-right: 10px;
+}
+
+.header__brand-subtitle {
+  @include header-subtitle;
+
+  margin: 0;
+}
+
+/**
+* Styles for header brand image.
+* 1. Specifies height to fit inside the header
+**/
+.header__brand-image {
+  line-height: 0;
+
+  img {
+    height: 56px; /* 1 */
+  }
+}
+
+/**
+* Styles for header div that contain social icons component.
+* 1. Adjust size of icons to be smaller than the default 24px svg
+**/
+.header__social-icons {
+  display: none;
+
+  @include lg-up {
+    align-self: center;
+    display: block;
+    line-height: 0;
+    position: absolute;
+    right: 40px;
+    width: 150px;
+  }
+
+  .social-icons__icon svg {
+    width: 16px; /* 1 */
+  }
+}

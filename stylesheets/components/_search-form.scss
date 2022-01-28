@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------------------
+// This file contains styles related to the search form component including input and select
+// -----------------------------------------------------------------------------------------
+
+/**
+* Defines layout styles for elements of search component.
+**/
+.search {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-group__search {
+  display: flex;
+  width: 100%;
+}
+
+.input-group__search-controls {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.input__search {
+  width: 100%;
+}
+
+/**
+* Defines styles for search input box and associated text.
+* 1. Removes rounded corners on iOS
+* 2. Changes font-size from the standard input-text mixin
+**/
+.input__search input {
+  @include input-text;
+
+  appearance: none; /* 1 */
+  border: 1px solid $night-grey;
+  border-radius: 0; /* 1 */
+  font-size: 18px; /* 2 */
+  height: 62px;
+  padding: 20px;
+  width: 100%;
+}
+
+/**
+* Defines styles for button associated with the search-form component.
+* 1. Align button with search input box instead of label.
+**/
+
+.search__submit-btn {
+  align-self: flex-end; /* 1 */
+  border-color: $rust-red;
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 12px 14px;
+
+  &:focus {
+    box-shadow: 0 0 0 1px $white inset;
+    outline: none;
+  }
+
+  .material-icon {
+    @include material-icon(36px);
+  }
+}
+
+/**
+* Defines styles for select.
+* 1. Align select with search input box instead of label
+* 2. Only display select on large screens
+**/
+.select__search--wrapper {
+  align-self: flex-end; /* 1 */
+  display: none; /* 2 */
+  position: relative;
+
+  @include lg-up {
+    display: inline-block; /* 2 */
+  }
+
+  /**
+  * Specify size and placement of icon to replace default select expand arrow
+  **/
+  .material-icon {
+    @include material-icon(20px);
+
+    position: absolute;
+    right: 22px;
+    top: 20px;
+  }
+}
+
+/**
+* Defines styles for select and associated text. Note that with the native select element,
+* there is no ability to style the select options.
+* 1. Remove the default select expand arrow, which is replaced with an icon in the html.
+**/
+.select__search select {
+  @include input-text;
+
+  appearance: none; /* 1 */
+  background-color: $white;
+  border: 1px solid $night-grey;
+  border-radius: 0;
+  font-size: 16px;
+  height: 62px;
+  padding: 20px;
+  width: 180px;
+}

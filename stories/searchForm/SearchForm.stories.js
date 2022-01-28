@@ -1,4 +1,4 @@
-import Search from './search.handlebars'
+import Search from './searchForm.handlebars'
 
 export const basic = () => Search({
   hideLabel: false,

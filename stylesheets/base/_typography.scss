@@ -46,6 +46,8 @@ a {
   text-decoration: underline;
 
   @include on-event {
+    @include transition-default;
+
     color: $crusta-orange; /* 1 */
     cursor: pointer; /* 2 */
     text-decoration: none; /* 3 */

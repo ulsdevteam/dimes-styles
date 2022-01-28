@@ -1,0 +1,310 @@
+// -----------------------------------------------------------------------------
+// This file contains styles related to navigation of the site/application.
+// For related components, see styles for the dropdown component and header layout.
+// -----------------------------------------------------------------------------
+
+/**
+* Header navigation link typography mixin
+**/
+@mixin header-nav-link {
+  @include header-text;
+
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.1em;
+  line-height: 60px;
+  text-transform: uppercase;
+
+  @include md-up {
+    line-height: 70px;
+  }
+
+  @include lg-up {
+    line-height: 60px;
+  }
+}
+
+/**
+* Header navigation item dropdown typography mixin
+**/
+@mixin nav-item-dropdown {
+  @include header-text;
+
+  font-size: 15px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.125em;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  @include lg-up {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  &:hover,
+  &:focus {
+    font-weight: $font-weight-heavy;
+  }
+}
+
+/**
+* Header navigation dropdown item title typography mixin
+**/
+@mixin nav-item-title {
+  @include header-text;
+
+  color: $white;
+  font-size: 16.5px;
+  font-weight: $font-weight-heavy;
+  letter-spacing: normal;
+  line-height: 20px;
+  text-transform: none;
+}
+
+/**
+* Header navigation dropdown item description typography mixin
+**/
+@mixin nav-item-description {
+  color: $white;
+  font-family: $serif-stack;
+  font-style: italic;
+  font-weight: $font-weight-normal;
+  letter-spacing: normal;
+  line-height: 20px;
+  opacity: 0.8;
+  text-transform: none;
+}
+
+/**
+* Styles for nav in header. Pushes nav items to the right.
+**/
+.nav-right {
+  display: flex;
+  margin-left: auto;
+}
+
+/**
+* Styles for nav in header.
+* 1. Aligns items to the right on mobile.
+* 2. Aligns items in the center on large screens.
+**/
+.nav-center {
+  display: flex;
+  justify-content: right; /* 1 */
+  width: 100%;
+
+  @include lg-up {
+    justify-content: center; /* 2 */
+  }
+}
+
+/**
+* Styles for nav that moves flex nav items to a vertical column on small screens.
+* 1. Fill 100% container width on small screens
+**/
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* 1 */
+
+  @include lg-up {
+    width: unset; /* 1 */
+  }
+}
+
+/**
+* Styles for navigation to be used within a header.
+* 1. Prevents icon from wrapping below link on certain screen sizes.
+**/
+.nav__list {
+  margin: 0;
+  padding: 0;
+
+  @include lg-up {
+    margin-right: -15px; /* 1 */
+  }
+}
+
+/**
+* Styles for navigation items and links used within a header.
+* 1. Replace the default focus styles, which don't look good with the header
+*    items, with an underline.
+**/
+.nav__item {
+  border-left: 1px solid $mortar-grey;
+  display: inline-block;
+
+  @include md-up {
+    padding: 0 14px;
+  }
+
+  &:focus-within,
+  &:hover {
+    @include transition-default;
+
+    text-decoration: underline; /* 1 */
+  }
+}
+
+.nav__link {
+  @include header-nav-link;
+
+  &:focus {
+    outline: inherit; /* 1 */
+  }
+}
+
+/**
+* Styles for a list of navigation items that contain dropdown lists of
+* sub-navigation items.
+* 1. On small screens, do not display until the dropdown is open. This is
+*    controlled via javascript.
+**/
+.nav__item--dropdown {
+  border: 0;
+  display: none; /* 1 */
+  text-align: right;
+
+  @include lg-up {
+    box-sizing: content-box;
+    display: inline-block;
+  }
+}
+
+/**
+* Styles for the navigation button/s that are used to open a dropdown sub-menu of
+* navigation items.
+* 1. Styles that apply only when the dropdown is open based on the aria-expanded
+*    attribute. When aria-expanded=false, these styles do not appear.
+* 2. Positions the border on top of the dropdown when it is open because they
+*    overlap.
+**/
+.nav__btn--dropdown {
+  @include nav-item-dropdown;
+
+  background: unset;
+  border: 0;
+  padding: 15px 20px 15px 0;
+
+  @include lg-up {
+    display: inline-block;
+    margin: 20px 25px 0;
+    padding: 0 0 10px;
+    position: relative; /* 2 */
+    z-index: 2; /* 2 */
+
+    &[aria-expanded=true] {
+      border-bottom: 8px solid; /* 1 */
+      color: $flame-orange; /* 1 */
+      outline: none; /* 1 */
+    }
+  }
+
+  &[aria-expanded=true] {
+    outline: none; /* 1 */
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .material-icon {
+    @include material-icon(15px);
+
+    opacity: 0.7;
+
+    @include lg-up {
+      font-size: 21px;
+      margin-left: 7px;
+    }
+  }
+}
+
+/**
+* Styles for the dropdown list of navigation items
+* 1. On large screens, positions the dropdown under the nav buttons and below the header.
+* 2. Positions this element underneath the border-bottom of the nav__btn--dropdown.
+**/
+.nav__list--dropdown {
+  @include transition-default;
+
+  background: $maroon-brown;
+  padding: 22px 0 0;
+  position: static;
+  width: 100%;
+
+  @include lg-up {
+    position: absolute; /* 1 */
+    width: 360px;
+    z-index: 1; /* 2 */
+  }
+}
+
+/**
+* Styles for the dropdown of navigation list items.
+* 1. Removes link underline and replaces with an outline on focus.
+**/
+.nav__list-item--dropdown {
+  height: auto;
+  min-width: 300px;
+  padding: 12px 28px;
+  text-align: left;
+
+  &:hover,
+  &:focus-within {
+    background: $rust-red;
+    text-decoration: none; /* 1 */
+  }
+
+  &:focus-within {
+    outline: 1px solid $white; /* 1 */
+  }
+}
+
+.nav__link-title {
+  @include nav-item-title;
+
+  margin: 0 3px;
+  width: 100%;
+}
+
+.nav__link-description {
+  @include nav-item-description;
+
+  margin: 0;
+  width: 100%;
+}
+
+/**
+* Styles for the menu button that opens a navigation dropdown on small screens.
+* 1. Pushes menu button to the right side of the nav flexbox.
+* 2. Aligns right icon margin with navigation buttons.
+* 3. Removes default outline offset on focus so that the outline stays within the header.
+**/
+.nav__btn--mobile {
+  background: unset;
+  border: 0;
+  margin-left: auto; /* 1 */
+  margin-right: 10px; /* 2 */
+
+  &:focus {
+    outline-offset: 0; /* 3 */
+  }
+
+  .material-icon {
+    @include material-icon(40px);
+  }
+}
+
+/**
+* Styles for orange mobile menu button.
+* 1. Vertical align button in the center of the header
+**/
+.nav__btn--orange {
+  color: $flame-orange;
+  margin-top: 8px; /* 1 */
+
+  &:active {
+    color: $rust-red;
+  }
+}

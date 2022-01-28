@@ -1,3 +1,171 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+/**
+* Defines mixins for button sizes and colors
+**/
+@mixin button-size($font-size, $line-height, $padding, ) {
+  font-size: $font-size;
+  line-height: $line-height;
+  padding: $padding;
+}
+
+@mixin button-color($background-color, $border-color, $color) {
+  background-color: $background-color;
+  border-color: $border-color;
+  color: $color;
+}
+
+/**
+* Defines base styles for buttons.
+**/
+.btn {
+  @include transition-default;
+
+  border-radius: $border-radius-default;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $sans-serif-stack;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &:disabled {
+    cursor: unset;
+    opacity: 0.7;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/**
+* Styles for buttons which take up the full width of their parent element.
+**/
+.btn--block {
+  display: flex;
+  width: 100%;
+}
+
+/**
+* Styles for button sizes. Font sizes and padding are adjusted for each size.
+**/
+.btn--sm {
+  @include button-size(10px, 16px, 8px 10px);
+
+  font-weight: bold;
+
+  .material-icon {
+    @include material-icon(16px, 16px);
+  }
+}
+
+.btn--md {
+  @include button-size(12px, 15px, 13px 14px);
+
+  .material-icon {
+    @include material-icon(20px, 15px);
+  }
+}
+
+.btn--lg {
+  @include button-size(14px, 18px, 18px);
+
+  .material-icon {
+    @include material-icon(20px, 17px);
+  }
+}
+
+/**
+* Styles for button colors. Sets background, border and text color, and adjusts
+* each on hover and/or focus.
+**/
+.btn--blue {
+  @include button-color($yale-blue, $yale-blue, $white);
+
+  &:hover,
+  &:focus {
+    background-color: darken($yale-blue, 10%);
+    border-color: darken($yale-blue, 10%);
+    color: $white;
+  }
+}
+
+.btn--light-blue {
+  @include button-color($solitude-blue, $regal-blue, $regal-blue);
+
+  &:hover,
+  &:focus {
+    background-color: darken($solitude-blue, 10%);
+    color: $regal-blue;
+  }
+}
+
+.btn--navy {
+  @include button-color($regal-blue, $regal-blue, $white);
+
+  &:hover,
+  &:focus {
+    background-color: lighten($regal-blue, 10%);
+    border-color: lighten($regal-blue, 10%);
+    color: $white;
+  }
+}
+
+.btn--orange {
+  @include button-color($flame-orange, $flame-orange, $white);
+
+  &:hover,
+  &:focus {
+    background-color: darken($flame-orange, 10%);
+    border-color: darken($flame-orange, 10%);
+    color: $desert-grey;
+  }
+}
+
+.btn--transparent {
+  @include button-color(transparent, $dark-grey, $mortar-grey);
+
+  &:hover,
+  &:focus {
+    border-color: darken($dark-grey, 20%);
+    color: darken($mortar-grey, 20%);
+  }
+}
+
+.btn--gray {
+  @include button-color($desert-grey, $dark-grey, $mortar-grey);
+
+  &:hover,
+  &:focus {
+    background-color: darken($desert-grey, 5%);
+    color: $mortar-grey;
+  }
+}
+
+.btn--dark-gray {
+  @include button-color($dark-grey, $dark-grey, $black);
+
+  &:hover,
+  &:focus {
+    background-color: darken($dark-grey, 5%);
+    border-color: darken($dark-grey, 5%);
+    color: $black;
+  }
+}
+
+.btn--black {
+  @include button-color($black, $white, $white);
+
+  &:hover,
+  &:focus {
+    background-color: lighten($black, 20%);
+    color: $white;
+  }
+}
