@@ -83,20 +83,6 @@
   }
 }
 
-@include describe('The grid-column mixin') {
-  @include it('Returns the expected grid-column start and end values.') {
-    @include assert {
-      @include output {
-        @include grid-column(10, span 3);
-      }
-      @include expect {
-        grid-column-end: span 3;
-        grid-column-start: 10;
-      }
-    }
-  }
-}
-
 @include describe('The input-text mixin') {
   @include it('Outputs the expected properties.') {
     @include assert {
