@@ -5,56 +5,56 @@
 // Colors by category
 
 // Oranges
-$flame-orange: hsl(17, 76%, 48%) !default;
-$crusta-orange: hsl(13, 86%, 60%) !default;
-$sandy-orange: hsl(25, 87%, 64%) !default;
-$peach-orange: hsl(30, 100%, 80%) !default;
-$rose-violet: hsl(0, 100%, 95%) !default;
+$flame-orange: hsl(17deg 76% 48%);
+$crusta-orange: hsl(13deg 86% 60%);
+$sandy-orange: hsl(25deg 87% 64%);
+$peach-orange: hsl(30deg 100% 80%);
+$rose-violet: hsl(0deg 100% 95%);
 
 // Blues
-$regal-blue: hsl(214, 49%, 19%) !default;
-$midnight-blue: hsl(214, 72%, 24%) !default;
-$yale-blue: hsl(214, 70%, 35%) !default;
-$water-blue: hsl(210, 27%, 82%) !default;
-$solitude-blue: hsl(213, 29%, 94%) !default;
+$regal-blue: hsl(214deg 49% 19%);
+$midnight-blue: hsl(214deg 72% 24%);
+$yale-blue: hsl(214deg 70% 35%);
+$water-blue: hsl(210deg 27% 82%);
+$solitude-blue: hsl(213deg 29% 94%);
 
 // Browns
-$maroon-brown: hsl(23, 100%, 20%) !default;
-$rust-red: hsl(19, 83%, 34%) !default;
-$umber-brown: hsl(17, 87%, 38%) !default;
+$maroon-brown: hsl(23deg 100% 20%);
+$rust-red: hsl(19deg 83% 34%);
+$umber-brown: hsl(17deg 87% 38%);
 
 // Greys
-$silver-grey: hsl(45, 6%, 72%) !default;
-$wan-white-grey: hsl(40, 10%, 88%) !default;
-$desert-grey: hsl(60, 10%, 96%) !default;
+$silver-grey: hsl(45deg 6% 72%);
+$wan-white-grey: hsl(40deg 10% 88%);
+$desert-grey: hsl(60deg 10% 96%);
 
 // Monochrome
-$black: hsl(0, 0%, 0%) !default;
-$night-grey: hsl(0, 0%, 18%) !default;
-$mortar-grey: hsl(0, 0%, 36%) !default;
-$dark-grey: hsl(0, 0%, 66%) !default;
-$white: hsl(0, 0%, 100%) !default;
+$black: hsl(0deg 0% 0%);
+$night-grey: hsl(0deg 0% 18%);
+$mortar-grey: hsl(0deg 0% 36%);
+$dark-grey: hsl(0deg 0% 66%);
+$white: hsl(0deg 0% 100%);
 
 // Fonts
-$sans-serif-stack: 'Lato', sans-serif !default;
-$serif-stack: 'Manuale', serif !default;
-$icons: 'Material Icons' !default;
+$sans-serif-stack: 'Lato', sans-serif;
+$serif-stack: 'Manuale', serif;
+$icons: 'Material Icons';
 
 // Font weight
-$font-weight-normal: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-extra-bold: 800 !default;
-$font-weight-heavy: 900 !default;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-heavy: 900;
 
 // Border radius
 $border-radius-default: 3px;
 
 // Gutters for grid container
-$gutters-default: 15px !default;
+$gutters-default: 15px;
 
 // Breakpoints map
-$break-md: 580px !default;
-$break-lg: 1024px !default;
+$break-md: 580px;
+$break-lg: 1024px;
 
 // Default transition to be used with @transition-default mixin
 $transition-default: all 0.2s ease;
@@ -62,7 +62,7 @@ $transition-default: all 0.2s ease;
 // Relative or absolute URL where all assets are served from
 // example scss - When using a CDN:
 //   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: '/assets/';
 
 :export {
   black: $black;

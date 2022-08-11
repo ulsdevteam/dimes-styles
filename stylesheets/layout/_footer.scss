@@ -68,9 +68,9 @@
 .footer-primary__link { @include footer-primary-link; }
 
 .footer-primary__title {
-  @include grid-column;
   @include footer-primary-title-text;
 
+  grid-column: 1 / 12;
   margin: 60px 0 28px;
   padding-bottom: 0;
 
@@ -81,8 +81,7 @@
 
 .footer-primary__address,
 .footer-primary__reading-room {
-  @include grid-column;
-
+  grid-column: 1 / 12;
   margin-bottom: 40px;
   margin-left: 0;
 
@@ -93,33 +92,31 @@
 
 .footer-primary__address {
   @include md-up {
-    @include grid-column(span 6);
+    grid-column: 1 / span 6;
   }
 
   @include lg-up {
-    @include grid-column(span 3);
+    grid-column: 1 / span 3;
   }
 }
 
 .footer-primary__reading-room {
   @include md-up {
-    @include grid-column(7, span 6);
+    grid-column: 7 / span 6;
   }
 
   @include lg-up {
-    @include grid-column(4, span 3);
+    grid-column: 4 / span 3;
   }
 }
 
 .footer-primary__social {
-  @include grid-column;
-
+  grid-column: 1 / 12;
   margin-bottom: 30px;
   margin-left: 0;
 
   @include lg-up {
-    @include grid-column(10, span 3);
-
+    grid-column: 10 / span 3;
     text-align: right;
   }
 }
@@ -136,8 +133,7 @@
 .footer-secondary__link { @include footer-secondary-link; }
 
 .footer-secondary__list {
-  @include grid-column;
-
+  grid-column: 1 / 12;
   list-style: none;
   padding: 0;
 
