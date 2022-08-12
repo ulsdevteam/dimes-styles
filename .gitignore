@@ -1,6 +1,10 @@
 # dependencies
 /node_modules
 
+# build
+storybook-static
+dist
+
 # sass
 .sass-cache/
 *.css.map
