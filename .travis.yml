@@ -16,11 +16,12 @@ script:
   - yarn lint
   - yarn test
   - yarn compile
+  - script/build_release.sh $TRAVIS_TAG
 deploy:
 # deploy storybook files to s3 when merged to base branch
 - provider: s3
-  access_key_id: $AWS_ACCESS_KEY_1
-  secret_access_key: $AWS_SECRET_KEY_1
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   local_dir: storybook-static
   skip_cleanup: true
   on:
@@ -28,23 +29,14 @@ deploy:
     branch: base
   bucket: rac-styleguide
   region: us-east-1
-# create directory of stylelibrary assets when new release is tagged
-- provider: releases
-  api-key: $GITHUB_API_KEY
+# deploy directory of new tagged release and updated stylelibrary assets to s3
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  local_dir: dist
   skip_cleanup: true
   on:
     tags: true
-# deploy directory of new tagged release and updated stylelibrary assets to s3
-- provider: s3
-  access_key_id: $AWS_ACCESS_KEY_2
-  secret_access_key: $AWS_SECRET_KEY_2
-  file:
-    - "dist/"
-    - # tagged release
-  skip_cleanup: true
-  on:
-    repo: RockefellerArchiveCenter/${APPLICATION_NAME}
-    branch: base
   bucket: rac-stylelibrary
   region: us-east-1
 notifications:
