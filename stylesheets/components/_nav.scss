@@ -193,14 +193,14 @@
     position: relative; /* 2 */
     z-index: 2; /* 2 */
 
-    &[aria-expanded=true] {
+    &[aria-expanded='true'] {
       border-bottom: 8px solid; /* 1 */
       color: $flame-orange; /* 1 */
       outline: none; /* 1 */
     }
   }
 
-  &[aria-expanded=true] {
+  &[aria-expanded='true'] {
     outline: none; /* 1 */
   }
 
