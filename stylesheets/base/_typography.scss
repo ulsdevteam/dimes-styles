@@ -3,9 +3,149 @@
 // -----------------------------------------------------------------------------
 
 /**
- * Import Google fonts
+ * Google fonts
  */
-@import 'https://fonts.googleapis.com/css?family=Lato:400,700,800,900|Manuale:400,700|Material+Icons';
+
+/* lato-regular - latin */
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(''),
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-italic - latin */
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 400;
+  src:
+    local(''),
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-italic.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-italic.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-700 - latin */
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(''),
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-700italic - latin */
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 700;
+  src:
+    local(''),
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700italic.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-700italic.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-900 - latin */
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    local(''),
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-900italic - latin */
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 900;
+  src:
+    local(''),
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900italic.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/lato-v23-latin/lato-v23-latin-900italic.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* manuale-regular - latin */
+@font-face {
+  font-family: Manuale;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(''),
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-regular.svg#Manuale') format('svg'); /* Legacy iOS */
+}
+
+/* manuale-700 - latin */
+@font-face {
+  font-family: Manuale;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(''),
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700.svg#Manuale') format('svg'); /* Legacy iOS */
+}
+
+/* manuale-italic - latin */
+@font-face {
+  font-family: Manuale;
+  font-style: italic;
+  font-weight: 400;
+  src:
+    local(''),
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-italic.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-italic.svg#Manuale') format('svg'); /* Legacy iOS */
+}
+
+/* manuale-700italic - latin */
+@font-face {
+  font-family: Manuale;
+  font-style: italic;
+  font-weight: 700;
+  src:
+    local(''),
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700italic.woff') format('woff'), /* Modern Browsers */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../assets/fonts/manual-v23-latin/manuale-v23-latin-700italic.svg#Manuale') format('svg'); /* Legacy iOS */
+}
+
+/* material-icon */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(''),
+    url('../assets/fonts/material-icons-MaterialIcons-Regular.woff2') format('woff2'),
+    url('../assets/fonts/material-icons/MaterialIcons-Regular.ttf') format('truetype');
+}
 
 /**
  * Apply basic text styles for body and bold/italic elements
