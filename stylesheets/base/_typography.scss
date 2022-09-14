@@ -14,7 +14,7 @@
   font-style: normal;
   font-weight: 400;
   src:
-    local(''),
+    local('Lato Regular'),
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -27,7 +27,7 @@
   font-style: italic;
   font-weight: 400;
   src:
-    local(''),
+    local('Lato Italic'),
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-italic.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -40,7 +40,7 @@
   font-style: normal;
   font-weight: 700;
   src:
-    local(''),
+    local('Lato Bold'),
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-700.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -53,7 +53,7 @@
   font-style: italic;
   font-weight: 700;
   src:
-    local(''),
+    local('Lato Bold Italic'),
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-700italic.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -66,7 +66,7 @@
   font-style: normal;
   font-weight: 900;
   src:
-    local(''),
+    local('Lato Black'),
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-900.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -79,7 +79,7 @@
   font-style: italic;
   font-weight: 900;
   src:
-    local(''),
+    local('Lato Black Italic'),
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-900italic.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-900italic.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/lato-v23-latin/lato-v23-latin-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -92,7 +92,7 @@
   font-style: normal;
   font-weight: 400;
   src:
-    local(''),
+    local('Manuale Regular'),
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -105,7 +105,7 @@
   font-style: normal;
   font-weight: 700;
   src:
-    local(''),
+    local('Manuale Bold'),
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-700.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -118,7 +118,7 @@
   font-style: italic;
   font-weight: 400;
   src:
-    local(''),
+    local('Manuale Italic'),
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-italic.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -131,7 +131,7 @@
   font-style: italic;
   font-weight: 700;
   src:
-    local(''),
+    local('Manuale Bold Italic'),
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-700italic.woff') format('woff'), /* Modern Browsers */
     url('../stories/assets/fonts/manuale-v23-latin/manuale-v23-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
@@ -144,7 +144,7 @@
   font-style: normal;
   font-weight: 400;
   src:
-    local(''),
+    local('Material Icons'),
     url('../stories/assets/fonts/material-icons/MaterialIcons-Regular.woff2') format('woff2'),
     url('../stories/assets/fonts/material-icons/MaterialIcons-Regular.ttf') format('truetype');
 }
