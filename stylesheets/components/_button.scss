@@ -5,7 +5,7 @@
 /**
 * Defines mixins for button sizes and colors
 **/
-@mixin button-size($font-size, $line-height, $padding, ) {
+@mixin button-size($font-size, $line-height, $padding) {
   font-size: $font-size;
   line-height: $line-height;
   padding: $padding;
