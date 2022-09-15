@@ -157,6 +157,25 @@
 }
 
 /**
+* Mixin for font-face declaration
+**/
+
+//TODO: replace relative font paths with CDN URLs
+@mixin font-face($family, $style, $weight, $font, $directory, $filename) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src:
+      local($font),
+      url('../stories/assets/fonts/#{$directory}/#{$filename}.woff2') format('woff2'),
+      url('../stories/assets/fonts/#{$directory}/#{$filename}.woff') format('woff'),
+      url('../stories/assets/fonts/#{$directory}/#{$filename}.ttf') format('truetype'),
+      url('../stories/assets/fonts/#{$directory}/#{$filename}.svg##{$family}') format('svg');
+  }
+}
+
+/**
 * Mixin for material icons. Accepts arguments for font-size and line-height.
 **/
 @mixin material-icon($font-size:24px, $line-height:normal) {
