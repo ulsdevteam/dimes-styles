@@ -98,31 +98,6 @@
   }
 }
 
-//TODO: Test failing. Debug
-
-// @include describe('The font-face mixin') {
-//   @include it('Returns font-face declarations with args for font family, style, weight, name, directory, and filename') {
-//     @include assert {
-//       @include output {
-//         @include font-face(Lato, bold, 700, 'Lato Bold', lato-v23-latin, lato-v23-latin-700);
-//       }
-//       @include expect {
-//         @font-face {
-//           font-family: Lato;
-//           font-style: bold;
-//           font-weight: 700;
-//           src:
-//             local('Lato Bold'),
-//             url('./assets/fonts/lato-v23-latin/lato-v23-latin-700.woff2') format('woff2'),
-//             url('./assets/fonts/lato-v23-latin/lato-v23-latin-700.woff') format('woff'),
-//             url('./assets/fonts/lato-v23-latin/lato-v23-latin-700.ttf') format('truetype'),
-//             url('./assets/fonts/lato-v23-latin/lato-v23-latin-700.svg#Lato') format('svg');
-//         }
-//       }
-//     }
-//   }
-// }
-
 @include describe('The material-icon mixin') {
   @include it('Sets default material icon styles with args for font-size and line-height') {
     @include assert {
