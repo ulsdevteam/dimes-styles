@@ -1,6 +1,6 @@
 import Header from './header.handlebars'
 import headerColors from './colors.json'
-import Logo from '../assets/img/rac_logo.svg'
+import Logo from '../../stylesheets/assets/img/rac_logo.svg'
 
 export const colors = () => {
   const headers = headerColors.map(c => Header({

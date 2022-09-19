@@ -148,12 +148,31 @@
 }
 
 /**
-* Mixin for input text
+* Mixin for default input text styles
 **/
 @mixin input-text {
   color: $night-grey;
   font-family: $sans-serif-stack;
   font-size: 14px;
+}
+
+/**
+* Mixin for font-face declaration
+**/
+
+//TODO: replace relative font paths with CDN URLs
+@mixin font-face($family, $style, $weight, $font, $directory, $filename) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src:
+      local($font),
+      url('./assets/fonts/#{$directory}/#{$filename}.woff2') format('woff2'),
+      url('./assets/fonts/#{$directory}/#{$filename}.woff') format('woff'),
+      url('./assets/fonts/#{$directory}/#{$filename}.ttf') format('truetype'),
+      url('./assets/fonts/#{$directory}/#{$filename}.svg##{$family}') format('svg');
+  }
 }
 
 /**
