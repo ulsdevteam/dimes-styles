@@ -1,10 +1,11 @@
 <div class="dropdown">
-  <button class="btn btn--orange btn--md" aria-haspopup="true" tabindex="0">
+  <button class="btn btn--orange btn--md" {{#if showDropdownItems}}aria-expanded="true"{{else}}aria-expanded="false"{{/if}} 
+  aria-haspopup="true" tabindex="0">
     <span class="material-icon material-icon--space-after" aria-hidden="true">{{iconBefore}}</span>
     {{buttonText}}
   </button>
   {{#if showDropdownItems}}
-  <div class="dropdown__list dropdown__list--orange dropdown__list--slide-down list--unstyled open" role="menu">
+  <div class="dropdown__list dropdown__list--orange dropdown__list--slide-down open" role="menu">
     <a id="menu-item-0" class="btn btn--orange dropdown__btn dropdown__item--orange"
       href={{linkTarget}}
       tabindex="-1" role="menuitem">
