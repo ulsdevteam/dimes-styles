@@ -116,8 +116,14 @@
   margin-left: 0;
 
   @include lg-up {
-    grid-column: 10 / span 3;
-    text-align: right;
+    grid-column: 8 / span 5;
+    justify-self: end;
+  }
+}
+
+.footer-primary__social .social-icons {
+  @include lg-up {
+    margin-left: auto;
   }
 }
 
