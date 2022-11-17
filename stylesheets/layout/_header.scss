@@ -42,7 +42,7 @@
 **/
 @mixin header-subtitle {
   @include header-text;
-
+  //TODO: figure out why font-style is not appearing as italic
   font-style: italic;
   line-height: 13px;
 }

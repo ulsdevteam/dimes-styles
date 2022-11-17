@@ -61,7 +61,7 @@ $transition-default: all 0.2s ease;
 // Relative or absolute URL where all assets are served from
 // example scss - When using a CDN:
 //   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/';
+$base-url: 'https://assets.rockarch.org/';
 
 :export {
   black: $black;
