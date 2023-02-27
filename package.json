@@ -22,7 +22,7 @@
     "lint"
   ],
   "scripts": {
-    "start": "react-scripts start --openssl-legacy-provider", //Fix because Node version 17 and above supports OpenSSL version 3 which doesn't enable the MD4 algorithm to create file hashes, and Webpack 4 requires MD4.
+    "start": "react-scripts start --openssl-legacy-provider",
     "compile": "sass stylesheets/main.scss dist/main.min.css --no-source-map --style=compressed && postcss dist/main.min.css --replace --use autoprefixer",
     "lint": "npx stylelint 'stylesheets/**/*.scss'",
     "lint-fix": "npx stylelint 'stylesheets/**/*.scss' --fix",
