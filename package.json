@@ -26,8 +26,8 @@
     "lint": "npx stylelint 'stylesheets/**/*.scss'",
     "lint-fix": "npx stylelint 'stylesheets/**/*.scss' --fix",
     "test": "jest --testRegex test_ --env=node --passWithNoTests",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
+    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook"
   },
   "browserslist": [
     "> 2%"
