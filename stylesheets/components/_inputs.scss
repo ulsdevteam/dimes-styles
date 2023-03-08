@@ -43,6 +43,7 @@ fieldset {
 }
 
 .input-group {
+  box-sizing: content-box;
   width: 100%;
 }
 
@@ -71,10 +72,6 @@ fieldset {
 **/
 [type='checkbox'] {
   margin-right: 5px;
-}
-
-.checkbox + label::before {
-  box-sizing: content-box;
 }
 
 .checkbox:focus + label::before {
@@ -119,7 +116,6 @@ fieldset {
 .checkbox:checked + label::after { /* 4 */
   @include transition-default;
 
-  box-sizing: content-box;
   content: '\2713'; /* 6 */
   font-family: monospace; /* 7 */
   font-size: 16px;
