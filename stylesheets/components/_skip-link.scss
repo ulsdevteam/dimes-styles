@@ -4,10 +4,10 @@
 
 /**
  * Skip link styles mixin. Allows users to position the skip link as desired
- * with $left and $top variables.
+ * with $left and $top variables. $left and $top are set to work with RAC header.
  * 1. Overrides for default link styling.
 **/
-@mixin skip-link($left: 0, $top: 0) {
+@mixin skip-link($left: 80, $top: 60) {
   @include visually-hidden;
 
   background: $flame-orange;
