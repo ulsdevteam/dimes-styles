@@ -16,6 +16,7 @@
 }
 
 .input-group__search-controls {
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 20px;
@@ -67,14 +68,14 @@
 /**
 * Defines styles for select.
 * 1. Align select with search input box instead of label
-* 2. Only display select on large screens
+* 2. Do not display on small screens
 **/
 .select__search--wrapper {
   align-self: flex-end; /* 1 */
   display: none; /* 2 */
   position: relative;
 
-  @include lg-up {
+  @include md-up {
     display: inline-block; /* 2 */
   }
 

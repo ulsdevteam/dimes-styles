@@ -78,7 +78,7 @@
 }
 
 /**
-* Mixins for grid column layout to be used with the .container helper class that
+* Mixin for grid column layout to be used with the .container helper class that
 * creates a 12-column layout (with 13 grid-lines). Specify the starting and ending
 * grid-line numbers or column span using the grid-column property.
 * Eg. `grid-column: 10 / span 3` takes up the right 3 columns on the page.
@@ -160,7 +160,6 @@
 * Mixin for font-face declaration
 **/
 
-//TODO: replace relative font paths with CDN URLs
 @mixin font-face($family, $style, $weight, $font, $directory, $filename) {
   @font-face {
     font-family: $family;
