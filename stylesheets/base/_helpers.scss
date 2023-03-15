@@ -20,7 +20,7 @@
  * 5. Flexbox wrapper class
  */
 .container {
-  @include twelve-column-grid;
+  @include twelve-column-grid; /* 1 */
 
   margin: 0 $gutters-default; /* 2 */
   width: calc(100% - (#{$gutters-default}) * 2); /* 3 */
@@ -77,9 +77,9 @@
 * Helper classes to adjust icon positions
 **/
 .material-icon--space-before {
-  margin-left: 3px;
+  margin: 0 0 3px 3px;
 }
 
 .material-icon--space-after {
-  margin-right: 3px;
+  margin: 0 3px 3px 0;
 }
