@@ -7,7 +7,7 @@
  * with $left and $top variables. $left and $top are set to work with RAC header.
  * 1. Overrides for default link styling.
 **/
-@mixin skip-link($left: 80, $top: 60) {
+@mixin skip-link($left: 80px, $top: 60px) {
   @include visually-hidden;
 
   background: $flame-orange;
