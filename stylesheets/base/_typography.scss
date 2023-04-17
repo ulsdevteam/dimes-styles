@@ -108,6 +108,14 @@ h1 {
   font-family: $serif-stack;
   font-size: 32px;
   font-weight: $font-weight-bold;
+
+  @include md-up {
+    font-size: 42px;
+  }
+
+  @include lg-up {
+    font-size: 52px;
+  }
 }
 
 h2,
@@ -126,17 +134,30 @@ h2 {
   margin-bottom: 20px;
   margin-top: 60px;
   padding-bottom: 12px;
+
+  @include lg-up {
+    font-size: 28px;
+    margin-top: 0;
+  }
 }
 
 h3 {
   font-size: 18px;
   margin-bottom: 10px;
   margin-top: 30px;
+
+  @include lg-up {
+    font-size: 20px;
+  }
 }
 
 h4 {
   color: $sandy-orange;
   font-size: 14px;
+
+  @include lg-up {
+    font-size: 16px;
+  }
 }
 
 /**
