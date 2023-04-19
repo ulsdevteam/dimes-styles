@@ -31,6 +31,21 @@ No related components.
 No known issues.
 
 ## Default implementation
+The number of card columns can be specified in local CSS using media queries,
+with the base styles providing one column that takes up the full width of its container.
+For example, for 4 card columns on large screens and 3 columns on medium screens, use:
+```
+.card-list {
+  @include md-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg-up {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+```
+
 By default, cards have a body and a footer.
 
 <Story story={stories.basic} />
