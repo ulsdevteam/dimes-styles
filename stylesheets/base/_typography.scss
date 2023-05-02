@@ -93,6 +93,11 @@ a {
 ul {
   font-family: $serif-stack;
   line-height: 23px;
+
+  @include lg-up {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
 
 /**
