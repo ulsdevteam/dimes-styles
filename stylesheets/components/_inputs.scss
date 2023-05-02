@@ -85,16 +85,6 @@ fieldset {
   outline: 2px solid $mortar-grey;
 }
 
-.checkbox:disabled + label::before {
-  background-color: $wan-white-grey;
-  border: 1px solid $mortar-grey;
-}
-
-.checkbox:disabled + label {
-  color: $mortar-grey;
-  cursor: not-allowed;
-}
-
 .checkbox:not(:checked),
 .checkbox:checked { /* 2 */
   left: -9999px;
@@ -189,6 +179,19 @@ fieldset {
   background-color: $white;
   border: 1px solid $night-grey;
   color: $night-grey;
+}
+
+/**
+* Styles for disabled checkboxes
+**/
+.checkbox:disabled + label::before {
+  background-color: $wan-white-grey;
+  border: 1px solid $mortar-grey;
+}
+
+.checkbox:disabled + label {
+  color: $mortar-grey;
+  cursor: not-allowed;
 }
 
 /**
