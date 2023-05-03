@@ -38,7 +38,6 @@
 
 /**
 * Header sub-title mixin
-*1. Assumes title is always a link and underlines on event
 **/
 @mixin header-subtitle {
   @include header-text;
@@ -87,7 +86,7 @@
 * Styles for header branding section that includes title, subtitle, and/or image.
 **/
 .header__brand {
-  align-items: center;
+  align-content: center;
   display: flex;
   flex-wrap: wrap;
   margin-right: auto;
@@ -107,7 +106,7 @@
 .header__brand-subtitle {
   @include header-subtitle;
 
-  margin: 0;
+  margin: 4px 0 0;
 }
 
 /**
