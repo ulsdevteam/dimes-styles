@@ -60,6 +60,13 @@ fieldset {
   padding: 10px;
 }
 
+.input__help-text {
+  color: $mortar-grey;
+  font-size: 13px;
+  font-style: italic;
+  margin: 0;
+}
+
 /**
 * Styles for checkboxes
 /**

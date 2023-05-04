@@ -1,3 +1,4 @@
 <label for="{{name}}" {{#if hideLabel}}class="visually-hidden"{{/if}}>Message{{#if required}} *{{/if}}</label>
 <textarea name="{{name}}" id="{{name}}" rows="5"{{#if invalid}}class="is-invalid" aria-invalid="true" aria-describedby="{{name}}-error"{{/if}}{{#if required}} required{{/if}}></textarea>
+<p {{#if hideHelpText}} class="visually-hidden"{{/if}} class="input__help-text">255 characters minimum.</p>
 {{#if invalid}}<div id="{{name}}-error" class="input__error">This message must be shorter than 255 characters.</div>{{/if}}
