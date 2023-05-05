@@ -60,6 +60,16 @@
 }
 
 /**
+* Footer layout styles.
+* Ensures that there is never space between the bottom of the footer and the
+* bottom of the page.
+**/
+footer {
+  position: absolute;
+  width: 100%;
+}
+
+/**
 * Primary Footer styles.
 * 1. Insertion of a visual line break without causing screen readers to pause.
 **/
