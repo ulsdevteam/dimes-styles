@@ -60,6 +60,13 @@ fieldset {
   padding: 10px;
 }
 
+.input__help-text {
+  color: $mortar-grey;
+  font-size: 13px;
+  font-style: italic;
+  margin: 0;
+}
+
 /**
 * Styles for checkboxes
 /**
@@ -83,16 +90,6 @@ fieldset {
 
 .checkbox:focus + label::before {
   outline: 2px solid $mortar-grey;
-}
-
-.checkbox:disabled + label::before {
-  background-color: $wan-white-grey;
-  border: 1px solid $mortar-grey;
-}
-
-.checkbox:disabled + label {
-  color: $mortar-grey;
-  cursor: not-allowed;
 }
 
 .checkbox:not(:checked),
@@ -189,6 +186,19 @@ fieldset {
   background-color: $white;
   border: 1px solid $night-grey;
   color: $night-grey;
+}
+
+/**
+* Styles for disabled checkboxes
+**/
+.checkbox:disabled + label::before {
+  background-color: $wan-white-grey;
+  border: 1px solid $mortar-grey;
+}
+
+.checkbox:disabled + label {
+  color: $mortar-grey;
+  cursor: not-allowed;
 }
 
 /**
