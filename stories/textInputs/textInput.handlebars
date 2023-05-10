@@ -1,3 +1,5 @@
 <label for="{{name}}" {{#if hideLabel}}class="visually-hidden"{{/if}}>{{label}}{{#if required}} *{{/if}}</label>
 <input name="{{name}}"{{#if invalid}} class="is-invalid"{{/if}} type="text" id="{{name}}"{{#if invalid}} aria-invalid="true" aria-describedby="{{name}}-error"{{/if}}{{#if required}} required{{/if}}>
+{{#if helptext}}<div id="{{name}}-error" class="input__error">This field is required.</div>{{/if}}
 {{#if invalid}}<div id="{{name}}-error" class="input__error">This field is required.</div>{{/if}}
+

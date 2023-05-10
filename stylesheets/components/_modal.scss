@@ -82,5 +82,5 @@ $modal-header-height: 52px;
 **/
 .modal__body {
   min-height: calc(80vh - $modal-header-height); /* 1 */
-  padding: 20px;
+  padding: 30px 20px;
 }

@@ -13,7 +13,7 @@
   margin-top: 8px;
 
   @include lg-up {
-    margin-top: 10px;
+    margin: 10px 0;
   }
 }
 
@@ -45,11 +45,22 @@
 
 /**
 * Styles the wrapper for the cards, which should be a ul element.
+* 1. The number of card columns can be adjusted by screensize
+* using media queries.
 **/
 .card-list {
-  @include card-element-flex;
+  display: grid;
+  gap: $gutters-default;
+  grid-template-columns: 1fr;
+  margin: 0;
 
-  padding: 0;
+  // @include md-up {
+  //   grid-template-columns: repeat(3, 1fr); /* 1 */
+  // }
+
+  // @include lg-up {
+  //   grid-template-columns: repeat(4, 1fr); /* 1 */
+  //   }
 }
 
 /**
@@ -57,14 +68,9 @@
 * 1. Relative positioning is necessary in order to make entire card clickable.
 **/
 .card {
-  @include card-element-flex;
-
-  align-items: flex-start;
   background-color: $desert-grey;
   border-radius: $border-radius-default;
   box-shadow: 0 0 0 1px $silver-grey, 0 0 4px 0 lighten($silver-grey, 5%);
-  box-sizing: border-box;
-  margin-bottom: $gutters-default;
   padding: 26px 20px;
   position: relative; /* 1 */
 
