@@ -19,6 +19,7 @@
 
 /**
 * Defines base styles for buttons.
+* 1. Removes default link margin for links styled as buttons
 **/
 .btn {
   @include transition-default;
@@ -30,6 +31,7 @@
   display: inline-block;
   font-family: $sans-serif-stack;
   letter-spacing: 1.5px;
+  margin-bottom: 0; /* 1 */
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
