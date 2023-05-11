@@ -21,9 +21,7 @@
   color: $regal-blue;
   font-family: $serif-stack;
   font-size: 15px;
-  font-weight: $font-weight-normal;
   line-height: 22px;
-  margin-bottom: 10px;
 }
 
 /**
@@ -64,7 +62,7 @@
 * Ensures that there is never space between the bottom of the footer and the
 * bottom of the page.
 **/
-footer {
+.footer {
   position: absolute;
   width: 100%;
 }
