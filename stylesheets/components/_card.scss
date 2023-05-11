@@ -19,12 +19,15 @@
 
 /**
 * Mixin for title text used in cards
+* 1. Specifies line height when a title spans multiple lines
+* instead of using the default line-height for ul elements
 **/
 @mixin card-title-text {
   @include card-text;
 
   font-size: 18px;
   font-weight: $font-weight-bold;
+  line-height: 22px; /* 1 */
   margin-top: 0;
   text-decoration: none;
 
@@ -68,6 +71,9 @@
 * 1. Relative positioning is necessary in order to make entire card clickable.
 **/
 .card {
+  @include card-element-flex;
+
+  align-items: flex-start;
   background-color: $desert-grey;
   border-radius: $border-radius-default;
   box-shadow: 0 0 0 1px $silver-grey, 0 0 4px 0 lighten($silver-grey, 5%);
