@@ -1,11 +1,11 @@
 import { Meta, Story } from '@storybook/addon-docs/blocks';
 import * as stories from './Hero.stories.js';
-import Logo from '../../stylesheets/assets/img/rac_logo.svg'
+import Logo from '../../stylesheets/assets/img/hero_logo.png'
 
 <Meta
   title="Components/Hero"
   args={{
-    altText: 'Rockefeller Archive Center',
+    altText: "",
     logoUrl: Logo,
     text: 'The Rockefeller Archive Center is a major repository and research center for the study of philanthropy and its impact throughout the world.'
   }} />
@@ -22,7 +22,8 @@ the purpose of the site and actions that are available to them there.
 
 ## Best practices
 
-Always ensure that any images used in this component have alt text applied.
+If the image in the hero is purely decorative, like a logo, it does not need
+alt text in the `img` element. Instead, use `alt=""` to indicate a decorative image.
 
 ## Related components
 
@@ -31,5 +32,9 @@ No related components.
 ## Known issues
 
 No known issues.
+
+## Image dimensions
+For different image dimensions, specify the `width` and/or `height` values in local CSS using
+the `hero__logo img` selector.
 
 <Story story={stories.basic} />
