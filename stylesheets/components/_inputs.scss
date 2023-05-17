@@ -30,7 +30,7 @@ label {
 fieldset {
   border: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 0;
 
   legend {
@@ -40,11 +40,6 @@ fieldset {
     font-weight: $font-weight-bold;
     text-transform: uppercase;
   }
-}
-
-.input-group {
-  box-sizing: content-box;
-  width: 100%;
 }
 
 .input__error {
@@ -84,8 +79,8 @@ fieldset {
 }
 
 .checkbox + label {
+  box-sizing: content-box;
   display: block; /* 1 */
-  line-height: 16px;
 }
 
 .checkbox:focus + label::before {
