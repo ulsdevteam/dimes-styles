@@ -19,7 +19,7 @@ $modal-header-height: 52px;
 .modal__overlay {
   @include transition-default;
 
-  background-color: color.adjust($black, $alpha: -0.4);
+  background-color: color.adjust($black, $alpha: -0.5);
   bottom: 0;
   left: 0;
   position: fixed; /* 1 */
