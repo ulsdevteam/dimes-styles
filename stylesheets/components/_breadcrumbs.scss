@@ -6,11 +6,13 @@
  * Class for breadcrumbs content block.
  * 1. Allow flex item to wrap into multiple lines on small screens.
  * 2. Remove default ordered list numbers that would otherwise be displayed.
+ * 3. Remove default ordered list element padding
  */
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap; /* 1 */
   list-style: none; /* 2 */
+  padding-left: 0; /* 3 */
 }
 
 /**
@@ -28,13 +30,16 @@
 }
 
 /**
- * Class to define the layout and spacing of the breadcrumbs items.
+ * Classes to define the layout and spacing of the breadcrumbs items.
  * 1. Layout items horizontally within their containing block.
- * 2. Specify space between items.
+ * 2. Specify space between items (excluding the first item).
  * 3. Specify the layout and spacing of the "/" character that comes before each item.
  */
 .breadcrumbs__item {
   display: inline-block; /* 1 */
+}
+
+.breadcrumbs__item:not(:first-of-type) {
   padding-left: 8px; /* 2 */
 
   &::before { /* 3 */
