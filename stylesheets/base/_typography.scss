@@ -41,7 +41,13 @@ body {
 
 p,
 a {
+  line-height: 26px;
   margin: 0 0 10px;
+
+  @include lg-up {
+    font-size: 17px;
+    line-height: 28px;
+  }
 }
 
 strong,
