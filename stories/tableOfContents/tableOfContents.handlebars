@@ -1,8 +1,13 @@
-<nav class="toc {{class}}" role="navigation" aria-label="{{ariaLabel}}">
-  {{#if title}}
+{{#if title}}
+<nav class="toc {{class}} toc--sticky" aria-label="{{ariaLabel}}">
   <a class="toc__title" href="/digital-preservation-policy/">{{title}}</a>
-  {{/if}}
-  {{#each listItems}}
-  <a class="toc__list-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
-  {{/each}}
+  <div id="toc__link-group">
+{{else}}
+<nav class="toc--sticky" aria-label="{{ariaLabel}}">
+  <div class="toc {{class}}" id="toc__link-group">
+{{/if}}
+    {{#each listItems}}
+    <a class="toc__link-item {{#if this.active}}active{{/if}}" href="#{{this.text}}">{{this.text}}</a>
+    {{/each}}
+  </div>
 </nav>
