@@ -48,21 +48,22 @@
 
 /**
 * Styles the wrapper for the cards, which should be a ul element.
-* 1. The number of card columns can be adjusted by screensize
+* 1. The gap between cards
+* 2. The number of card columns can be adjusted by screen size
 * using media queries.
 **/
 .card-list {
   display: grid;
-  gap: $gutters-default;
+  gap: 15px;
   grid-template-columns: 1fr;
   margin: 0;
 
   // @include md-up {
-  //   grid-template-columns: repeat(3, 1fr); /* 1 */
+  //   grid-template-columns: repeat(3, 1fr); /* 2 */
   // }
 
   // @include lg-up {
-  //   grid-template-columns: repeat(4, 1fr); /* 1 */
+  //   grid-template-columns: repeat(4, 1fr); /* 2 */
   //   }
 }
 

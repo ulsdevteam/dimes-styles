@@ -24,6 +24,8 @@ saving their information.
 - Use the base "btn" class in addition to a class which specifies a color or size.
 - When using the transparent button, make sure to check that the button will meet
   the contrast threshold against the background it is being used on.
+- When adding a decorative icon to the button, wrap it in a `span` element and use
+  `aria-hidden="true"` to hide the icon from assistive technology.
 
 ## Related components
 
@@ -48,7 +50,8 @@ Buttons come in small, medium or large sizes. Use the `btn--sm`, `btn--md` and `
 <Story story={stories.sizes} />
 
 ## Button icons
-You can add an icon before or after the button text.
+You can add an icon before or after the button text. Use the `material-icon--space-before` or 
+`material-icon--space-after` classes to add a margin between the button text and the icon.
 
 <Story story={stories.icons} />
 
