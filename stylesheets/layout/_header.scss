@@ -134,8 +134,9 @@
     align-self: center;
     display: block;
     line-height: 0;
-    margin-right: 15px;
-    width: 150px;
+    position: absolute;
+    right: 55px;
+    width: 135px;
   }
 
   .social-icons__icon svg {

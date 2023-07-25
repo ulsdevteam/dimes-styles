@@ -67,6 +67,7 @@
 @mixin nav-item-description {
   color: $white;
   font-family: $serif-stack;
+  font-size: 13px;
   font-style: italic;
   font-weight: $font-weight-normal;
   letter-spacing: normal;
@@ -264,7 +265,7 @@
 .nav__link-title {
   @include nav-item-title;
 
-  margin: 0 3px;
+  margin: 0;
   width: 100%;
 }
 
