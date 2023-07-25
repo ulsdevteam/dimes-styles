@@ -20,7 +20,8 @@
 /**
 * Defines base styles for buttons.
 * 1. If icons are added, aligns them with the text
-* 2. Removes default link margin for links styled as buttons
+* 2. Removes default line height for links styled as buttons
+* 3. Removes default link margin for links styled as buttons
 **/
 .btn {
   @include transition-default;
@@ -33,7 +34,8 @@
   display: inline-flex; /* 1 */
   font-family: $sans-serif-stack;
   letter-spacing: 1.5px;
-  margin-bottom: 0; /* 2 */
+  line-height: inherit; /* 2 */
+  margin-bottom: 0; /* 3 */
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;

@@ -4,6 +4,7 @@
 
 /**
  * Class for social icons content block.
+ * * 1. Remove default link line-height
  */
 .social-icons {
   display: flex;
@@ -11,6 +12,7 @@
   max-width: 250px;
 
   a {
+    line-height: inherit; /* 1 */
     margin: 0;
     text-decoration: none;
   }
