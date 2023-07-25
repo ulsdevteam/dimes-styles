@@ -1,6 +1,7 @@
 import { Meta, Story, Typeset } from '@storybook/addon-docs/blocks';
 import * as headingsStories from './Headings.stories.js';
 import * as linkStories from './Links.stories.js';
+import * as textColorStories from './TextColor.stories.js';
 
 <Meta title="Global/Typography" />
 
@@ -71,3 +72,25 @@ Links are underlined by default.
 No known issues.
 
 <Story story={linkStories.links} />
+
+## Text color
+
+### Best practices
+In the case where the default text colors result in accessibility issues because of color
+contrast with the background color or aesthetically don't look good, use text color classes
+to change the element color. Components like buttons, a header, or a table of contents already 
+have various color options with different text colors, so use the specific component color
+classes when appropriate.
+
+- For white text use `text--white`
+- For blue text use `text--blue`
+- For orange text use `text--orange`
+
+### Known issues
+
+The orange text uses `$flame-orange`, which with many background colors does not easily meet
+WCAG requirements for color contrast.
+
+<Story story={textColorStories.textColor} />
+
+
