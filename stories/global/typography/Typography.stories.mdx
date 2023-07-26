@@ -75,12 +75,14 @@ No known issues.
 
 ## Text color
 
-### Best practices
+### When to use
 In the case where the default text colors result in accessibility issues because of color
 contrast with the background color or aesthetically don't look good, use text color classes
-to change the element color. Components like buttons, a header, or a table of contents already 
-have various color options with different text colors, so use the specific component color
-classes when appropriate.
+to change the element color.
+
+### Best practices
+Components like buttons, a header, or a table of contents already have various color options 
+with different text colors, so use the specific component color classes when appropriate.
 
 - For white text use `text--white`
 - For blue text use `text--blue`
@@ -88,8 +90,8 @@ classes when appropriate.
 
 ### Known issues
 
-The orange text uses `$flame-orange`, which with many background colors does not easily meet
-WCAG requirements for color contrast.
+Color `$flame-orange (#d7521d)` does not meet WCAG requirements for color 
+contrast against most background colors.
 
 <Story story={textColorStories.textColor} />
 
