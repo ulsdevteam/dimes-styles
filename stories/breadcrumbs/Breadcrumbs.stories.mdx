@@ -20,7 +20,8 @@ or to show progress through a linear journey or transaction.
 
 ## Best practices
 
-The last item in a breadcrumb trail should indicate the current page, and should not be a link.
+The last item in a breadcrumb trail should indicate the current page using 
+`aria-current="page"`, and should not be a link.
 
 ## Related components
 
@@ -28,6 +29,7 @@ The last item in a breadcrumb trail should indicate the current page, and should
 
 ## Known issues
 
-No known issues.
+Color `$flame-orange (#d7521d)` on link hover/focus does not meet WCAG requirements for color 
+contrast against most background colors.
 
 <Story story={stories.basic} />
