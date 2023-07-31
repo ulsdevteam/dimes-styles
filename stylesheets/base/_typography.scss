@@ -181,3 +181,29 @@ h4 {
 .heading--dotted-border {
   border-bottom: 1.5px dotted $regal-blue;
 }
+
+/**
+ * Change the text color for text including headings, links, or paragraphs
+ * Include on-event styles to maintain link color consistency on hover/focus
+ * 1. When link text is white, the focus outline and text will also be white to be visible on a dark background
+ */
+
+.text--blue {
+  color: $regal-blue;
+}
+
+.text--orange {
+  color: $flame-orange;
+}
+
+.text--white {
+  color: $white;
+
+  @include on-event {
+    color: $white; /* 1 */
+  }
+
+  &:focus {
+    outline-color: $white; /* 1 */
+  }
+}
