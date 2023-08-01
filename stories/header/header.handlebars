@@ -1,34 +1,36 @@
 <header class="header {{class}}">
-  <div class="wrapper">
+  <div class="container">
+    <div class="wrapper">
 
-    {{#if withTextBrand}}
-      <div class="header__brand header__brand--text">
-        <a href="/" class="header__brand-title">{{brandTitle}}</a>
-        <p class="header__brand-subtitle">{{brandSubtitle}}</p>
-      </div>
-    {{/if}}
+      {{#if withTextBrand}}
+        <div class="header__brand header__brand--text">
+          <a href="/" class="header__brand-title">{{brandTitle}}</a>
+          <p class="header__brand-subtitle">{{brandSubtitle}}</p>
+        </div>
+      {{/if}}
 
-    {{#if withImageBrand}}
-      <div class="header__brand">
-        <a href="/" class="header__brand-image">
-          <img alt="Rockefeller Archive Center" src="{{logoUrl}}">
-        </a>
-      </div>
-    {{/if}}
+      {{#if withImageBrand}}
+        <div class="header__brand">
+          <a href="/" class="header__brand-image">
+            <img alt="Rockefeller Archive Center" src="{{logoUrl}}">
+          </a>
+        </div>
+      {{/if}}
 
-    {{#if withNavItems}}
-      {{> navItems}}
-    {{/if}}
+      {{#if withNavItems}}
+        {{> navItems}}
+      {{/if}}
 
-    {{#if withDropdownItems}}
-      {{> dropdownItems}}
-    {{/if}}
+      {{#if withDropdownItems}}
+        {{> dropdownItems}}
+      {{/if}}
 
-    {{#if withSocialIcons}}
-      <div class="header__social-icons">
-        {{> ../socialIcons/socialIcons}}
-      </div>
-    {{/if}}
+      {{#if withSocialIcons}}
+        <div class="header__social-icons">
+          {{> ../socialIcons/socialIcons}}
+        </div>
+      {{/if}}
 
+    </div>
   </div>
 </header>
