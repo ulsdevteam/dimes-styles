@@ -145,7 +145,6 @@
 .footer-secondary__list {
   grid-column: 1 / span 12;
   list-style: none;
-  margin-left: 15px;
   padding: 0;
 
   @include lg-up { text-align: right; }
@@ -158,4 +157,8 @@
     display: inline-block;
     padding-right: 28px;
   }
+}
+
+.footer-secondary__list-item:last-of-type {
+  padding-right: 0;
 }
