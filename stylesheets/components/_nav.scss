@@ -87,7 +87,8 @@
 /**
 * Styles for nav in header.
 * 1. Aligns items to the right on mobile.
-* 2. Aligns items in the center on large screens.
+* 2. Aligns items in the center on large screens, with padding-left set as the width of
+* the social icons.
 **/
 .nav-center {
   display: flex;
@@ -96,6 +97,7 @@
 
   @include lg-up {
     justify-content: center; /* 2 */
+    padding-left: 135px; /* 2 */
   }
 }
 
