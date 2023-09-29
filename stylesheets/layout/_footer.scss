@@ -59,11 +59,13 @@
 
 /**
 * Footer layout styles.
-* Ensures that there is never space between the bottom of the footer and the
-* bottom of the page.
+* Ensures that there is no space between the bottom of the footer and the
+* bottom of the page. This combines with the `flex-direction: column` styles applied
+* to the the <body> element of the page. The footer must be a direct child of the
+* <body> for this to take effect.
 **/
-.footer {
-  position: absolute;
+footer {
+  margin-top: auto;
   width: 100%;
 }
 
