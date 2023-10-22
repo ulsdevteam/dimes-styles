@@ -1,0 +1,40 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as stories from './Tooltips.stories.js';
+
+<Meta
+  title="Components/Tooltips"
+  parameters={{
+    layout: 'centered',
+  }}
+  args={{
+    anchorText: 'Tooltip anchor text.',
+    tooltipText: 'Tooltip text.',
+    position: 'top',
+  }} />
+
+# Tooltips
+
+Temporarily display help or confirmation messages associated with a button or 
+other action element.
+
+## When to use
+
+Use the tooltip component when you want to temporarily display a brief help or 
+confirmation message that is associated with a clickable element.
+
+## Best practices
+
+- Tooltips should be displayed for at least six seconds.
+- Use the role='alert' attribute to support screen readers.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Basic implementation
+
+<Story story={stories.basic} />
