@@ -1,0 +1,71 @@
+$tooltip-width: 200px;
+$tooltip-padding: 5px;
+
+.tooltip__wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip {
+  background-color: $night-grey;
+  border-radius: $border-radius-default;
+  color: $white;
+  padding: $tooltip-padding;
+  position: absolute;
+  text-align: center;
+  width: $tooltip-width;
+  z-index: 1;
+
+  &::after {
+    border: calc($tooltip-padding * 2) solid $night-grey;
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+  }
+}
+
+.tooltip--top {
+  bottom: calc(100% + $tooltip-padding);
+  left: 50%;
+  margin-left: - calc($tooltip-width / 2);
+
+  &::after {
+    border-color: $night-grey transparent transparent transparent;
+    bottom: - calc($tooltip-padding * 5);
+    left: calc(50% - calc($tooltip-padding * 2));
+  }
+}
+
+.tooltip--bottom {
+  left: 50%;
+  margin-left: - calc($tooltip-width / 2);
+  top: calc(100% + $tooltip-padding);
+
+  &::after {
+    border-color: transparent transparent $night-grey transparent;
+    left: calc(50% - calc($tooltip-padding * 2));
+    top: - $tooltip-padding;
+  }
+}
+
+.tooltip--left {
+  right: calc(100% + $tooltip-padding);
+  top: calc(100% / 4);
+
+  &::after {
+    border-color: transparent transparent transparent $night-grey;
+    right: - calc($tooltip-padding * 3);
+    top: 50%;
+  }
+}
+
+.tooltip--right {
+  left: calc(100% + $tooltip-padding);
+  top: calc(100% / 4);
+
+  &::after {
+    border-color: transparent $night-grey transparent transparent;
+    left: - calc($tooltip-padding * 3);
+    top: 50%;
+  }
+}
