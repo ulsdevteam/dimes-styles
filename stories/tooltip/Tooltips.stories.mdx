@@ -7,25 +7,28 @@ import * as stories from './Tooltips.stories.js';
     layout: 'centered',
   }}
   args={{
-    anchorText: 'Tooltip anchor text.',
-    tooltipText: 'Tooltip text.',
+    anchorText: 'Tooltip anchor text',
+    tooltipText: 'Tooltip text',
     position: 'top',
   }} />
 
 # Tooltips
 
-Temporarily display help or confirmation messages associated with a button or 
+Display a temporary, non-actionable help or confirmation message associated with a button or
 other action element.
 
 ## When to use
 
-Use the tooltip component when you want to temporarily display a brief help or 
-confirmation message that is associated with a clickable element.
+Use the tooltip component when you want to temporarily display a brief help or confirmation
+message that is associated with a clickable element. Use tooltips to add
+supplemental information that is helpful for users, but is not required to operate the UI.
 
 ## Best practices
 
 - Tooltips should be displayed for at least six seconds.
 - Use the role='alert' attribute to support screen readers.
+- Tooltips should not block a user from performing any other task on the screen.
+- Do not include links or other interactive content in a tooltip.
 
 ## Related components
 
@@ -36,5 +39,10 @@ No related components.
 No known issues.
 
 ## Basic implementation
+Position the tooltip in relation to the element it describes using one of four classes:
+1. `tooltip--top`
+2. `tooltip--bottom`
+3. `tooltip--left`
+4. `tooltip--right`
 
 <Story story={stories.basic} />
