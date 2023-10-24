@@ -11,11 +11,11 @@ cache:
     - node_modules
 install:
   - yarn install
-before_script:
-  - yarn build-storybook
 script:
   - yarn lint
   - yarn test
+before_deploy: 
+  - yarn build-storybook
   - yarn compile
   - script/build_release.sh $TRAVIS_TAG
 deploy:
