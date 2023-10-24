@@ -20,8 +20,9 @@ other action element.
 ## When to use
 
 Use the tooltip component when you want to temporarily display a brief help or confirmation
-message that is associated with a clickable element. Use tooltips to add
-supplemental information that is helpful for users, but is not required to operate the UI.
+message that is associated with an element a user clicks, hovers or focuses on. Use tooltips 
+to add supplemental information that is helpful for users, but is not required to operate 
+the UI.
 
 ## Best practices
 
@@ -39,6 +40,9 @@ No related components.
 No known issues.
 
 ## Basic implementation
+Use javascript to show the tooltip when a user clicks, hovers or focuses 
+on an element and to automatically hide it after a period of time.
+
 Position the tooltip in relation to the element it describes using one of four classes:
 1. `tooltip--top`
 2. `tooltip--bottom`
