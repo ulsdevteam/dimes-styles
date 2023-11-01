@@ -1,0 +1,50 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './TableOfContents.stories.js';
+import listItems from './listItems';
+
+<Meta of={stories} />
+
+# Table of Contents
+
+A table of contents is a navigation element that helps users quickly jump to a
+section of a page.
+
+## When to use
+
+Use on long pages to provide a way for users to quickly scan the page contents
+without having to scroll.
+
+## Best practices
+
+- Use the `#toc__link-group` div id selector for building the table of contents from
+page headings in a script.
+
+- Optionally use `class="active"` to indicate when a specific section of contents is
+visible on the page, if that functionality is built into the table of contents
+implementation.
+- Optionally, use the `toc--sticky` class to make the the table contents position
+sticky as a user scrolls down the page.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+`toc--orange` does not meet WCAG requirements for color contrast.
+
+## Colors
+The table of contents comes in a variety of colors. Use the `toc--neutral`,
+`toc--blue` and `toc--orange` classes.
+
+<Story of={stories.neutral} />
+
+<Story of={stories.blue} />
+
+<Story of={stories.orange} />
+
+## Adding a title
+
+The table of contents can also have one or more titles to separate sections:
+
+<Story of={stories.withTitle} />

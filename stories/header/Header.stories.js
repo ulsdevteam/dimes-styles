@@ -4,6 +4,12 @@ import Logo from '../../stylesheets/assets/img/hero_logo.png'
 
 export default {
   component: Header,
+  title: "Components/Header",
+  args:{
+    showMobileNavItems: false,
+    showMobileDropdownItems: false,
+    showDropdownItems: false
+  }
 };
 
 export const colors = () => {

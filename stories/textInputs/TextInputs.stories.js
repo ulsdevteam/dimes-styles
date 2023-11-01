@@ -2,6 +2,11 @@ import TextInput from './textInput.handlebars'
 
 export default {
   component: TextInput,
+  title: "Components/Text Input",
+  args:{
+    label: 'First Name',
+    name: 'first_name'
+  }
 };
 
 export const basic = (args) => TextInput(args)

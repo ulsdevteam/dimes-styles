@@ -1,0 +1,42 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Pagination.stories.js';
+
+<Meta of={stories} />
+
+# Pagination
+
+Pagination allows you to divide large amounts of content into smaller chunks across multiple pages.
+
+## When to use
+
+Use pagination when there are too many results to show on one page, so the user
+isn't overwhelmed by too much information.
+
+Pagination is commonly used for things like table listings, search results, and
+directories. What constitutes “too many results” can be influenced by:
+- system load times
+- amount of data in each entry
+- screen space
+
+Pagination is a control that sits at the bottom and top of the page and allows
+the user to easily move between each page.
+
+## Best practices
+
+Clearly identify which page the user is on by displaying the current page number
+and applying `aria-current="page"`.
+
+By providing context into how many pages there are in total (eg. 1 of 4 pages),
+you can help provide clarity around the data displayed.
+
+Use pagination instead of enabling infinite scrolling.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+Color `flame-orange (#d7521d)` does not meet WCAG requirements for color contrast.
+
+<Story of={stories.basic} />

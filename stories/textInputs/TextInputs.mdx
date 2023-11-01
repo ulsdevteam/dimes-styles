@@ -1,0 +1,47 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './TextInputs.stories.js';
+
+<Meta of={stories} />
+
+# Text Inputs
+
+Allow users to enter short text in a form.
+
+## When to use
+
+Use the text input component when you need to let users enter text that’s no
+longer than a single line, such as their name or phone number. If you need to
+let users enter longer answers that might span multiple lines, you should use
+the textarea component.
+
+## Best practices
+
+- Provide labels and instructions that are clear and concise.
+- If specific validation rules are present on a field, provide instructions for
+  completing it. For example, "Passwords must contain at least 8 letters and/or numbers.""
+- If the text input is a required field include the `aria-required` property indicate
+  that it is a required field, and use the validation message for input errors.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Basic implementation
+
+<Story of={stories.basic} />
+
+## With hidden label
+
+<Story of={stories.hideLabel} />
+
+## Required field
+
+<Story of={stories.required} />
+
+## Displaying errors
+
+<Story of={stories.withError} />

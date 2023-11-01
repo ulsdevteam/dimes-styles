@@ -2,6 +2,7 @@ import Search from './searchForm.handlebars'
 
 export default {
   component: Search,
+  title: "Components/Search"
 };
 
 export const basic = () => Search({

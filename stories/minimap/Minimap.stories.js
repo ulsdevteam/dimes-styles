@@ -2,6 +2,7 @@ import Minimap from './minimap.handlebars'
 
 export default {
   component: Minimap,
+  title: "Components/Minimap"
 };
 
 export const basic = () => Minimap()

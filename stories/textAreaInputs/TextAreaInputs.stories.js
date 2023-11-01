@@ -2,6 +2,11 @@ import TextareaInput from './textareaInputs.handlebars'
 
 export default {
   component: TextareaInput,
+  title: "Components/Textarea Inputs",
+  args:{
+    label: 'Message',
+    name: 'message'
+  }
 };
 
 export const basic = (args) => TextareaInput(args)

@@ -2,6 +2,30 @@ import Select from './select.handlebars'
 
 export default {
   component: Select,
+  title: "Components/Select",
+  args:{
+    hideLabel: false,
+    label: 'Choose a search field',
+    name: 'field',
+    options: [
+      {
+        value: '',
+        label: 'Everything'
+      },
+      {
+        value: 'title',
+        label: 'Title'
+      },
+      {
+        value: 'author',
+        label: 'Author'
+      },
+      {
+        value: 'subject',
+        label: 'Subject'
+      }
+    ]
+  }
 };
 
 export const basic = (args) => Select(args)

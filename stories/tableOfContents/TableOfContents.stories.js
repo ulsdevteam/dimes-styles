@@ -2,6 +2,11 @@ import TableOfContents from './tableOfContents.handlebars'
 
 export default {
   component: TableOfContents,
+  title: "Components/Table of Contents",
+  args:{
+    ariaLabel: 'table of contents',
+    listItems: listItems
+  }
 };
 
 export const neutral = (args) => TableOfContents({ class: 'toc--neutral', ...args })

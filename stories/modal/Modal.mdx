@@ -1,0 +1,46 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Modal.stories.js';
+
+<Meta of={stories} />
+
+# Modal
+
+Modals focus the user’s attention exclusively on one task or piece of information
+via a window that sits on top of the page content.
+
+## When to use
+
+### Require an immediate response from the user
+Use a dialog to request information that is preventing the system from continuing
+a user-initiated process.
+
+### Notify the user of urgent information
+Use a modal dialog to notify the user of urgent information concerning their
+current work. Modal dialogs are commonly used to report system errors or convey
+a consequence of a user’s action.
+
+### Confirm a user decision
+Use a modal dialog to confirm user decisions. Clearly describe the action being
+confirmed and explain any potential consequences that it may cause. Both the
+title and the button should reflect the action that will occur. If the action is
+destructive or irreversible then use a transactional danger modal.
+
+## Best practices
+
+- After the modal opens, initial focus should be set on the first focusable
+  element in the modal.
+- After a modal closes, focus should return to the element that invoked the modal.
+- Focus must not move outside the modal until it is closed.
+- The tab sequence of all modal dialogs should include a visible button that
+  closes the dialog such as a close icon and/or cancel button.
+- The escape key should also close the modal.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+<Story of={stories.basic} height='500px'/>
