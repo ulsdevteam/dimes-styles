@@ -2,6 +2,10 @@ import Header from './header.handlebars'
 import headerColors from './colors.json'
 import Logo from '../../stylesheets/assets/img/hero_logo.png'
 
+export default {
+  component: Header,
+};
+
 export const colors = () => {
   const headers = headerColors.map(c => Header({
     class: c,

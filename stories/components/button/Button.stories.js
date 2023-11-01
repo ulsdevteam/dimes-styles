@@ -3,6 +3,10 @@ import Link from './link.handlebars'
 import buttonColors from './colors.json'
 import buttonSizes from './sizes.json'
 
+export default {
+  component: Button,
+};
+
 export const colors = (args) => {
   const buttons = buttonColors.map(c => Button({ class: c, ...args })).join('')
   return buttons

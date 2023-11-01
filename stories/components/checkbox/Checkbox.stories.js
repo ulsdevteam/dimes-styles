@@ -3,6 +3,10 @@ import CheckboxGroup from './checkboxFieldset.handlebars'
 import checkboxColors from './colors.json'
 import checkboxItems from './items.json'
 
+export default {
+  component: Checkbox,
+};
+
 export const colors = (args) => (
   checkboxColors.map(c => Checkbox({ class: c.class, name: c.name, text: c.text, ...args })).join('')
 )

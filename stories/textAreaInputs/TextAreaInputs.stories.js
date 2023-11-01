@@ -1,5 +1,9 @@
 import TextareaInput from './textareaInputs.handlebars'
 
+export default {
+  component: TextareaInput,
+};
+
 export const basic = (args) => TextareaInput(args)
 
 export const required = (args) => TextareaInput({ ...args, required: true })

@@ -1,5 +1,9 @@
 import TableOfContents from './tableOfContents.handlebars'
 
+export default {
+  component: TableOfContents,
+};
+
 export const neutral = (args) => TableOfContents({ class: 'toc--neutral', ...args })
 
 export const blue = (args) => TableOfContents({ class: 'toc--blue', ...args })
