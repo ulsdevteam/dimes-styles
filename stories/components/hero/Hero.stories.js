@@ -1,5 +1,5 @@
 import Hero from './hero.handlebars'
-import Logo from '../../stylesheets/assets/img/hero_logo.png'
+import Logo from '../../../stylesheets/assets/img/hero_logo.png'
 
 export default {
   component: Hero,

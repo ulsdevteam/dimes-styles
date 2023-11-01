@@ -1,6 +1,6 @@
 import Header from './header.handlebars'
 import headerColors from './colors.json'
-import Logo from '../../stylesheets/assets/img/hero_logo.png'
+import Logo from '../../../stylesheets/assets/img/hero_logo.png'
 
 export default {
   component: Header,
