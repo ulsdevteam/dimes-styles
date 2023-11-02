@@ -1,4 +1,5 @@
 import TableOfContents from './tableOfContents.handlebars'
+import listItems from './listItems';
 
 export default {
   component: TableOfContents,
