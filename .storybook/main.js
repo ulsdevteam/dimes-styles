@@ -18,7 +18,7 @@ const config = {
         }
       }
     }
-  }, '@storybook/addon-mdx-gfm'],
+  }],
 
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

@@ -42,7 +42,6 @@
     "@storybook/addon-docs": "^7.5.2",
     "@storybook/addon-essentials": "^7.5.2",
     "@storybook/addon-links": "^7.5.2",
-    "@storybook/addon-mdx-gfm": "^7.5.2",
     "@storybook/html": "^7.5.2",
     "@storybook/html-webpack5": "^7.5.2",
     "@storybook/preset-scss": "^1.0.3",
