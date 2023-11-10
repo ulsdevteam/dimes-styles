@@ -1,0 +1,56 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './GridLayout.stories.js';
+
+<Meta of={stories} />
+
+# Layout
+Layout dictates how components appear on the page in relation to each
+other, including on different devices and screen sizes.
+
+## Usage
+Use [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox),
+[CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout), and the `float` property as needed to
+position components and set page areas. There are multiple page wrapper and layout helper classes to
+facilitate layout:
+
+- `container`: Sets a container elements with 15px margin gutters on either side of the
+container with a width of 100% minus the gutters.
+- `container--full-width`: Sets a container element to `width: 100%` with no gutters.
+- `wrapper`: Creates a flexbox wrapper (`display: flex`) that centers the content inside
+with  `justify-content: center;`
+- `flex`: Simply adds `display: flex` to an element.
+- `grid`: Creates a CSS Grid container with 12 columns that fill the container by applying
+  the styles `display: grid` and `grid-template-columns: repeat(12, 1fr)` to the element.
+
+## Best practices
+
+Design for a responsive layout by initially creating styles for small screens using a single-column
+layout. Then, enhance using media queries as needed to adjust for medium screens and
+large screens. You can add the SCSS mixins for media queries in local
+site styles along with the screen size breakpoint variables:
+```
+// Breakpoints map
+$break-md: 580px;
+$break-lg: 1024px;
+
+@mixin md-up {
+  @media screen and (min-width: $break-md) { @content; }
+}
+
+@mixin lg-up {
+  @media screen and (min-width: $break-lg) { @content; }
+}
+```
+There is no default maximum width set in the styles, but for sites that require a
+maximum width, use `max-width: 1440px`.
+
+## Known issues
+There are no known issues.
+
+## Implementing a 12-column grid
+Apply the `grid` class to a container to define 12 columns on the page, and then
+specify which/how many columns each child element should span using the `grid-column`
+property.
+
+<Story of={stories.gridLayout} />
+

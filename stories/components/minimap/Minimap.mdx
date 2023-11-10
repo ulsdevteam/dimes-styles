@@ -1,0 +1,45 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Minimap.stories.js';
+
+<Meta of={stories} />
+
+# Minimap
+
+A minimap shows the location of hits within a large results set.
+
+## When to use
+
+The minimap is used to help users navigate search results within a collection.
+
+## Best practices
+The clickable target size of the minimap boxes have an area of at least 24 by 24
+CSS pixels for accessibility.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Default implementation
+
+The minimap takes up the entire width and height of the container that wraps it,
+although that container size must allow a minimum box width of 24px.
+
+<Story story={stories.basic} />
+
+## Changing the column count
+
+By default, each row of the minimap contains five squares. It is possible to
+change this behavior by adding a class which specifies the number of squares
+up to 20.
+
+### Ten across (`minimap--10-across`)
+
+<Story story={stories.tenAcross} />
+
+### Twenty across (`minimap--20-across`)
+
+<Story story={stories.twentyAcross} />

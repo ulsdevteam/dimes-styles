@@ -1,0 +1,72 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+
+import {colors} from './Colors'
+
+<Meta title="Global/Colors" />
+
+# Colors
+
+The two primary colors are orange and a complimentary navy. The orange matches
+the orange of the Rockefeller Archive Center logo.
+
+<ColorPalette>
+  <ColorItem title="Primary color palette" colors={[colors.flameOrange, colors.regalBlue]} />
+</ColorPalette>
+
+## Usage
+For accessibility, do not use color alone to communicate information. To meet
+WCAG 2.x Level AA, text must have a contrast ratio of at least 4.5:1, or 3:1 for
+large text (defined as 14pt bold or 18pt).
+
+## Oranges
+
+<ColorPalette>
+  <ColorItem title="flame-orange" colors={[colors.flameOrange]} />
+  <ColorItem title="crusta-orange" colors={[colors.crustaOrange]} />
+  <ColorItem title="sandy-orange" colors={[colors.sandyOrange]} />
+  <ColorItem title="peach-orange" colors={[colors.peachOrange]} />
+  <ColorItem title="rose-violet" colors={[colors.roseViolet]} />
+</ColorPalette>
+
+## Blues
+
+<ColorPalette>
+  <ColorItem title="regal-blue" colors={[colors.regalBlue]} />
+  <ColorItem title="midnight-blue" colors={[colors.midnightBlue]} />
+  <ColorItem title="yale-blue" colors={[colors.yaleBlue]} />
+  <ColorItem title="water-blue" colors={[colors.waterBlue]} />
+  <ColorItem title="solitude-blue" colors={[colors.solitudeBlue]} />
+</ColorPalette>
+
+## Browns
+
+<ColorPalette>
+  <ColorItem title="maroon-brown" colors={[colors.maroonBrown]} />
+  <ColorItem title="rust-red" colors={[colors.rustRed]} />
+  <ColorItem title="umber-brown" colors={[colors.umberBrown]} />
+</ColorPalette>
+
+## Grays
+
+<ColorPalette>
+  <ColorItem title="silver-grey" colors={[colors.silverGrey]} />
+  <ColorItem title="wan-white-grey" colors={[colors.wanWhiteGrey]} />
+  <ColorItem title="desert-grey" colors={[colors.desertGrey]} />
+</ColorPalette>
+
+## Monochrome shades
+Colors from dark to light are:
+`black`, `night-grey`, `mortar-grey`, `dark-grey`, and `white`.
+
+<ColorPalette>
+  <ColorItem
+    title="Monochrome"
+    colors={[
+      colors.black,
+      colors.nightGrey,
+      colors.mortarGrey,
+      colors.darkGrey,
+      colors.white
+    ]}
+  />
+</ColorPalette>

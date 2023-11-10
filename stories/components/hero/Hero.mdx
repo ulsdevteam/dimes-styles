@@ -1,0 +1,33 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Hero.stories.js';
+
+<Meta of={stories} />
+
+# Hero
+
+A hero is a section of a page which draws attention through the use of large
+images and text.
+
+## When to use
+
+Use a hero on the home page of a web site in order to quickly convey to users
+the purpose of the site and actions that are available to them there.
+
+## Best practices
+
+If the image in the hero is purely decorative, like a logo, it does not need
+alt text in the `img` element. Instead, use `alt=""` to indicate a decorative image.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Image dimensions
+For different image dimensions, specify the `width` and/or `height` values in local CSS using
+the `hero__logo img` selector.
+
+<Story of={stories.basic} />

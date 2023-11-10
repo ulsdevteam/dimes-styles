@@ -1,0 +1,69 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Header.stories.js';
+
+<Meta of={stories} />
+
+# Header
+
+The header shows users that they are on a Rockefeller Archive Center website,
+and which service they are using.
+
+## When to use
+
+A version of the header should be used on all Rockefeller Archive Center web properties.
+
+## Best practices
+
+There are a number of variations of the header; see below to select the most
+appropriate one for your use case.
+
+## Related components
+
+The header is a layout that consists of Navigation and Dropdown components that are included
+together. Button styles are also used for navigation dropdown styles in the header, and Social
+Media Icons component is an optional component.
+
+## Known issues
+
+In the header with dropdown items, when the dropdown is open the dropdown buttons in the header move.
+It is unclear if this is something that can be fixed in the styles, or is related to Storybook's
+rendering.
+
+## Colors
+
+The header comes in white or dark blue themes. Use the `header--white` and `header--blue`
+classes.
+
+<Story of={stories.colors} />
+
+## Branding
+
+The header can have either a simple text brand:
+
+<Story of={stories.withTextBrand} />
+
+Or it can use an image in lieu of text. Make sure the image has appropriate `alt` text:
+
+<Story of={stories.withImageBrand} />
+
+## Navigation
+
+The header can contain navigation items. These can be simple links. Use the `header--blue`
+class in this case. On small screens, the navigation items are replaced by a button and
+with a dropdown that shows the links. To see what this looks like, switch to the Canvas
+tab and toggle the "hideMobileNavItems" switch on a mobile view:
+
+<Story of={stories.withNavItems} />
+
+They can also contain dropdown menus for more complex navigation. Use the `header--white`
+class in this case. To see what this looks like, switch to the Canvas
+tab and toggle the "showDropdownItems" switch on any screensize, and the "showmobileDropdownItems"
+on a mobile view. Use javascript to implement the function to show/hide the mobile `id="nav-toggle"` button.
+
+<Story of={stories.withDropdownItems} />
+
+## Social Media Icons
+
+Social media icons can be added to a header as well.
+
+<Story of={stories.withSocialIcons} />

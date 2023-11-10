@@ -1,30 +1,25 @@
-module.exports = {
+const config = {
   stories: [
-    '../stories/**/*.stories.mdx',
+    '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx)'
   ],
-  addons: [
-    '@storybook/addon-docs',
-    {
-      name: '@storybook/addon-essentials',
-      options: {
-        actions: false
-      }
-    },
-    '@whitespace/storybook-addon-html',
-    '@storybook/addon-links',
-    '@storybook/addon-a11y',
-    {
-      name: '@storybook/preset-scss',
-      options: {
-        cssLoaderOptions: {
-          modules: {
-            compileType: 'icss' // allows use of :export directive
-          }
+
+  addons: ['@storybook/addon-docs', {
+    name: '@storybook/addon-essentials',
+    options: {
+      actions: false
+    }
+  }, '@whitespace/storybook-addon-html', '@storybook/addon-links', '@storybook/addon-a11y', {
+    name: '@storybook/preset-scss',
+    options: {
+      cssLoaderOptions: {
+        modules: {
+          mode: 'icss' // allows use of :export directive
         }
       }
     }
-  ],
+  }],
+
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
@@ -36,5 +31,15 @@ module.exports = {
       use: ['handlebars-loader']
     })
     return config
+  },
+
+  framework: {
+    name: '@storybook/html-webpack5',
+    options: {}
+  },
+
+  docs: {
+    autodocs: false
   }
-}
+};
+export default config;

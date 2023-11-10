@@ -1,0 +1,50 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Select.stories.js';
+
+<Meta of={stories} />
+
+# Select
+
+Select allows users to make a single selection from a list of options.
+
+## When to use
+
+Use the select component inside a form where users are selecting from a list of
+options and submitting data.
+
+## Best practices
+
+- Order your list of options in a way that will make the most sense to the user. This could be:
+  - alphabetically
+  - numerically
+  - by most commonly selected option
+- Don’t overwhelm the user with too many options.
+- Avoid very long option names to facilitate understandability and perceivability.
+- Do not use the same word or phrase at the beginning of a set of options.
+- Use a unique id for each option.
+- If the select field is required, include the `aria-required` property, indicate
+  that it is a required field, and use the validation message for input errors.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Basic implementation
+
+<Story of={stories.basic} />
+
+## With hidden label
+
+<Story of={stories.hideLabel} />
+
+## Required field
+
+<Story of={stories.required} />
+
+## Displaying errors
+
+<Story of={stories.withError} />
