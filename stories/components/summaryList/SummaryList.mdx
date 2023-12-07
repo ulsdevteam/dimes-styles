@@ -1,0 +1,33 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './SummaryList.stories.js';
+
+<Meta of={stories} />
+
+# Summary Lists
+
+Summarize information as a list of key facts.
+
+## When to use
+
+Use a summary list to display metadata like ‘Last updated’ with a date like ‘22 June 2018’.
+
+Do not use it for tabular data or a simple list of information or tasks, like a task list. 
+For those use a `table`, `ul` or `ol`.
+
+## Best practices
+
+- The summary list uses the description list HTML element, so only use it to present information
+  that has a key and at least one value.
+- Do not use inputs in this component
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Basic implementation
+
+<Story of={stories.basic} />

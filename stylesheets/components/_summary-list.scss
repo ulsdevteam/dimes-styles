@@ -1,0 +1,51 @@
+// ------------------------------------------------------
+// This file contains all styles related to summary lists
+// ------------------------------------------------------
+
+/**
+ * Base styles for summary lists.
+ */
+.summary-list {
+  border-collapse: collapse;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/**
+ * Spacing for rows, keys and values.
+ */
+.summary-list__row,
+.summary-list__key,
+.summary-list__value {
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+/**
+ * Display keys and values as table cells.
+ */
+.summary-list__key,
+.summary-list__value {
+  display: table-cell;
+  overflow-wrap: break-word;
+}
+
+/**
+ * Base styles for summary list rows.
+ */
+.summary-list__row {
+  border-bottom: 1px solid #b1b4b6;
+  display: table-row;
+}
+
+/**
+ * Base styles for summary keys.
+ */
+.summary-list__key {
+  font-weight: $font-weight-bold;
+  margin-bottom: 5px;
+  overflow-wrap: break-word;
+  width: 30%;
+}
