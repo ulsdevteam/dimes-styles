@@ -1,0 +1,46 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Tabs.stories.js';
+
+<Meta of={stories} />
+
+# Tabs
+
+Navigate between related sections of content, displaying one section at a time.
+
+## When to use
+
+Tabs can be a helpful way of letting users quickly switch between related information if:
+
+- your content can be usefully separated into clearly labeled sections
+- the first section is more relevant than the others for most users
+- users will not need to view all the sections at once
+
+Tabs can work well for people who use a service regularly. Their need to perform tasks 
+quickly may be greater than their need for simplicity of first-time use.
+
+## Best practices
+
+- Use an `href` attribute to ensure that the `id` of the tab is stored in the URL.
+  This will allow the browsers's back button to work properly.
+- Use clear labels to describe content so users will know if they need to click them.
+- Order tabs according to user need, with the most commonly-used occuring first.
+- Do not disable tabs. If there is no content for a tab, remove it or provide an 
+  explanation as to why there is no content.
+- Avoid tabs that wrap over more than one line.
+- Add headings to tab content which duplicates information in the tab label.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+Orange link color does not meet color contrast threshold.
+
+## Basic implementation
+
+Use JavaScript to show and hide tabs. To show a tab, add the `tabs__list-item--selected` class
+to the relevant tabs list item, and add a `tabs__panel--hidden` class to all of the tab panels
+that should be hidden.
+
+<Story of={stories.basic} />

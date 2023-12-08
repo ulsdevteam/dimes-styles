@@ -1,0 +1,48 @@
+<div class="tabs">
+  <h2 class="tabs__title">
+    Contents
+  </h2>
+  <ul class="tabs__list" role="tablist">
+    <li class="tabs__list-item tabs__list-item--selected" role="presentation">
+      <a class="tabs__tab" href="#pending-accessions" id="tab_pending-accessions" role="tab"
+        aria-controls="pending-accessions" aria-selected="true" tabindex="0">
+        Pending Accessions
+      </a>
+    </li>
+    <li class="tabs__list-item" role="presentation">
+      <a class="tabs__tab" href="#completed-accessions" id="tab_completed-accessions" role="tab"
+        aria-controls="completed-accessions" aria-selected="false" tabindex="-1">
+        Completed Accessions
+      </a>
+    </li>
+    <li class="tabs__list-item" role="presentation">
+      <a class="tabs__tab" href="#in-progress-accessions" id="tab_in-progress-accessions" role="tab"
+        aria-controls="in-progress-accessions" aria-selected="false" tabindex="-1">
+        In Progress Accessions
+      </a>
+    </li>
+  </ul>
+  <div class="tabs__panel" id="pending-accessions" role="tabpanel" aria-labelledby="tab_pending-accessions">
+    <h2>Pending Accessions</h2>
+    <ul>
+      <li>Rockefeller Archive Center Records, Events</li>
+      <li>Rockefeller Archive Center Records, Communications</li>
+      <li>Ford Foundation, organizational history</li>
+    </ul>
+
+  </div>
+  <div class="tabs__panel tabs__panel--hidden" id="completed-accessions" role="tabpanel"
+    aria-labelledby="tab_completed-accessions">
+    <h2>Completed Accessions</h2>
+
+    <ul>
+      <li>Rockefeller Archive Center Records, Events, 50th Anniversary Celebration</li>
+      <li>Ford Foundation, board of trustees</li>
+    </ul>
+  </div>
+  <div class="tabs__panel tabs__panel--hidden" id="in-progress-accessions" role="tabpanel"
+    aria-labelledby="tab_in-progress-accessions">
+    <h2>In Progress Accessions</h2>
+    <p>There are no accessions currently in progress.</p>
+  </div>
+</div>
