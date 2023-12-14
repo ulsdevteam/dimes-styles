@@ -4,7 +4,7 @@ export default {
   component: Table,
   title: "Components/Table",
   args:{
-    striped: false,
+    striped: true,
   }
 };
 
