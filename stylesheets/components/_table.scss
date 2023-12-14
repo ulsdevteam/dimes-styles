@@ -1,0 +1,42 @@
+// -------------------------------------------
+// This file contains styles related to tables
+// -------------------------------------------
+
+/**
+* Defines layout styles for base table.
+**/
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table thead th {
+  font-weight: $font-weight-bold;
+  padding: 20px;
+  text-align: left;
+}
+
+.table tbody th {
+  font-weight: $font-weight-normal; // override default browser styling
+  padding: 20px;
+  text-align: left;
+}
+
+.table td {
+  padding: 20px;
+}
+
+.table td input {
+  width: auto;
+}
+
+/**
+* Defines layout styles for striped table.
+**/
+.table.table-striped tbody tr:nth-child(odd) {
+  background-color: $wan-white-grey;
+}
+
+.table.table-striped tbody tr:nth-child(even) {
+  background-color: $white;
+}

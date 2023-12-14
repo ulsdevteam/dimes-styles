@@ -1,0 +1,43 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as stories from './Table.stories.js';
+
+<Meta of={stories} />
+
+# Tables
+
+Display tabular data.
+
+## When to use
+
+Use this component when you have tabular data (data in rows and columns) and want to 
+help users quickly and easily look up values.
+
+Tables should not be used to control layout of a web page.
+
+## Best practices
+
+- Always use the base `table` class to improve the display of the table.
+
+## Related components
+
+No related components.
+
+## Known issues
+
+No known issues.
+
+## Basic implementation
+Apply the `table-striped` class to the `<table>` element to include alternating row background colors.
+
+<Story of={stories.basic} />
+
+## With Inputs
+
+Inputs can be added inside of table cells, for example a checkbox to select a row, or a button to 
+perform an action. When adding inputs in a table:
+  - Each column needs a `th` tag with a unique ID attribute.
+  - Each row needs a `th` tag with `scope="row"` and a unique ID attribute. This should ideally be a cell
+    which describes the row, since that is the value screen readers will read.
+  - Each field needs an aria-labelledby pointing to the IDs of the column and row header (separated by a space).
+
+<Story of={stories.withInputs} />
