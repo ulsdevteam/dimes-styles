@@ -2,24 +2,24 @@
     <thead>
         <tr>
             {{#if inputs}}<th id="select">Select</th>{{/if}}
-            <th id="title">Title</th>
-            <th id="date">Date</th>
+            <th{{#if inputs}} id="title"{{/if}}>Title</th>
+            <th{{#if inputs}} id="date"{{/if}}>Date</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             {{# if inputs}}<td><input type="checkbox" id="1" aria-labelledby="row01 title"></td>{{/if}}
-            <th scope="row" id="row1">Pie Making Grant</td>
+            <th scope="row"{{#if inputs}} id="row1"{{/if}}>Pie Making Grant</td>
             <td>2021</td>
         </tr>
         <tr>
             {{#if inputs}}<td><input type="checkbox" id="2" aria-labelledby="row02 title"></td>{{/if}}
-            <th scope="row" id="row2">Cupcake Makers Association of America</td>
+            <th scope="row"{{#if inputs}} id="row2"{{/if}}>Cupcake Makers Association of America</td>
             <td>2023</td>
         </tr>    
         <tr>
             {{#if inputs}}<td><input type="checkbox" id="3" aria-labelledby="row03 title"></td>{{/if}}
-            <th scope="row" id="row3">Brownie Purveyors Society</td>
+            <th scope="row"{{#if inputs}} id="row3"{{/if}}>Brownie Purveyors Society</td>
             <td>2024</td>
         </tr>         
     </tbody>
