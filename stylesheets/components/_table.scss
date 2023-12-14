@@ -29,9 +29,9 @@
 * Defines layout styles for striped table.
 **/
 .table.table-striped tbody tr:nth-child(odd) {
-  background-color: #e3e1dd;
+  background-color: $wan-white-grey;
 }
 
 .table.table-striped tbody tr:nth-child(even) {
-  background-color: #fff;
+  background-color: $white;
 }
