@@ -13,16 +13,21 @@
 .table thead th {
   font-weight: $font-weight-bold;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .table tbody th {
   font-weight: $font-weight-normal; // override default browser styling
+  padding: 20px;
   text-align: left;
 }
 
 .table td {
   padding: 20px;
+}
+
+.table td input {
+  width: auto;
 }
 
 /**
