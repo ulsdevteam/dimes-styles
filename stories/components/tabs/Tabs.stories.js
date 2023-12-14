@@ -5,4 +5,4 @@ export default {
   title: "Components/Tabs"
 };
 
-export const basic = (args) => Tabs(args)
+export const basic = () => Tabs()
