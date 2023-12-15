@@ -15,4 +15,6 @@ export const required = (args) => TextInput({ ...args, required: true })
 
 export const hideLabel = (args) => TextInput({ ...args, hideLabel: true })
 
+export const helpText = (args) => TextInput({ ...args, helpText: true })
+
 export const withError = (args) => TextInput({ ...args, required: true, invalid: true })
