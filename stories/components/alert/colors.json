@@ -1,11 +1,6 @@
 [
-    "alert--light-blue",
     "alert--blue",
     "alert--navy",
-    "alert--orange",
-    "alert--transparent",
-    "alert--gray",
-    "alert--dark-gray",
-    "alert--black"
+    "alert--orange"
   ]
   

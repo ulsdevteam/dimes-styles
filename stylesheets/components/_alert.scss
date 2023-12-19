@@ -76,10 +76,6 @@
 /**
 * Styles for alert colors.
 **/
-.alert--light-blue {
-  @include alert-color($solitude-blue, $regal-blue, $regal-blue);
-}
-
 .alert--blue {
   @include alert-color($yale-blue, $yale-blue, $white);
 }
@@ -90,20 +86,4 @@
 
 .alert--orange {
   @include alert-color($flame-orange, $flame-orange, $white);
-}
-
-.alert--transparent {
-  @include alert-color(transparent, $dark-grey, $mortar-grey);
-}
-
-.alert--gray {
-  @include alert-color($desert-grey, $dark-grey, $mortar-grey);
-}
-
-.alert--dark-gray {
-  @include alert-color($dark-grey, $dark-grey, $black);
-}
-
-.alert--black {
-  @include alert-color($black, $white, $white);
 }
