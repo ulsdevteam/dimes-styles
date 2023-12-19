@@ -17,6 +17,8 @@ they are disruptive and should be used sparingly.
 
 - Use the `role='alert'` attribute to support screen readers.
 - Alerts should not block a user from performing any other task on the screen.
+- Alerts should not disappear automatically. If you want users to be able to remove
+  alerts, use the `alert--dismissable` class.
 - Use the base `alert` class along with a color class that sets the background
   color of the alert.
 - Do not use a notification banner to tell the user about validation errors - 
@@ -31,7 +33,6 @@ they are disruptive and should be used sparingly.
 `alert--orange` does not meet WCAG requirements for color contrast.
 
 ## Basic implementation
-Use javascript to show the alert or hide it when a user clicks on the close button.
 
 <Story of={stories.basic} />
 
@@ -58,6 +59,6 @@ It is also possible to add an icon to the alert.
 <Story of={stories.icons} />
 
 ## Dismissable Alerts
-If necessary, you can allow users to dismiss alerts by adding a close button. 
+If necessary, use JavaScript to allow users to dismiss alerts by clicking a close button. 
 
 <Story of={stories.dismissable} />

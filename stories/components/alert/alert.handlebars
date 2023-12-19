@@ -1,5 +1,9 @@
 <div class="alert {{color}}" role="alert">
-    {{# if dismissable}}<button type="button" class="alert__button" data-dismiss="alert" aria-hidden="true">X</button>{{/if}}
+    {{# if dismissable}}
+        <button class="alert__button" aria-label="Close">
+            <span class="material-icon" aria-hidden="true">close</span>
+        </button>
+    {{/if}}
     {{# if icon}}
     <div class="alert__icon-wrapper">
         <span class="alert__icon" aria-hidden="true">{{icon}}</span>

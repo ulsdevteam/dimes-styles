@@ -40,12 +40,10 @@
 * Button which closes the alert.
 **/
 .alert__button {
-  appearance: none;
   background: none;
   border: 0;
   color: inherit;
   float: right;
-  font-family: $sans-serif-stack;
   margin: -10px;
 }
 
@@ -54,7 +52,7 @@
 **/
 .alert__header {
   color: inherit;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /**
