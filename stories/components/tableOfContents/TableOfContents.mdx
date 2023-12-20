@@ -47,3 +47,13 @@ The table of contents comes in a variety of colors. Use the `toc--neutral`,
 The table of contents can also have one or more titles to separate sections:
 
 <Story of={stories.withTitle} />
+
+## Adding a skip link
+
+For long tables of contents that are repeated on multiple pages, or located inside of 
+the `main` element, add a "skip navigation" link to improve keyboard navigation 
+accessibility. The `href` attribute of this link should point to the id of the element
+containing the page's main content. Use a color-specific class which contrasts with
+the table of contents background color.
+
+<Story of={stories.skipNavigation} />
