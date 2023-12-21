@@ -3,34 +3,50 @@
 // -----------------------------------------------------------------------------
 
 /**
- * Skip link styles mixin. Allows users to position the skip link as desired
- * with $left and $top variables. $left and $top are set to work with RAC header.
+ * Base skip link styles mixin.
  * 1. Removes margin styles from visually-hidden mixin
 **/
-@mixin skip-link($left: 80px, $top: 60px) {
+@mixin skip-link() {
   @include visually-hidden;
 
-  background: $flame-orange;
-  color: $desert-grey;
   font-family: $sans-serif-stack;
   font-size: 18px;
   font-weight: $font-weight-bold;
-  left: $left;
   margin: 0; /* 1 */
   padding: 15px 20px 18px;
-  position: absolute;
   text-align: center;
-  top: $top;
 
   &:focus {
     @include show-on-focus;
 
-    color: $desert-grey; /* 1 */
     text-decoration: underline; /* 1 */
+  }
+}
+
+/**
+ * Skip link mixin for positioning skip link. Allows users to position the skip link as desired
+ * with $left and $top variables. $left and $top are set to work with RAC header.
+**/
+@mixin skip-link-position($left: 80px, $top: 60px) {
+  left: $left;
+  position: absolute;
+  top: $top;
+}
+
+/**
+ * Skip link mixin for colors. Allows users to set background and color of skip link
+ * with $background and $color variables. $background and $color are set to work with RAC header.
+**/
+@mixin skip-link-color($background: $flame-orange, $color: $desert-grey) {
+  background: $background;
+  color: $color;
+
+  &:focus {
+    color: $color;
   }
 
   &:hover {
-    color: $desert-grey; /* 1 */
+    color: $color;
   }
 }
 
@@ -39,4 +55,6 @@
 **/
 .skip-link {
   @include skip-link;
+  @include skip-link-color;
+  @include skip-link-position;
 }

@@ -29,7 +29,27 @@
 }
 
 /**
-* Styles for the the contents links, including the title
+* Styles for the table of contents skip link
+**/
+.toc__skip-link {
+  @include skip-link;
+  @include skip-link-position($left: 0, $top: 0);
+}
+
+.toc__skip-link--orange {
+  @include skip-link-color;
+}
+
+.toc__skip-link--blue {
+  @include skip-link-color($background: $solitude-blue, $color: $regal-blue);
+}
+
+.toc__skip-link--neutral {
+  @include skip-link-color($background: $desert-grey, $color: $night-grey);
+}
+
+/**
+* Styles for the table of contents links, including the title
 **/
 .toc__title,
 .toc__link-item {
