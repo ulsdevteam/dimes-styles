@@ -56,6 +56,14 @@
   @include show-on-lg-up;
 }
 
+.hide-on-md-up {
+  @include hide-on-md-up;
+}
+
+.show-on-md-up {
+  @include show-on-md-up;
+}
+
 .show-on-focus {
   @include show-on-focus;
 }
