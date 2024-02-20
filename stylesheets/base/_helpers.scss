@@ -3,12 +3,11 @@
 // -----------------------------------------------------------------------------
 
 /**
- * Clear inner floats
+ * Remove the default bullet and left indent from an unordered list
  */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table;
+.list--unstyled {
+  list-style: none;
+  padding-left: 0;
 }
 
 /**
@@ -42,18 +41,6 @@
   @include twelve-column-grid; /* 5 */
 }
 
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0; /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
 .visually-hidden {
   @include visually-hidden;
 }
@@ -67,6 +54,14 @@
 
 .show-on-lg-up {
   @include show-on-lg-up;
+}
+
+.hide-on-md-up {
+  @include hide-on-md-up;
+}
+
+.show-on-md-up {
+  @include show-on-md-up;
 }
 
 .show-on-focus {
