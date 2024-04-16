@@ -41,10 +41,20 @@ For example, for 4 card columns on large screens and 3 columns on medium screens
 }
 ```
 
-By default, cards have a body and a footer.
+By default, cards are designed to be a list of links with a body and a footer.
 
 <Story of={stories.basic} />
 
 However, the card footer is optional.
 
 <Story of={stories.noFooter} />
+
+## Using cards as stylized content containers
+A card can be used flexibly as a content container that is not
+part of a list or a link by removing the `card--link` class and adjusting
+the HTML structure for the desired content. This example includes an `h2`
+as the card title:
+
+<Story of={stories.notLink} />
+
+
