@@ -2,7 +2,7 @@ import Select from './select.handlebars'
 
 export default {
   component: Select,
-  title: "Components/Select",
+  title: "Components/Form/Select",
   args:{
     hideLabel: false,
     label: 'Choose a search field',

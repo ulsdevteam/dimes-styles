@@ -5,7 +5,7 @@ import checkboxItems from './items.json'
 
 export default {
   component: Checkbox,
-  title: "Components/Checkbox"
+  title: "Components/Form/Checkbox"
 };
 
 export const colors = (args) => (

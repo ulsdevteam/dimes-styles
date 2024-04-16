@@ -1,4 +1,4 @@
-<label for="{{name}}" {{#if hideLabel}}class="visually-hidden"{{/if}}>Message{{#if required}} *{{/if}}</label>
+<label for="{{name}}">Message{{#if required}} *{{/if}}</label>
 <textarea name="{{name}}" id="{{name}}" rows="5"
     {{#if invalid}} class="is-invalid" aria-invalid="true" aria-describedby="{{name}}-error"{{/if}}
     {{#if helpText}} aria-describedby="{{name}}-help"{{/if}}
