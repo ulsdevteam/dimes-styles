@@ -140,7 +140,6 @@ h2 {
   font-size: 21px;
   margin-bottom: 20px;
   margin-top: 60px;
-  padding-bottom: 12px;
 
   @include lg-up {
     font-size: 28px;
@@ -172,6 +171,7 @@ h4 {
  */
 .heading--dotted-border {
   border-bottom: 1.5px dotted $regal-blue;
+  padding-bottom: 12px;
 }
 
 /**
