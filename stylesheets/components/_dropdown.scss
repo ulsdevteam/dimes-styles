@@ -39,6 +39,7 @@
 /**
 * Styles for a dropdown list of items used on small screens
 * like the dropdown opened by the navigation menu button.
+* 1. Keeps other page content from covering the dropdown
 **/
 .dropdown__list--mobile {
   border-radius: 0;
@@ -48,6 +49,7 @@
   right: 0;
   top: 60px;
   width: 240px;
+  z-index: 999; /* 1 */
 }
 
 /**
