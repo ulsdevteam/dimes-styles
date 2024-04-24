@@ -6,16 +6,29 @@
  * Google fonts
  */
 
-@include font-face(Lato, normal, 400, 'Lato Regular', lato-v23-latin, lato-v23-latin-regular);
-@include font-face(Lato, normal, 700, 'Lato Bold', lato-v23-latin, lato-v23-latin-700);
-@include font-face(Lato, normal, 900, 'Lato Black', lato-v23-latin, lato-v23-latin-900);
-@include font-face(Manuale, normal, 400, 'Manuale Regular', manuale-v23-latin, manuale-v23-latin-regular);
-@include font-face(Manuale, normal, 700, 'Manuale Bold', manuale-v23-latin, manuale-v23-latin-700);
-@include font-face(Lato, italic, 400, 'Lato Italic', lato-v23-latin, lato-v23-latin-italic);
-@include font-face(Lato, italic, 700, 'Lato Bold Italic', lato-v23-latin, lato-v23-latin-700italic);
-@include font-face(Lato, italic, 900, 'Lato Black Italic', lato-v23-latin, lato-v23-latin-900italic);
-@include font-face(Manuale, italic, 400, 'Manuale Italic', manuale-v23-latin, manuale-v23-latin-italic);
-@include font-face(Manuale, italic, 700, 'Manuale Bold Italic', manuale-v23-latin, manuale-v23-latin-700italic);
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  src: url('./assets/fonts/rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  src: url('./assets/fonts/rubik/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Manuale;
+  font-style: normal;
+  src: url('./assets/fonts/merriweather/Merriweather[opsz,wdth,wght].ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Manuale;
+  font-style: italic;
+  src: url('./assets/fonts/merriweather/Merriweather-Italic[opsz,wdth,wght].ttf') format('truetype');
+}
 
 /* material-icon */
 @font-face {
@@ -73,7 +86,7 @@ i {
  * 3. Remove link underline
  */
 a {
-  color: $flame-orange;
+  color: $yale-blue;
   text-decoration: underline;
 
   @include on-event {
