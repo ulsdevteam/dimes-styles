@@ -19,12 +19,14 @@
     "stylelint-config-standard": "^27.0.0"
   },
   "pre-commit": [
-    "lint"
+    "lint-w"
   ],
   "scripts": {
     "compile": "sass stylesheets/main.scss dist/main.min.css --no-source-map --style=compressed && postcss dist/main.min.css --replace --use autoprefixer",
     "lint": "npx stylelint 'stylesheets/**/*.scss'",
+    "lint-w": "npx stylelint stylesheets/**/*.scss",
     "lint-fix": "npx stylelint 'stylesheets/**/*.scss' --fix",
+    "lint-w-fix": "npx stylelint stylesheets/**/*.scss --fix",
     "test": "jest --testRegex test_ --env=node --passWithNoTests",
     "storybook": "storybook dev",
     "build-storybook": "storybook build"
@@ -54,7 +56,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.5.0",
-    "sass": "^1.54.4",
+    "sass": "^1.72.0",
     "sass-loader": "^13.3.2",
     "storybook": "^7.5.2",
     "style-loader": "^3.3.3"
