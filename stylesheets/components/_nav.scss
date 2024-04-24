@@ -53,7 +53,7 @@
 @mixin nav-item-title {
   @include header-text;
 
-  color: $white;
+  color: $pitt-med-blue;
   font-size: 16.5px;
   font-weight: $font-weight-heavy;
   letter-spacing: normal;
@@ -65,7 +65,7 @@
 * Header navigation dropdown item description typography mixin
 **/
 @mixin nav-item-description {
-  color: $white;
+  color: $pitt-med-blue;
   font-family: $serif-stack;
   font-size: 13px;
   font-style: italic;
@@ -231,7 +231,7 @@
 .nav__list--dropdown {
   @include transition-default;
 
-  background: $maroon-brown;
+  background: $pitt-gold;
   padding: 22px 0 0;
   position: static;
   width: 100%;

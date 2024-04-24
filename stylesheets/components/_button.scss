@@ -125,13 +125,13 @@
 }
 
 .btn--orange {
-  @include button-color($flame-orange, $flame-orange, $white);
+  @include button-color($flame-orange, $flame-orange, $regal-blue);
 
   &:hover,
   &:focus {
     background-color: darken($flame-orange, 10%);
     border-color: darken($flame-orange, 10%);
-    color: $desert-grey;
+    color: $yale-blue;
   }
 }
 
