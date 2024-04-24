@@ -1,0 +1,9 @@
+<div class="input">
+  <label class="{{#if hideLabel}}visually-hidden{{/if}}" for="field">{{label}}{{#if required}} *{{/if}}</label>
+  <select name="{{name}}" id="{{name}}" {{#if invalid}} aria-invalid="true" aria-describedby="{{name}}-error"{{/if}}{{#if required}} required{{/if}}>
+    {{#each options}}
+    <option value="{{this.value}}">{{this.label}}</option>
+    {{/each}}
+  </select>
+  {{#if invalid}}<div id="{{name}}-error" class="input__error">This field is required.</div>{{/if}}
+</div>

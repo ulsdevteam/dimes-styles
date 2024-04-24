@@ -16,7 +16,9 @@
  * 2. Calculate width with gutters
  * 3. Make the container full width without gutters
  * 4. Flexbox wrapper classes
- * 5. Use CSS grid to create 12-column grid on container element
+ * 5. Apply flex-direction: column to a flex parent container
+ * 6. Use CSS grid to create 12-column grid on container element
+
  */
 
 .container {
@@ -37,8 +39,12 @@
   display: flex;
 }
 
+.flex--column { /* 5 */
+  flex-direction: column;
+}
+
 .grid {
-  @include twelve-column-grid; /* 5 */
+  @include twelve-column-grid; /* 6 */
 }
 
 .visually-hidden {

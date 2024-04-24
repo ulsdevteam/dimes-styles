@@ -1,8 +1,0 @@
-<label for="{{name}}" {{#if hideLabel}}class="visually-hidden"{{/if}}>{{label}}{{#if required}} *{{/if}}</label>
-<input name="{{name}}" type="text" id="{{name}}" 
-    {{#if invalid}} class="is-invalid" aria-invalid="true" aria-describedby="{{name}}-error"{{/if}}
-    {{#if helpText}} aria-describedby="{{name}}-help"{{/if}}
-    {{#if required}} required{{/if}}>
-{{#if helpText}}<div id="{{name}}-help" class="input__help-text">Please enter your given name.</div>{{/if}}
-{{#if invalid}}<div id="{{name}}-error" class="input__error">This field is required.</div>{{/if}}
-

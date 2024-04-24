@@ -2,7 +2,7 @@ import TextInput from './textInput.handlebars'
 
 export default {
   component: TextInput,
-  title: "Components/Text Input",
+  title: "Components/Form/Text Input",
   args:{
     label: 'First Name',
     name: 'first_name'
@@ -12,8 +12,6 @@ export default {
 export const basic = (args) => TextInput(args)
 
 export const required = (args) => TextInput({ ...args, required: true })
-
-export const hideLabel = (args) => TextInput({ ...args, hideLabel: true })
 
 export const helpText = (args) => TextInput({ ...args, helpText: true })
 

@@ -1,7 +1,7 @@
 import { Meta, Story, Typeset } from '@storybook/blocks';
 import * as headingsStories from './Headings.stories.js';
 import * as linkStories from './Links.stories.js';
-import * as textColorStories from './TextColor.stories.js';
+import * as textStyleStories from './TextStyle.stories.js';
 
 <Meta title="Global/Typography" />
 
@@ -73,16 +73,18 @@ No known issues.
 
 ### Implementation
 
-For a bolder link, use the `link--bold` class.
+For a bolder link, use the `font--bold` class.
 
 <Story of={linkStories.links} />
 
-## Text color
+## Text color and font weight
 
 ### When to use
-In the case where the default text colors result in accessibility issues because of color
+In the case where the default text color results in accessibility issues because of color
 contrast with the background color or aesthetically don't look good, use text color classes
 to change the element color.
+
+Use `font--bold` to change any text weight to 600 bold.
 
 ### Best practices
 Components like buttons, a header, or a table of contents already have various color options 
@@ -95,10 +97,11 @@ contrast against most background colors.
 
 ### Implementation
 
+- For bold text use `text--bold`
 - For white text use `text--white`
 - For blue text use `text--blue`
 - For orange text use `text--orange`
 
-<Story of={textColorStories.textColor} />
+<Story of={textStyleStories.textStyle} />
 
 

@@ -2,7 +2,7 @@ import TextareaInput from './textareaInputs.handlebars'
 
 export default {
   component: TextareaInput,
-  title: "Components/Textarea Inputs",
+  title: "Components/Form/Textarea Inputs",
   args:{
     label: 'Message',
     name: 'message'
@@ -12,8 +12,6 @@ export default {
 export const basic = (args) => TextareaInput(args)
 
 export const required = (args) => TextareaInput({ ...args, required: true })
-
-export const hideLabel = (args) => TextareaInput({ ...args, hideLabel: true })
 
 export const helpText = (args) => TextareaInput({ ...args, helpText: true })
 

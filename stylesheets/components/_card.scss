@@ -57,7 +57,9 @@
   display: grid;
   gap: 15px;
   grid-template-columns: 1fr;
+  list-style: none;
   margin: 0;
+  padding-left: 0;
 
   // @include md-up {
   //   grid-template-columns: repeat(3, 1fr); /* 2 */
@@ -148,4 +150,22 @@
 
 .card__footer-text {
   @include card-text;
+}
+
+/* Styles for card that is not a link.
+*  1. Remove hover and focus styles for cards.
+*  2. Enables flexible interaction with elements in a card by removing the pseudo element
+*  so that the entire card is not clickable.
+*/
+.card--container {
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 1px $silver-grey, 0 0 4px 0 lighten($silver-grey, 10%); /* 1 */
+  }
+}
+
+.card--container .card__title {
+  &::after {
+    position: relative; /* 2 */
+  }
 }
