@@ -1,6 +1,8 @@
 import Header from './header.handlebars'
 import headerColors from './colors.json'
-import Logo from '../../../stylesheets/assets/img/hero_logo.png'
+import Logo_white from '../../../stylesheets/assets/img/hero_logo_white.png'
+import Logo_blue from '../../../stylesheets/assets/img/hero_logo_blue.png'
+
 
 export default {
   component: Header,
@@ -30,10 +32,14 @@ export const withTextBrand = () => {
 }
 
 export const withImageBrand = () => {
+  let Logos = {
+    'header--blue': Logo_white,
+    'header--white': Logo_blue
+  }
   const headers = headerColors.map(c => Header({
     class: c,
     withImageBrand: true,
-    logoUrl: Logo
+    logoUrl: Logos[c]
   })).join('')
   return headers
 }
