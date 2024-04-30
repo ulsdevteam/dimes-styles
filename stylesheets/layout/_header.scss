@@ -87,7 +87,9 @@
 .header__brand {
   align-content: center;
   display: flex;
+  flex-flow: column;
   flex-wrap: wrap;
+  justify-content: center;
   margin-right: auto;
   padding-left: 15px;
   z-index: 3;
