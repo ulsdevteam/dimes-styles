@@ -13,7 +13,7 @@ export const basic = {
   args:{
     altText: "",
     logoUrl: Logo,
-    text: 'The Rockefeller Archive Center is a major repository and research center for the study of philanthropy and its impact throughout the world.'
+    text: ''
   },
 }
 
@@ -25,7 +25,7 @@ export const colors = () => {
   const Heros = logoColors.map(c => Hero({
     altText: "",
     logoUrl: Logos[c],
-    text: 'The Rockefeller Archive Center is a major repository and research center for the study of philanthropy and its impact throughout the world.',
+    text: '',
   })).join('');
   return Heros;
 };

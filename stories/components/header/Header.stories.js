@@ -25,8 +25,8 @@ export const withTextBrand = () => {
   const headers = headerColors.map(c => Header({
     class: c,
     withTextBrand: true,
-    brandTitle: 'library.rockarch.org',
-    brandSubtitle: 'The Online Bibliographic Catalog of Rockefeller Archive Center'
+    brandTitle: 'MyReadingRoom @ Archives & Special Collections',
+    brandSubtitle: 'Submit requests in advance of your Reading Room visit'
   })).join('')
   return headers
 }
@@ -49,8 +49,8 @@ export const withNavItems = (args) => Header(
     ...args,
     class: "header--blue",
     withTextBrand: true,
-    brandTitle: 'library.rockarch.org',
-    brandSubtitle: 'The Online Collection & Catalog of Rockefeller Archive Center',
+    brandTitle: 'MyReadingRoom @ Archives & Special Collections',
+    brandSubtitle: 'Submit requests in advance of your Reading Room visit',
     withNavItems: true
   }
 )
