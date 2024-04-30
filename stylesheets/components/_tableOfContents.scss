@@ -99,11 +99,11 @@
 }
 
 .toc--blue {
-  background-color: $solitude-blue;
+  background-color: $pitt-dark-blue;
 
   .toc__link-item,
   .toc__title {
-    color: $regal-blue;
+    color: $pitt-gold;
   }
 }
 
@@ -111,15 +111,15 @@
   background-color: $flame-orange;
 
   .active {
-    outline-color: $white; /* 1 */
+    outline-color: $pitt-dark-blue; /* 1 */
   }
 }
 
 .toc--orange .toc__link-item,
 .toc--orange .toc__title {
-  color: $white;
+  color: $pitt-dark-blue;
 
   &:focus {
-    outline-color: $white; /* 1 */
+    outline-color: $pitt-dark-blue; /* 1 */
   }
 }

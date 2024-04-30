@@ -37,7 +37,7 @@
  * Skip link mixin for colors. Allows users to set background and color of skip link
  * with $background and $color variables. $background and $color are set to work with RAC header.
 **/
-@mixin skip-link-color($background: $flame-orange, $color: $desert-grey) {
+@mixin skip-link-color($background: $flame-orange, $color: $pitt-dark-blue) {
   background: $background;
   color: $color;
 
